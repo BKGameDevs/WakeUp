@@ -14,8 +14,9 @@ public class PlayerController : MonoBehaviour
     public float _JumpForce = 5;
     private bool _Jump;
     private Rigidbody2D _RigidBody;
-    private SpriteRenderer _SP;
+    private SpriteRenderer _SpriteRenderer;
     private BoxCollider2D _Collider;
+    private Animator _Animator;
     [SerializeField] private LayerMask layerMask;
 
     void Start()
@@ -23,8 +24,9 @@ public class PlayerController : MonoBehaviour
         //Set position of transform
         _Position = transform.position;
         _RigidBody = GetComponent<Rigidbody2D>();
-        _SP = GetComponent<SpriteRenderer>();
+        _SpriteRenderer = GetComponent<SpriteRenderer>();
         _Collider = GetComponent<BoxCollider2D>();
+        _Animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,10 +37,17 @@ public class PlayerController : MonoBehaviour
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
         _Vertical = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
 
+        _Animator.SetBool("Running", _Horizontal != 0);
+        if (_Horizontal != 0)
+            _SpriteRenderer.flipX = _Horizontal < 0;
+            
+        if (_Animator.GetBool("Jumping") && _RigidBody.velocity.y == 0)
+            _Animator.SetBool("Jumping", false);
 
         if (_Vertical > 0 && IsGrounded())
         {
             _Jump = true;
+            _Animator.SetBool("Jumping", true);
         }
         
     }
@@ -59,6 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             _Jump = false;
             // _RigidBody.velocity = transform.up * _JumpForce; /* jump is more realstic with this one, but doesn't work perfectly with boxcast */
+            _RigidBody.velocity = new Vector2(0, 0);
             _RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
         }
 
