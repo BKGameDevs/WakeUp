@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
-        _Vertical = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
+        _Vertical = IsPressingDown ? -1 : ((IsPressingUp || IsPressingSpace) ? 1 : 0);
 
         _Animator.SetBool("Running", _Horizontal != 0);
         if (_Horizontal != 0)
