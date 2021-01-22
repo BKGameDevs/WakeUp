@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
     private Animator _Animator;
     [SerializeField] private LayerMask layerMask;
 
+    private int MAX_SANITY = 100;
+
+    private int _CurrentSanity;
+    public EventHandler<int> SanityReduced { get; set; }
+
     void Start()
     {
         //Set position of transform
@@ -27,6 +32,8 @@ public class PlayerController : MonoBehaviour
         _SpriteRenderer = GetComponent<SpriteRenderer>();
         _Collider = GetComponent<BoxCollider2D>();
         _Animator = GetComponent<Animator>();
+
+        _CurrentSanity = MAX_SANITY;
     }
 
     // Update is called once per frame
@@ -49,7 +56,9 @@ public class PlayerController : MonoBehaviour
             _Jump = true;
             _Animator.SetBool("Jumping", true);
         }
-        
+
+        if (IsPressingEnter)
+            ReduceSanity(1);
     }
 
     // private void OnCollisionEnter2D(Collision2D collision)
@@ -92,5 +101,12 @@ public class PlayerController : MonoBehaviour
         // Debug.DrawRay(_Collider.bounds.center - new Vector3(_Collider.bounds.extents.x, 0), Vector2.down * (_Collider.bounds.extents.y + extraLength), rayColor);
         // Debug.DrawRay(_Collider.bounds.center - new Vector3(_Collider.bounds.extents.x, _Collider.bounds.extents.y + extraLength), Vector2.right * (_Collider.bounds.extents.x), rayColor);
         return hit.collider != null;
+    }
+
+    private void ReduceSanity(int amount){
+        _CurrentSanity -= amount;
+        _CurrentSanity = _CurrentSanity < 0 ? 0 : _CurrentSanity;
+        
+        SanityReduced?.Invoke(this, _CurrentSanity);
     }
 }
