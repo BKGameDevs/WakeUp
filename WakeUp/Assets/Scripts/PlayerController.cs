@@ -86,8 +86,8 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        var extraLength = -.2f; //can be adjusted if the box's y extent doesn't seem perfect
-        RaycastHit2D hit = Physics2D.BoxCast(_Collider.bounds.center, _Collider.bounds.size, 0f, Vector2.down, _Collider.bounds.extents.y + extraLength, layerMask);
+        var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
+        RaycastHit2D hit = Physics2D.BoxCast(_Collider.bounds.center, _Collider.bounds.size, 0f, Vector2.down, extraLength, layerMask);
         
         /* uncomment to show the BoxCast (green means it is not grounded, red means it is) */
         // Color rayColor;
