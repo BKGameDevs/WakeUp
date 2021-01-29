@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        if (Player != null) 
-            Player.SanityReduced += (player, currentSanity) => {
-                if (SanityBar != null)
-                    SanityBar.SetSanity(currentSanity);
-            };
+        // if (Player != null) 
+        //     Player.SanityReduced += (player, currentSanity) => {
+        //         if (SanityBar != null)
+        //             SanityBar.SetSanity(currentSanity);
+        //     };
     }
 
     // Update is called once per frame

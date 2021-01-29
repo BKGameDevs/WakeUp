@@ -19,9 +19,15 @@ public class PlayerController : MonoBehaviour
     private Animator _Animator;
     [SerializeField] private LayerMask layerMask;
 
-    private int MAX_SANITY = 100;
+    public FloatVariable PlayerHp;
 
+    private int MAX_SANITY = 100;
+    public int SanityReduceRate = 1;
+    public int SanityReduceInterval = 5;
+    private int CurrentInterval = 1;
     private int _CurrentSanity;
+    private float _StartTime;
+    private float _ElapsedTime;
     public EventHandler<int> SanityReduced { get; set; }
 
     void Start()
@@ -34,6 +40,7 @@ public class PlayerController : MonoBehaviour
         _Animator = GetComponent<Animator>();
 
         _CurrentSanity = MAX_SANITY;
+        _StartTime = Time.fixedTime;
     }
 
     // Update is called once per frame
@@ -57,8 +64,21 @@ public class PlayerController : MonoBehaviour
             _Animator.SetBool("Jumping", true);
         }
 
-        if (IsPressingEnter)
-            ReduceSanity(1);
+        if (_Horizontal != 0){
+            _StartTime = _ElapsedTime;
+        }
+
+        //Amount of time passed since Player creation
+        var time = _ElapsedTime - _StartTime;
+        if (time > SanityReduceInterval) {
+            _StartTime = _ElapsedTime;
+            ReduceSanity(SanityReduceRate);
+        }
+
+        if (PlayerHp != null)
+            PlayerHp.Value = _CurrentSanity;
+        // if (IsPressingEnter)
+        //     ReduceSanity(1);
     }
 
     // private void OnCollisionEnter2D(Collision2D collision)
@@ -73,6 +93,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _ElapsedTime = Time.fixedTime;
         if (_Jump)
         {
             _Jump = false;
