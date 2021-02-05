@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
-public class SpotLightController : MonoBehaviour
+public class SpotLightController : PropertyChangedListener
 {
-    public FloatVariable PlayerHp;
     private Light2D _SpotLight;
     private float _OuterMax;
     private float _InnerMax;
-    // Start is called before the first frame update
-    void Start()
+
+    protected override void Initialize()
     {
+        base.Initialize();
+        
         _SpotLight = GetComponent<Light2D>();
         _InnerMax = _SpotLight.pointLightInnerRadius;
         _OuterMax = _SpotLight.pointLightOuterRadius;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnPropertyChanged(PropertyChangedScriptableObject propertyChangeSO)
     {
-        if (PlayerHp != null)
-            AdjustLight(PlayerHp.Value);
+        if (propertyChangeSO.name == "PlayerSanity")
+        {
+            var playerSanity = propertyChangeSO as FloatVariable;
+            AdjustLight(playerSanity.RuntimeValue);
+        }
     }
 
     private void AdjustLight(float percentage) {

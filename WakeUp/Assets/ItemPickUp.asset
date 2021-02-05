@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa1d3aad47d72084aae9ad1ff04b335f, type: 3}
-  m_Name: PlayerHp
+  m_Name: ItemPickUp
   m_EditorClassIdentifier: 
-  Variable: 100
+  _InitialValue: 0

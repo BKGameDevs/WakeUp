@@ -15,37 +15,49 @@ public class PlayerController : MonoBehaviour
     private bool _Jump;
     private Rigidbody2D _RigidBody;
     private SpriteRenderer _SpriteRenderer;
-    private BoxCollider2D _Collider;
+    private Collider2D _Collider;
     private Animator _Animator;
     [SerializeField] private LayerMask layerMask;
 
-    public FloatVariable PlayerHp;
+    public FloatVariable PlayerSanity;
+    public FloatVariable ItemPickUp;
 
     private int MAX_SANITY = 100;
     public int SanityReduceRate = 1;
     public int SanityReduceInterval = 5;
     private int CurrentInterval = 1;
-    private int _CurrentSanity;
+    private float _CurrentSanity;
     private float _StartTime;
     private float _ElapsedTime;
-    public EventHandler<int> SanityReduced { get; set; }
 
+    private bool _IsGrounded;
+    private Vector3 _OriginalPosition;
     void Start()
     {
         //Set position of transform
-        _Position = transform.position;
+        _OriginalPosition = _Position = transform.position;
         _RigidBody = GetComponent<Rigidbody2D>();
         _SpriteRenderer = GetComponent<SpriteRenderer>();
-        _Collider = GetComponent<BoxCollider2D>();
+        _Collider = GetComponent<Collider2D>();
         _Animator = GetComponent<Animator>();
 
         _CurrentSanity = MAX_SANITY;
         _StartTime = Time.fixedTime;
+
+        if (ItemPickUp != null)
+            ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
+    }
+
+    private void ItemPickUp_PropertyChanged(object sender, EventArgs args) {
+        if (ItemPickUp.RuntimeValue > 0)
+            _CurrentSanity += ItemPickUp.RuntimeValue;
+        ItemPickUp.RuntimeValue = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
@@ -55,10 +67,10 @@ public class PlayerController : MonoBehaviour
         if (_Horizontal != 0)
             _SpriteRenderer.flipX = _Horizontal < 0;
             
-        if (_Animator.GetBool("Jumping") && _RigidBody.velocity.y == 0)
+        if (_Animator.GetBool("Jumping") && _IsGrounded)
             _Animator.SetBool("Jumping", false);
 
-        if (_Vertical > 0 && IsGrounded())
+        if (_Vertical > 0 && _IsGrounded)
         {
             _Jump = true;
             _Animator.SetBool("Jumping", true);
@@ -75,8 +87,8 @@ public class PlayerController : MonoBehaviour
             ReduceSanity(SanityReduceRate);
         }
 
-        if (PlayerHp != null)
-            PlayerHp.Value = _CurrentSanity;
+        if (PlayerSanity != null)
+            PlayerSanity.RuntimeValue = _CurrentSanity;
         // if (IsPressingEnter)
         //     ReduceSanity(1);
     }
@@ -93,22 +105,27 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _IsGrounded = IsGrounded();
         _ElapsedTime = Time.fixedTime;
         if (_Jump)
         {
             _Jump = false;
+            _IsGrounded = false;
             // _RigidBody.velocity = transform.up * _JumpForce; /* jump is more realstic with this one, but doesn't work perfectly with boxcast */
             _RigidBody.velocity = new Vector2(0, 0);
             _RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
         }
 
-        _RigidBody.velocity = new Vector2(_Horizontal * Speed, _RigidBody.velocity.y);
+        var yVelocity = _IsGrounded ? 0 : _RigidBody.velocity.y;
+        _RigidBody.velocity = new Vector2(_Horizontal * Speed, yVelocity);
     }
 
     private bool IsGrounded()
     {
         var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
-        RaycastHit2D hit = Physics2D.BoxCast(_Collider.bounds.center, _Collider.bounds.size, 0f, Vector2.down, extraLength, layerMask);
+        var size = _Collider.bounds.size;
+        var newSize = new Vector3(size.x / 2, size.y, size.z);
+        RaycastHit2D hit = Physics2D.BoxCast(_Collider.bounds.center, newSize, 0f, Vector2.down, extraLength, layerMask);
         
         /* uncomment to show the BoxCast (green means it is not grounded, red means it is) */
         // Color rayColor;
@@ -127,7 +144,7 @@ public class PlayerController : MonoBehaviour
     private void ReduceSanity(int amount){
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity < 0 ? 0 : _CurrentSanity;
-        
-        SanityReduced?.Invoke(this, _CurrentSanity);
     }
+
+    public void ResetPlayer() => transform.position = _OriginalPosition;
 }

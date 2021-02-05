@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class FloatVariable : Variable<float>
+public class BoolVariable : Variable<bool>
 {
 
 }

@@ -1,26 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SanityBar : MonoBehaviour
+public class SanityBar : PropertyChangedListener
 {
     private Slider _Slider;
     public Gradient SanityBarGradient;
     public Image Fill;
-    public FloatVariable PlayerHp;
+    //public FloatVariable PlayerSanity;
     // Start is called before the first frame update
-    void Start()
+    //void Start()
+    //{
+        
+    //    //if (PlayerSanity != null)
+    //    //    PlayerSanity.PropertyChanged += (s, e) => SetSanity(PlayerSanity.RuntimeValue);
+    //}
+
+    protected override void Initialize()
     {
+        base.Initialize();
         _Slider = GetComponent<Slider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnPropertyChanged(PropertyChangedScriptableObject propertyChangeSO)
     {
-        if (PlayerHp != null)
-            SetSanity(PlayerHp.Value);
+        if (propertyChangeSO.name == "PlayerSanity")
+        {
+            var playerSanity = propertyChangeSO as FloatVariable;
+            SetSanity(playerSanity.RuntimeValue);
+        }
     }
+
+    //private void OnDestroy()
+    //{
+    //    if (PlayerHp != null)
+    //        PlayerHp.PropertyChanged -= PlayerHpChanged;
+    //}
+
+    //private void PlayerHpChanged(object sender, EventArgs eventArgs) => SetSanity(PlayerHp.RuntimeValue);
 
     public void SetSanity(float sanity)
     {
