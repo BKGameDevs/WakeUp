@@ -147,4 +147,8 @@ public class PlayerController : MonoBehaviour
     }
 
     public void ResetPlayer() => transform.position = _OriginalPosition;
+
+    public void UpdateCheckpoint(Vector3 newPos){
+        _OriginalPosition = newPos;
+    }
 }
