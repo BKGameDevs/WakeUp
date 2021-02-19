@@ -1,0 +1,2415 @@
+fileFormatVersion: 2
+guid: 19bb6a020de464c9bb9e61a368e2bb0a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -985336715639654085
+    second: Dark_Gray_Dungeon_Tiles_0
+  - first:
+      213: 1920572182748968893
+    second: Dark_Gray_Dungeon_Tiles_1
+  - first:
+      213: 1032868847702606850
+    second: Dark_Gray_Dungeon_Tiles_2
+  - first:
+      213: -6660951390650021929
+    second: Dark_Gray_Dungeon_Tiles_3
+  - first:
+      213: -1648091748766635208
+    second: Dark_Gray_Dungeon_Tiles_4
+  - first:
+      213: 8207714563886234772
+    second: Dark_Gray_Dungeon_Tiles_5
+  - first:
+      213: 550609136264499620
+    second: Dark_Gray_Dungeon_Tiles_6
+  - first:
+      213: 4914602416452937074
+    second: Dark_Gray_Dungeon_Tiles_7
+  - first:
+      213: -9076950219026086902
+    second: Dark_Gray_Dungeon_Tiles_8
+  - first:
+      213: -479439363272368634
+    second: Dark_Gray_Dungeon_Tiles_9
+  - first:
+      213: 3426016556930723496
+    second: Dark_Gray_Dungeon_Tiles_10
+  - first:
+      213: -4000914309027201824
+    second: Dark_Gray_Dungeon_Tiles_11
+  - first:
+      213: -4270669352358503179
+    second: Dark_Gray_Dungeon_Tiles_12
+  - first:
+      213: -6865274552147823672
+    second: Dark_Gray_Dungeon_Tiles_13
+  - first:
+      213: 4105410188680439299
+    second: Dark_Gray_Dungeon_Tiles_14
+  - first:
+      213: 105114788454713109
+    second: Dark_Gray_Dungeon_Tiles_15
+  - first:
+      213: 2203328315788042479
+    second: Dark_Gray_Dungeon_Tiles_16
+  - first:
+      213: 4855379071785992112
+    second: Dark_Gray_Dungeon_Tiles_17
+  - first:
+      213: -5802596928423385551
+    second: Dark_Gray_Dungeon_Tiles_18
+  - first:
+      213: -6156491416112570345
+    second: Dark_Gray_Dungeon_Tiles_19
+  - first:
+      213: 8684148905409365403
+    second: Dark_Gray_Dungeon_Tiles_20
+  - first:
+      213: 1581792295222282535
+    second: Dark_Gray_Dungeon_Tiles_21
+  - first:
+      213: -500722086655142347
+    second: Dark_Gray_Dungeon_Tiles_22
+  - first:
+      213: -5350505828294766688
+    second: Dark_Gray_Dungeon_Tiles_23
+  - first:
+      213: 1712585011189347846
+    second: Dark_Gray_Dungeon_Tiles_24
+  - first:
+      213: 7339546207740049303
+    second: Dark_Gray_Dungeon_Tiles_25
+  - first:
+      213: -8161224989725619450
+    second: Dark_Gray_Dungeon_Tiles_26
+  - first:
+      213: 9030814353741630589
+    second: Dark_Gray_Dungeon_Tiles_27
+  - first:
+      213: -2455453937862253959
+    second: Dark_Gray_Dungeon_Tiles_28
+  - first:
+      213: 1830454619132812676
+    second: Dark_Gray_Dungeon_Tiles_29
+  - first:
+      213: 7798939568534348669
+    second: Dark_Gray_Dungeon_Tiles_30
+  - first:
+      213: 8166984332444892364
+    second: Dark_Gray_Dungeon_Tiles_31
+  - first:
+      213: -8511007864997119724
+    second: Dark_Gray_Dungeon_Tiles_32
+  - first:
+      213: -2101221050050525842
+    second: Dark_Gray_Dungeon_Tiles_33
+  - first:
+      213: 3978739562594521490
+    second: Dark_Gray_Dungeon_Tiles_34
+  - first:
+      213: 9217769090953569163
+    second: Dark_Gray_Dungeon_Tiles_35
+  - first:
+      213: 4874527468728053670
+    second: Dark_Gray_Dungeon_Tiles_36
+  - first:
+      213: 6207064777721039631
+    second: Dark_Gray_Dungeon_Tiles_37
+  - first:
+      213: -3902215812330127162
+    second: Dark_Gray_Dungeon_Tiles_38
+  - first:
+      213: 8456396771532079197
+    second: Dark_Gray_Dungeon_Tiles_39
+  - first:
+      213: -6744602901304440247
+    second: Dark_Gray_Dungeon_Tiles_40
+  - first:
+      213: -1075735130264005786
+    second: Dark_Gray_Dungeon_Tiles_41
+  - first:
+      213: 3198780278081923580
+    second: Dark_Gray_Dungeon_Tiles_42
+  - first:
+      213: -805050142238662460
+    second: Dark_Gray_Dungeon_Tiles_43
+  - first:
+      213: 4071229528359096051
+    second: Dark_Gray_Dungeon_Tiles_44
+  - first:
+      213: 6187325468681337892
+    second: Dark_Gray_Dungeon_Tiles_45
+  - first:
+      213: 4476692680842567850
+    second: Dark_Gray_Dungeon_Tiles_46
+  - first:
+      213: 4647804440021296826
+    second: Dark_Gray_Dungeon_Tiles_47
+  - first:
+      213: 5552397689168564415
+    second: Dark_Gray_Dungeon_Tiles_48
+  - first:
+      213: 4571029079618724226
+    second: Dark_Gray_Dungeon_Tiles_49
+  - first:
+      213: -1755970469556248179
+    second: Dark_Gray_Dungeon_Tiles_50
+  - first:
+      213: 8824464986208561022
+    second: Dark_Gray_Dungeon_Tiles_51
+  - first:
+      213: -6536258919262778453
+    second: Dark_Gray_Dungeon_Tiles_52
+  - first:
+      213: -2919724582365589966
+    second: Dark_Gray_Dungeon_Tiles_53
+  - first:
+      213: -5411310408677398238
+    second: Dark_Gray_Dungeon_Tiles_54
+  - first:
+      213: 1601905753924535316
+    second: Dark_Gray_Dungeon_Tiles_55
+  - first:
+      213: 5074393338809732269
+    second: Dark_Gray_Dungeon_Tiles_56
+  - first:
+      213: -707151915904005210
+    second: Dark_Gray_Dungeon_Tiles_57
+  - first:
+      213: -8233046220820773653
+    second: Dark_Gray_Dungeon_Tiles_58
+  - first:
+      213: 4186799616734298622
+    second: Dark_Gray_Dungeon_Tiles_59
+  - first:
+      213: 9196750272048103659
+    second: Dark_Gray_Dungeon_Tiles_60
+  - first:
+      213: -985464577739729891
+    second: Dark_Gray_Dungeon_Tiles_61
+  - first:
+      213: 5124249503763722431
+    second: Dark_Gray_Dungeon_Tiles_62
+  - first:
+      213: 3443094879427949382
+    second: Dark_Gray_Dungeon_Tiles_63
+  - first:
+      213: -7899894480968686240
+    second: Dark_Gray_Dungeon_Tiles_64
+  - first:
+      213: -7599256175007013717
+    second: Dark_Gray_Dungeon_Tiles_65
+  - first:
+      213: -5996667071849205641
+    second: Dark_Gray_Dungeon_Tiles_66
+  - first:
+      213: -9100994884179404976
+    second: Dark_Gray_Dungeon_Tiles_67
+  - first:
+      213: 3047180407950826002
+    second: Dark_Gray_Dungeon_Tiles_68
+  - first:
+      213: -7911690603863898818
+    second: Dark_Gray_Dungeon_Tiles_69
+  - first:
+      213: -8626406443037228343
+    second: Dark_Gray_Dungeon_Tiles_70
+  - first:
+      213: 7710754842448836924
+    second: Dark_Gray_Dungeon_Tiles_71
+  - first:
+      213: -8300692541425873850
+    second: Dark_Gray_Dungeon_Tiles_72
+  - first:
+      213: -565939748349652459
+    second: Dark_Gray_Dungeon_Tiles_73
+  - first:
+      213: -1348184244473988805
+    second: Dark_Gray_Dungeon_Tiles_74
+  - first:
+      213: -4390463068552754312
+    second: Dark_Gray_Dungeon_Tiles_75
+  - first:
+      213: 6020534696298666318
+    second: Dark_Gray_Dungeon_Tiles_76
+  - first:
+      213: -5819556520646339156
+    second: Dark_Gray_Dungeon_Tiles_77
+  - first:
+      213: -6458068754359169137
+    second: Dark_Gray_Dungeon_Tiles_78
+  - first:
+      213: 910824507572416907
+    second: Dark_Gray_Dungeon_Tiles_79
+  - first:
+      213: 2424910026438732735
+    second: Dark_Gray_Dungeon_Tiles_80
+  - first:
+      213: 8015667516524844995
+    second: Dark_Gray_Dungeon_Tiles_81
+  - first:
+      213: -3406132093079662265
+    second: Dark_Gray_Dungeon_Tiles_82
+  - first:
+      213: -6466907401324920712
+    second: Dark_Gray_Dungeon_Tiles_83
+  - first:
+      213: 5230611242393455775
+    second: Dark_Gray_Dungeon_Tiles_84
+  - first:
+      213: 9023450459419396011
+    second: Dark_Gray_Dungeon_Tiles_85
+  - first:
+      213: -1527129893156164524
+    second: Dark_Gray_Dungeon_Tiles_86
+  - first:
+      213: 8041177791837805129
+    second: Dark_Gray_Dungeon_Tiles_87
+  - first:
+      213: -8949929835423325991
+    second: Dark_Gray_Dungeon_Tiles_88
+  - first:
+      213: -5876761097101197712
+    second: Dark_Gray_Dungeon_Tiles_89
+  - first:
+      213: 3780073528543066504
+    second: Dark_Gray_Dungeon_Tiles_90
+  - first:
+      213: -2885135889022619179
+    second: Dark_Gray_Dungeon_Tiles_91
+  - first:
+      213: -4670475077428787740
+    second: Dark_Gray_Dungeon_Tiles_92
+  - first:
+      213: -8439655440056970491
+    second: Dark_Gray_Dungeon_Tiles_93
+  - first:
+      213: 7669105344327007714
+    second: Dark_Gray_Dungeon_Tiles_94
+  - first:
+      213: -5910544188422298240
+    second: Dark_Gray_Dungeon_Tiles_95
+  - first:
+      213: 8198777550636678420
+    second: Dark_Gray_Dungeon_Tiles_96
+  - first:
+      213: -1417901960912610684
+    second: Dark_Gray_Dungeon_Tiles_97
+  - first:
+      213: 5290309763961442346
+    second: Dark_Gray_Dungeon_Tiles_98
+  - first:
+      213: -4443443456014161123
+    second: Dark_Gray_Dungeon_Tiles_99
+  - first:
+      213: -9216570931044909355
+    second: Dark_Gray_Dungeon_Tiles_100
+  - first:
+      213: 8360291701278732244
+    second: Dark_Gray_Dungeon_Tiles_101
+  - first:
+      213: -4728015443103703008
+    second: Dark_Gray_Dungeon_Tiles_102
+  - first:
+      213: -8215970554895952638
+    second: Dark_Gray_Dungeon_Tiles_103
+  - first:
+      213: -4808837608383686298
+    second: Dark_Gray_Dungeon_Tiles_104
+  - first:
+      213: 8296867554058899454
+    second: Dark_Gray_Dungeon_Tiles_105
+  - first:
+      213: -7855789944360615380
+    second: Dark_Gray_Dungeon_Tiles_106
+  - first:
+      213: 4171426283830155312
+    second: Dark_Gray_Dungeon_Tiles_107
+  - first:
+      213: -2503146678290575014
+    second: Dark_Gray_Dungeon_Tiles_108
+  - first:
+      213: 8477125901051261119
+    second: Dark_Gray_Dungeon_Tiles_109
+  - first:
+      213: -5396877221096362441
+    second: Dark_Gray_Dungeon_Tiles_110
+  - first:
+      213: -7861135844887334378
+    second: Dark_Gray_Dungeon_Tiles_111
+  - first:
+      213: 3687070659193386786
+    second: Dark_Gray_Dungeon_Tiles_112
+  - first:
+      213: -2848581432468556843
+    second: Dark_Gray_Dungeon_Tiles_113
+  - first:
+      213: 1503480170509637052
+    second: Dark_Gray_Dungeon_Tiles_114
+  - first:
+      213: 6107038728379645793
+    second: Dark_Gray_Dungeon_Tiles_115
+  - first:
+      213: 7351695787359733183
+    second: Dark_Gray_Dungeon_Tiles_116
+  - first:
+      213: 2214795645153258678
+    second: Dark_Gray_Dungeon_Tiles_117
+  - first:
+      213: 1155908442995409395
+    second: Dark_Gray_Dungeon_Tiles_118
+  - first:
+      213: 3907978419717486568
+    second: Dark_Gray_Dungeon_Tiles_119
+  - first:
+      213: -1793858369154209852
+    second: Dark_Gray_Dungeon_Tiles_120
+  - first:
+      213: -2893709960110116765
+    second: Dark_Gray_Dungeon_Tiles_121
+  - first:
+      213: 393413606057380916
+    second: Dark_Gray_Dungeon_Tiles_122
+  - first:
+      213: -1464896749788929827
+    second: Dark_Gray_Dungeon_Tiles_123
+  - first:
+      213: 8985605717688771480
+    second: Dark_Gray_Dungeon_Tiles_124
+  - first:
+      213: -3788869329496551430
+    second: Dark_Gray_Dungeon_Tiles_125
+  - first:
+      213: 9182479066971357689
+    second: Dark_Gray_Dungeon_Tiles_126
+  - first:
+      213: -3808236923367109635
+    second: Dark_Gray_Dungeon_Tiles_127
+  - first:
+      213: 8556501053215577897
+    second: Dark_Gray_Dungeon_Tiles_128
+  - first:
+      213: 6280694329559069336
+    second: Dark_Gray_Dungeon_Tiles_129
+  - first:
+      213: -2736122284429377975
+    second: Dark_Gray_Dungeon_Tiles_130
+  - first:
+      213: -2748516510546042170
+    second: Dark_Gray_Dungeon_Tiles_131
+  - first:
+      213: -5638659357181687263
+    second: Dark_Gray_Dungeon_Tiles_132
+  - first:
+      213: 3855271038609778132
+    second: Dark_Gray_Dungeon_Tiles_133
+  - first:
+      213: 2390767538996890366
+    second: Dark_Gray_Dungeon_Tiles_134
+  - first:
+      213: 8860428748958914302
+    second: Dark_Gray_Dungeon_Tiles_135
+  - first:
+      213: -4055336977166483991
+    second: Dark_Gray_Dungeon_Tiles_136
+  - first:
+      213: -3181219590400145219
+    second: Dark_Gray_Dungeon_Tiles_137
+  - first:
+      213: 2459511129545549457
+    second: Dark_Gray_Dungeon_Tiles_138
+  - first:
+      213: -4540543334417161698
+    second: Dark_Gray_Dungeon_Tiles_139
+  - first:
+      213: 7905634760966822114
+    second: Dark_Gray_Dungeon_Tiles_140
+  - first:
+      213: 4646383697247296910
+    second: Dark_Gray_Dungeon_Tiles_141
+  - first:
+      213: 236080463922744949
+    second: Dark_Gray_Dungeon_Tiles_142
+  - first:
+      213: -2348193177932425826
+    second: Dark_Gray_Dungeon_Tiles_143
+  - first:
+      213: -487329356244383880
+    second: Dark_Gray_Dungeon_Tiles_144
+  - first:
+      213: -4903017574683810309
+    second: Dark_Gray_Dungeon_Tiles_145
+  - first:
+      213: -7303946910749365234
+    second: Dark_Gray_Dungeon_Tiles_146
+  - first:
+      213: -389654373133345031
+    second: Dark_Gray_Dungeon_Tiles_147
+  - first:
+      213: 2859151214434938525
+    second: Dark_Gray_Dungeon_Tiles_148
+  - first:
+      213: 3144966709121568121
+    second: Dark_Gray_Dungeon_Tiles_149
+  - first:
+      213: 2319131921961332944
+    second: Dark_Gray_Dungeon_Tiles_150
+  - first:
+      213: 3144793267823409747
+    second: Dark_Gray_Dungeon_Tiles_151
+  - first:
+      213: 7605501667753333912
+    second: Dark_Gray_Dungeon_Tiles_152
+  - first:
+      213: -3767295496450003024
+    second: Dark_Gray_Dungeon_Tiles_153
+  - first:
+      213: 4283757347846881380
+    second: Dark_Gray_Dungeon_Tiles_154
+  - first:
+      213: 3372584935104238631
+    second: Dark_Gray_Dungeon_Tiles_155
+  - first:
+      213: 3166132727524098007
+    second: Dark_Gray_Dungeon_Tiles_156
+  - first:
+      213: -6186520738124495320
+    second: Dark_Gray_Dungeon_Tiles_157
+  - first:
+      213: -6859818770046723455
+    second: Dark_Gray_Dungeon_Tiles_158
+  - first:
+      213: 1637808947731891916
+    second: Dark_Gray_Dungeon_Tiles_159
+  - first:
+      213: 1495117188942858378
+    second: Dark_Gray_Dungeon_Tiles_160
+  - first:
+      213: 8871531564232571441
+    second: Dark_Gray_Dungeon_Tiles_161
+  - first:
+      213: -8547987339117900501
+    second: Dark_Gray_Dungeon_Tiles_162
+  - first:
+      213: -7384904882134586803
+    second: Dark_Gray_Dungeon_Tiles_163
+  - first:
+      213: 6805549428981667538
+    second: Dark_Gray_Dungeon_Tiles_164
+  - first:
+      213: -746036777117205838
+    second: Dark_Gray_Dungeon_Tiles_165
+  - first:
+      213: -2115061125242457090
+    second: Dark_Gray_Dungeon_Tiles_166
+  - first:
+      213: 4340581652866761130
+    second: Dark_Gray_Dungeon_Tiles_167
+  - first:
+      213: -1779896660724196649
+    second: Dark_Gray_Dungeon_Tiles_168
+  - first:
+      213: 951948897506778730
+    second: Dark_Gray_Dungeon_Tiles_169
+  - first:
+      213: -8880855984317733771
+    second: Dark_Gray_Dungeon_Tiles_170
+  - first:
+      213: 4301494631917007860
+    second: Dark_Gray_Dungeon_Tiles_171
+  - first:
+      213: 683645689207544118
+    second: Dark_Gray_Dungeon_Tiles_172
+  - first:
+      213: -355707135477829834
+    second: Dark_Gray_Dungeon_Tiles_173
+  - first:
+      213: -4516903492318088742
+    second: Dark_Gray_Dungeon_Tiles_174
+  - first:
+      213: -7426144775369442614
+    second: Dark_Gray_Dungeon_Tiles_175
+  - first:
+      213: 8458871383525621301
+    second: Dark_Gray_Dungeon_Tiles_176
+  - first:
+      213: 2702240781611002735
+    second: Dark_Gray_Dungeon_Tiles_177
+  - first:
+      213: 8831575145292548515
+    second: Dark_Gray_Dungeon_Tiles_178
+  - first:
+      213: -3461690501135736326
+    second: Dark_Gray_Dungeon_Tiles_179
+  - first:
+      213: 6211997052179850242
+    second: Dark_Gray_Dungeon_Tiles_180
+  - first:
+      213: 2109247432950153179
+    second: Dark_Gray_Dungeon_Tiles_181
+  - first:
+      213: -6857920312372402553
+    second: Dark_Gray_Dungeon_Tiles_182
+  - first:
+      213: -7029143938203588378
+    second: Dark_Gray_Dungeon_Tiles_183
+  - first:
+      213: 8233620952845187043
+    second: Dark_Gray_Dungeon_Tiles_184
+  - first:
+      213: -6472433665288693107
+    second: Dark_Gray_Dungeon_Tiles_185
+  - first:
+      213: -9101246225859110901
+    second: Dark_Gray_Dungeon_Tiles_186
+  - first:
+      213: -2662297582422465660
+    second: Dark_Gray_Dungeon_Tiles_187
+  - first:
+      213: -4593551423669493886
+    second: Dark_Gray_Dungeon_Tiles_188
+  - first:
+      213: 8593160194576046313
+    second: Dark_Gray_Dungeon_Tiles_189
+  - first:
+      213: -565192870303674062
+    second: Dark_Gray_Dungeon_Tiles_190
+  - first:
+      213: 6377796700918381189
+    second: Dark_Gray_Dungeon_Tiles_191
+  - first:
+      213: 5775045955430545021
+    second: Dark_Gray_Dungeon_Tiles_192
+  - first:
+      213: -3862824397411465938
+    second: Dark_Gray_Dungeon_Tiles_193
+  - first:
+      213: 2386437599621702491
+    second: Dark_Gray_Dungeon_Tiles_194
+  - first:
+      213: -4616318043866799763
+    second: Dark_Gray_Dungeon_Tiles_195
+  - first:
+      213: -5823668289344756122
+    second: Dark_Gray_Dungeon_Tiles_196
+  - first:
+      213: -1320534750862080432
+    second: No_tile_DarkGray_0
+  - first:
+      213: 3115422252152343803
+    second: No_tile_DarkGray_1
+  - first:
+      213: -2523122709842290419
+    second: No_tile_DarkGray_2
+  - first:
+      213: 1896690212269363470
+    second: No_tile_DarkGray_3
+  - first:
+      213: -1205157138466920446
+    second: No_tile_DarkGray_4
+  - first:
+      213: 7395022958953767458
+    second: No_tile_DarkGray_5
+  - first:
+      213: 136586876348830673
+    second: No_tile_DarkGray_6
+  - first:
+      213: -7817557134319371059
+    second: No_tile_DarkGray_7
+  - first:
+      213: 4694947166534987565
+    second: No_tile_DarkGray_8
+  - first:
+      213: -3759038421905450523
+    second: No_tile_DarkGray_9
+  - first:
+      213: -1181892407355997322
+    second: No_tile_DarkGray_10
+  - first:
+      213: -7176018899828886318
+    second: No_tile_DarkGray_11
+  - first:
+      213: 6214962938485921934
+    second: No_tile_DarkGray_12
+  - first:
+      213: -7228153547309395010
+    second: No_tile_DarkGray_13
+  - first:
+      213: -5693453032015445305
+    second: No_tile_DarkGray_14
+  - first:
+      213: -6676698084060309575
+    second: No_tile_DarkGray_15
+  - first:
+      213: -7458258460516550666
+    second: No_tile_DarkGray_16
+  - first:
+      213: -980108296564171758
+    second: No_tile_DarkGray_17
+  - first:
+      213: 5849227649838772317
+    second: No_tile_DarkGray_18
+  - first:
+      213: -4609773408378434349
+    second: No_tile_DarkGray_19
+  - first:
+      213: -7981360875044149979
+    second: No_tile_DarkGray_20
+  - first:
+      213: 663618982644726547
+    second: No_tile_DarkGray_21
+  - first:
+      213: -195265666055239042
+    second: No_tile_DarkGray_22
+  - first:
+      213: 4461134337851993453
+    second: No_tile_DarkGray_23
+  - first:
+      213: 4287463431596106340
+    second: No_tile_DarkGray_24
+  - first:
+      213: 5635194481628952363
+    second: No_tile_DarkGray_25
+  - first:
+      213: -2523126589435830256
+    second: No_tile_DarkGray_26
+  - first:
+      213: -5592004378592680806
+    second: No_tile_DarkGray_27
+  - first:
+      213: 3853763284292835943
+    second: No_tile_DarkGray_28
+  - first:
+      213: 1860772128556648030
+    second: No_tile_DarkGray_29
+  - first:
+      213: -5543075233770540873
+    second: No_tile_DarkGray_30
+  - first:
+      213: 8009598232418471420
+    second: No_tile_DarkGray_31
+  - first:
+      213: -3622078603875218402
+    second: No_tile_DarkGray_32
+  - first:
+      213: 2333221164125518068
+    second: No_tile_DarkGray_33
+  - first:
+      213: 1158066168851987328
+    second: No_tile_DarkGray_34
+  - first:
+      213: -5396114674256546445
+    second: No_tile_DarkGray_35
+  - first:
+      213: 3625780103753569123
+    second: No_tile_DarkGray_36
+  - first:
+      213: 7083709731463854909
+    second: No_tile_DarkGray_37
+  - first:
+      213: 7029121299824552997
+    second: No_tile_DarkGray_38
+  - first:
+      213: -6154150840030259868
+    second: No_tile_DarkGray_39
+  - first:
+      213: -2108437558230273554
+    second: No_tile_DarkGray_40
+  - first:
+      213: -8253612987654268410
+    second: No_tile_DarkGray_41
+  - first:
+      213: -887286122072940509
+    second: No_tile_DarkGray_42
+  - first:
+      213: -6645823642116268906
+    second: No_tile_DarkGray_43
+  - first:
+      213: -6708680947299662690
+    second: No_tile_DarkGray_44
+  - first:
+      213: -5589425046740180345
+    second: No_tile_DarkGray_45
+  - first:
+      213: -3832800732768577125
+    second: No_tile_DarkGray_46
+  - first:
+      213: -8951871048441072888
+    second: No_tile_DarkGray_47
+  - first:
+      213: -3063196508861410661
+    second: No_tile_DarkGray_48
+  - first:
+      213: -8647446631834685643
+    second: No_tile_DarkGray_49
+  - first:
+      213: -8244026372770860552
+    second: No_tile_DarkGray_50
+  - first:
+      213: -5870602648708012529
+    second: No_tile_DarkGray_51
+  - first:
+      213: 1021748779474941932
+    second: No_tile_DarkGray_52
+  - first:
+      213: 50754139027535406
+    second: No_tile_DarkGray_53
+  - first:
+      213: -756209493729126080
+    second: No_tile_DarkGray_54
+  - first:
+      213: -8501724209454008099
+    second: No_tile_DarkGray_55
+  - first:
+      213: 2934239805948104932
+    second: No_tile_DarkGray_56
+  - first:
+      213: -8766486554072939637
+    second: No_tile_DarkGray_57
+  - first:
+      213: -5824751993209015516
+    second: No_tile_DarkGray_58
+  - first:
+      213: -381115803379729127
+    second: No_tile_DarkGray_59
+  - first:
+      213: -6538159993479704616
+    second: No_tile_DarkGray_60
+  - first:
+      213: 3610134867382477443
+    second: No_tile_DarkGray_61
+  - first:
+      213: 314002900547842635
+    second: No_tile_DarkGray_62
+  - first:
+      213: -2342941761257556151
+    second: No_tile_DarkGray_63
+  - first:
+      213: 7602163077183658213
+    second: No_tile_DarkGray_64
+  - first:
+      213: 7999766417391225766
+    second: No_tile_DarkGray_65
+  - first:
+      213: 265231683746383971
+    second: No_tile_DarkGray_66
+  - first:
+      213: 7284811365378035339
+    second: No_tile_DarkGray_67
+  - first:
+      213: 8803970326080007006
+    second: No_tile_DarkGray_68
+  - first:
+      213: 2483668973708375352
+    second: No_tile_DarkGray_69
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: No_tile_DarkGray_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 220
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0568e4df3a48cade0800000000000000
+      internalID: -1320534750862080432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 220
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc43e838043c3b20800000000000000
+      internalID: 3115422252152343803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 220
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09112373411cfcd0800000000000000
+      internalID: -2523122709842290419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 220
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01964fe2b5625a10800000000000000
+      internalID: 1896690212269363470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 220
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208272fb7fb664fe0800000000000000
+      internalID: -1205157138466920446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 175
+        width: 13
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2222c4e533660a660800000000000000
+      internalID: 7395022958953767458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_6
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 188
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d390c55a0145e100800000000000000
+      internalID: 136586876348830673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 204
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccb29d9435728390800000000000000
+      internalID: -7817557134319371059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 204
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f6b84b29dc72140800000000000000
+      internalID: 4694947166534987565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 204
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9d745b87635dbc0800000000000000
+      internalID: -3759038421905450523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 172
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67380d01e13199fe0800000000000000
+      internalID: -1181892407355997322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 172
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4b53ea4d8a96c90800000000000000
+      internalID: -7176018899828886318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_12
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 172
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88dba04ddbff3650800000000000000
+      internalID: 6214962938485921934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3d4a625a070bb90800000000000000
+      internalID: -7228153547309395010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 108
+        width: 16
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c24951f1aaccf0b0800000000000000
+      internalID: -5693453032015445305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_15
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 124
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7dd0b977a9753a0800000000000000
+      internalID: -6676698084060309575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_16
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 124
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7fbd91271fe7890800000000000000
+      internalID: -7458258460516550666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c11e572b4f562f0800000000000000
+      internalID: -980108296564171758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 108
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5078079e81ac2150800000000000000
+      internalID: 5849227649838772317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 140
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dccf8a328bc600c0800000000000000
+      internalID: -4609773408378434349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_20
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 140
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525eaca32928c3190800000000000000
+      internalID: -7981360875044149979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_21
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 140
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bbebed2f5a53900800000000000000
+      internalID: 663618982644726547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_22
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a82f949e64a4df0800000000000000
+      internalID: -195265666055239042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_23
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 140
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d27fe4b0229ed30800000000000000
+      internalID: 4461134337851993453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_24
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 108
+        width: 26
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46263cb6641208b30800000000000000
+      internalID: 4287463431596106340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_25
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 110
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b273cb5468b343e40800000000000000
+      internalID: 5635194481628952363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_26
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 108
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010a5592cbd0cfcd0800000000000000
+      internalID: -2523126589435830256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 108
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94ed8735a53562b0800000000000000
+      internalID: -5592004378592680806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 96
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a97b8f9415b7530800000000000000
+      internalID: 3853763284292835943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_29
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 92
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e560192646ac2d910800000000000000
+      internalID: 1860772128556648030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 70
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b077df717a0313b0800000000000000
+      internalID: -5543075233770540873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 44
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd46ecd72fc72f60800000000000000
+      internalID: 8009598232418471420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_32
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 86
+        width: 46
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c897b43bacbbdc0800000000000000
+      internalID: -3622078603875218402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_33
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 81
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8ff1e6944416020800000000000000
+      internalID: 2333221164125518068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_34
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 79
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bf1dc7b07421010800000000000000
+      internalID: 1158066168851987328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_35
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 80
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3757aa92b462d15b0800000000000000
+      internalID: -5396114674256546445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_36
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 79
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36319ed4bcb515230800000000000000
+      internalID: 3625780103753569123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_37
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 80
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b71eb38746e4260800000000000000
+      internalID: 7083709731463854909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_38
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 67
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cac2f84947c8160800000000000000
+      internalID: 7029121299824552997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_39
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 60
+        width: 112
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46513d5ca60189aa0800000000000000
+      internalID: -6154150840030259868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_40
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 65
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1b79636335db2e0800000000000000
+      internalID: -2108437558230273554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_41
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 65
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a115d97b6457d80800000000000000
+      internalID: -8253612987654268410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_42
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 61
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32065b719f9bfa3f0800000000000000
+      internalID: -887286122072940509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_43
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 62
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c54cbcb9a45c3a0800000000000000
+      internalID: -6645823642116268906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_44
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 63
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94c5c8f83af5e2a0800000000000000
+      internalID: -6708680947299662690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_45
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 61
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7826166b88f5e62b0800000000000000
+      internalID: -5589425046740180345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_46
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 63
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99d8746a082fcac0800000000000000
+      internalID: -3832800732768577125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_47
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 60
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803f092e5b094c380800000000000000
+      internalID: -8951871048441072888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_48
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 60
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92591431075d75d0800000000000000
+      internalID: -3063196508861410661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 12
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f685fba191ef780800000000000000
+      internalID: -8647446631834685643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 12
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f17a0451b5579d80800000000000000
+      internalID: -8244026372770860552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_51
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 12
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06aa4aaefd678ea0800000000000000
+      internalID: -5870602648708012529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7fa4af91bfd2e00800000000000000
+      internalID: 1021748779474941932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 12
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26fd9bde9054b000800000000000000
+      internalID: 50754139027535406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_54
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 12
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0495f76d8776185f0800000000000000
+      internalID: -756209493729126080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_55
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8b72520eec30a80800000000000000
+      internalID: -8501724209454008099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_56
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 12
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e01957ae8388b820800000000000000
+      internalID: 2934239805948104932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_57
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 12
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b838e380dee275680800000000000000
+      internalID: -8766486554072939637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_58
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 14
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423370c4ce25a2fa0800000000000000
+      internalID: -5824751993209015516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_59
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 15
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d7341323106baf0800000000000000
+      internalID: -381115803379729127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_60
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 16
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfc8f7602ac345a0800000000000000
+      internalID: -6538159993479704616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_61
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 16
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382a599d886c91230800000000000000
+      internalID: 3610134867382477443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_62
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 16
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42b89179ff8b5400800000000000000
+      internalID: 314002900547842635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_63
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 13
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947b0dea1e23c7fd0800000000000000
+      internalID: -2342941761257556151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_64
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 13
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e85f1c6a0f408960800000000000000
+      internalID: 7602163077183658213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_65
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 14
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab04ba0c21e40f60800000000000000
+      internalID: 7999766417391225766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_66
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 14
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368c1e4afca4ea300800000000000000
+      internalID: 265231683746383971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_67
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 12
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e06191759d81560800000000000000
+      internalID: 7284811365378035339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_68
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 12
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b241bbd5cfd2a70800000000000000
+      internalID: 8803970326080007006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_tile_DarkGray_69
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 12
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835fb85c5c3c77220800000000000000
+      internalID: 2483668973708375352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 186673d3731444aee863278a9a5b76b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

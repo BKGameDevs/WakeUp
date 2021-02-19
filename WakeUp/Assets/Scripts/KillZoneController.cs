@@ -13,7 +13,7 @@ public class KillZoneController : MonoBehaviour
     }
 
     private IEnumerator WaitAndReset(){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.25f);
         Player?.ResetPlayer();
     }
 }
