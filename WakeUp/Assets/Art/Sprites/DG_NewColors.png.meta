@@ -629,6 +629,18 @@ TextureImporter:
   - first:
       213: -4575276813850113667
     second: DG_NewColors_208
+  - first:
+      213: 5834882780752857683
+    second: DG_NewColors_209
+  - first:
+      213: -4355390334655307919
+    second: DG_NewColors_210
+  - first:
+      213: 344953117954894432
+    second: DG_NewColors_211
+  - first:
+      213: 8210191438624131800
+    second: DG_NewColors_212
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1534,8 +1546,8 @@ TextureImporter:
       name: DG_NewColors_37
       rect:
         serializedVersion: 2
-        x: 208
-        y: 204
+        x: 496
+        y: 220
         width: 16
         height: 16
       alignment: 0
@@ -1555,8 +1567,8 @@ TextureImporter:
       name: DG_NewColors_38
       rect:
         serializedVersion: 2
-        x: 240
-        y: 204
+        x: 512
+        y: 220
         width: 16
         height: 16
       alignment: 0
@@ -1576,7 +1588,7 @@ TextureImporter:
       name: DG_NewColors_39
       rect:
         serializedVersion: 2
-        x: 256
+        x: 208
         y: 204
         width: 16
         height: 16
@@ -1597,7 +1609,7 @@ TextureImporter:
       name: DG_NewColors_40
       rect:
         serializedVersion: 2
-        x: 288
+        x: 240
         y: 204
         width: 16
         height: 16
@@ -1618,7 +1630,7 @@ TextureImporter:
       name: DG_NewColors_41
       rect:
         serializedVersion: 2
-        x: 304
+        x: 256
         y: 204
         width: 16
         height: 16
@@ -1639,7 +1651,7 @@ TextureImporter:
       name: DG_NewColors_42
       rect:
         serializedVersion: 2
-        x: 320
+        x: 288
         y: 204
         width: 16
         height: 16
@@ -1660,7 +1672,7 @@ TextureImporter:
       name: DG_NewColors_43
       rect:
         serializedVersion: 2
-        x: 352
+        x: 304
         y: 204
         width: 16
         height: 16
@@ -1681,7 +1693,7 @@ TextureImporter:
       name: DG_NewColors_44
       rect:
         serializedVersion: 2
-        x: 368
+        x: 320
         y: 204
         width: 16
         height: 16
@@ -1702,7 +1714,7 @@ TextureImporter:
       name: DG_NewColors_45
       rect:
         serializedVersion: 2
-        x: 400
+        x: 352
         y: 204
         width: 16
         height: 16
@@ -1723,7 +1735,7 @@ TextureImporter:
       name: DG_NewColors_46
       rect:
         serializedVersion: 2
-        x: 416
+        x: 368
         y: 204
         width: 16
         height: 16
@@ -1744,7 +1756,7 @@ TextureImporter:
       name: DG_NewColors_47
       rect:
         serializedVersion: 2
-        x: 448
+        x: 400
         y: 204
         width: 16
         height: 16
@@ -1765,7 +1777,7 @@ TextureImporter:
       name: DG_NewColors_48
       rect:
         serializedVersion: 2
-        x: 464
+        x: 416
         y: 204
         width: 16
         height: 16
@@ -1786,8 +1798,8 @@ TextureImporter:
       name: DG_NewColors_49
       rect:
         serializedVersion: 2
-        x: 16
-        y: 188
+        x: 448
+        y: 204
         width: 16
         height: 16
       alignment: 0
@@ -1807,8 +1819,8 @@ TextureImporter:
       name: DG_NewColors_50
       rect:
         serializedVersion: 2
-        x: 32
-        y: 188
+        x: 464
+        y: 204
         width: 16
         height: 16
       alignment: 0
@@ -1828,8 +1840,8 @@ TextureImporter:
       name: DG_NewColors_51
       rect:
         serializedVersion: 2
-        x: 48
-        y: 188
+        x: 496
+        y: 204
         width: 16
         height: 16
       alignment: 0
@@ -1849,8 +1861,8 @@ TextureImporter:
       name: DG_NewColors_52
       rect:
         serializedVersion: 2
-        x: 64
-        y: 188
+        x: 512
+        y: 204
         width: 16
         height: 16
       alignment: 0
@@ -1870,7 +1882,7 @@ TextureImporter:
       name: DG_NewColors_53
       rect:
         serializedVersion: 2
-        x: 80
+        x: 16
         y: 188
         width: 16
         height: 16
@@ -1891,7 +1903,7 @@ TextureImporter:
       name: DG_NewColors_54
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 188
         width: 16
         height: 16
@@ -1912,7 +1924,7 @@ TextureImporter:
       name: DG_NewColors_55
       rect:
         serializedVersion: 2
-        x: 160
+        x: 48
         y: 188
         width: 16
         height: 16
@@ -1933,7 +1945,7 @@ TextureImporter:
       name: DG_NewColors_56
       rect:
         serializedVersion: 2
-        x: 176
+        x: 64
         y: 188
         width: 16
         height: 16
@@ -1954,7 +1966,7 @@ TextureImporter:
       name: DG_NewColors_57
       rect:
         serializedVersion: 2
-        x: 208
+        x: 80
         y: 188
         width: 16
         height: 16
@@ -1975,7 +1987,7 @@ TextureImporter:
       name: DG_NewColors_58
       rect:
         serializedVersion: 2
-        x: 240
+        x: 96
         y: 188
         width: 16
         height: 16
@@ -1996,7 +2008,7 @@ TextureImporter:
       name: DG_NewColors_59
       rect:
         serializedVersion: 2
-        x: 256
+        x: 160
         y: 188
         width: 16
         height: 16
@@ -2017,8 +2029,8 @@ TextureImporter:
       name: DG_NewColors_60
       rect:
         serializedVersion: 2
-        x: 16
-        y: 172
+        x: 176
+        y: 188
         width: 16
         height: 16
       alignment: 0
@@ -2038,8 +2050,8 @@ TextureImporter:
       name: DG_NewColors_61
       rect:
         serializedVersion: 2
-        x: 32
-        y: 172
+        x: 208
+        y: 188
         width: 16
         height: 16
       alignment: 0
@@ -2059,8 +2071,8 @@ TextureImporter:
       name: DG_NewColors_62
       rect:
         serializedVersion: 2
-        x: 48
-        y: 172
+        x: 240
+        y: 188
         width: 16
         height: 16
       alignment: 0
@@ -2080,8 +2092,8 @@ TextureImporter:
       name: DG_NewColors_63
       rect:
         serializedVersion: 2
-        x: 64
-        y: 172
+        x: 256
+        y: 188
         width: 16
         height: 16
       alignment: 0
@@ -2101,7 +2113,7 @@ TextureImporter:
       name: DG_NewColors_64
       rect:
         serializedVersion: 2
-        x: 80
+        x: 16
         y: 172
         width: 16
         height: 16
@@ -2122,7 +2134,7 @@ TextureImporter:
       name: DG_NewColors_65
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 172
         width: 16
         height: 16
@@ -2143,7 +2155,7 @@ TextureImporter:
       name: DG_NewColors_66
       rect:
         serializedVersion: 2
-        x: 160
+        x: 48
         y: 172
         width: 16
         height: 16
@@ -2164,7 +2176,7 @@ TextureImporter:
       name: DG_NewColors_67
       rect:
         serializedVersion: 2
-        x: 176
+        x: 64
         y: 172
         width: 16
         height: 16
@@ -2185,7 +2197,7 @@ TextureImporter:
       name: DG_NewColors_68
       rect:
         serializedVersion: 2
-        x: 208
+        x: 80
         y: 172
         width: 16
         height: 16
@@ -2206,7 +2218,7 @@ TextureImporter:
       name: DG_NewColors_69
       rect:
         serializedVersion: 2
-        x: 288
+        x: 96
         y: 172
         width: 16
         height: 16
@@ -2227,7 +2239,7 @@ TextureImporter:
       name: DG_NewColors_70
       rect:
         serializedVersion: 2
-        x: 352
+        x: 160
         y: 172
         width: 16
         height: 16
@@ -2248,7 +2260,7 @@ TextureImporter:
       name: DG_NewColors_71
       rect:
         serializedVersion: 2
-        x: 368
+        x: 176
         y: 172
         width: 16
         height: 16
@@ -2269,7 +2281,7 @@ TextureImporter:
       name: DG_NewColors_72
       rect:
         serializedVersion: 2
-        x: 384
+        x: 208
         y: 172
         width: 16
         height: 16
@@ -2290,7 +2302,7 @@ TextureImporter:
       name: DG_NewColors_73
       rect:
         serializedVersion: 2
-        x: 416
+        x: 288
         y: 172
         width: 16
         height: 16
@@ -2311,7 +2323,7 @@ TextureImporter:
       name: DG_NewColors_74
       rect:
         serializedVersion: 2
-        x: 448
+        x: 352
         y: 172
         width: 16
         height: 16
@@ -2332,7 +2344,7 @@ TextureImporter:
       name: DG_NewColors_75
       rect:
         serializedVersion: 2
-        x: 464
+        x: 368
         y: 172
         width: 16
         height: 16
@@ -2353,7 +2365,7 @@ TextureImporter:
       name: DG_NewColors_76
       rect:
         serializedVersion: 2
-        x: 480
+        x: 384
         y: 172
         width: 16
         height: 16
@@ -2377,7 +2389,7 @@ TextureImporter:
       name: DG_NewColors_77
       rect:
         serializedVersion: 2
-        x: 496
+        x: 416
         y: 172
         width: 16
         height: 16
@@ -2401,8 +2413,8 @@ TextureImporter:
       name: DG_NewColors_78
       rect:
         serializedVersion: 2
-        x: 240
-        y: 156
+        x: 448
+        y: 172
         width: 16
         height: 16
       alignment: 0
@@ -2422,8 +2434,8 @@ TextureImporter:
       name: DG_NewColors_79
       rect:
         serializedVersion: 2
-        x: 256
-        y: 156
+        x: 464
+        y: 172
         width: 16
         height: 16
       alignment: 0
@@ -2443,15 +2455,18 @@ TextureImporter:
       name: DG_NewColors_80
       rect:
         serializedVersion: 2
-        x: 288
-        y: 156
+        x: 480
+        y: 172
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 67c7514ed07ac7f70800000000000000
@@ -2464,15 +2479,18 @@ TextureImporter:
       name: DG_NewColors_81
       rect:
         serializedVersion: 2
-        x: 352
-        y: 156
+        x: 496
+        y: 172
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 050dc8d7c9ea989b0800000000000000
@@ -2485,7 +2503,7 @@ TextureImporter:
       name: DG_NewColors_82
       rect:
         serializedVersion: 2
-        x: 368
+        x: 240
         y: 156
         width: 16
         height: 16
@@ -2506,7 +2524,7 @@ TextureImporter:
       name: DG_NewColors_83
       rect:
         serializedVersion: 2
-        x: 384
+        x: 256
         y: 156
         width: 16
         height: 16
@@ -2527,7 +2545,7 @@ TextureImporter:
       name: DG_NewColors_84
       rect:
         serializedVersion: 2
-        x: 416
+        x: 288
         y: 156
         width: 16
         height: 16
@@ -2548,7 +2566,7 @@ TextureImporter:
       name: DG_NewColors_85
       rect:
         serializedVersion: 2
-        x: 448
+        x: 352
         y: 156
         width: 16
         height: 16
@@ -2569,7 +2587,7 @@ TextureImporter:
       name: DG_NewColors_86
       rect:
         serializedVersion: 2
-        x: 464
+        x: 368
         y: 156
         width: 16
         height: 16
@@ -2590,7 +2608,7 @@ TextureImporter:
       name: DG_NewColors_87
       rect:
         serializedVersion: 2
-        x: 480
+        x: 384
         y: 156
         width: 16
         height: 16
@@ -2611,7 +2629,7 @@ TextureImporter:
       name: DG_NewColors_88
       rect:
         serializedVersion: 2
-        x: 496
+        x: 416
         y: 156
         width: 16
         height: 16
@@ -2632,8 +2650,8 @@ TextureImporter:
       name: DG_NewColors_89
       rect:
         serializedVersion: 2
-        x: 16
-        y: 140
+        x: 448
+        y: 156
         width: 16
         height: 16
       alignment: 0
@@ -2653,8 +2671,8 @@ TextureImporter:
       name: DG_NewColors_90
       rect:
         serializedVersion: 2
-        x: 32
-        y: 140
+        x: 464
+        y: 156
         width: 16
         height: 16
       alignment: 0
@@ -2674,8 +2692,8 @@ TextureImporter:
       name: DG_NewColors_91
       rect:
         serializedVersion: 2
-        x: 48
-        y: 140
+        x: 480
+        y: 156
         width: 16
         height: 16
       alignment: 0
@@ -2695,8 +2713,8 @@ TextureImporter:
       name: DG_NewColors_92
       rect:
         serializedVersion: 2
-        x: 80
-        y: 140
+        x: 496
+        y: 156
         width: 16
         height: 16
       alignment: 0
@@ -2716,7 +2734,7 @@ TextureImporter:
       name: DG_NewColors_93
       rect:
         serializedVersion: 2
-        x: 112
+        x: 16
         y: 140
         width: 16
         height: 16
@@ -2737,7 +2755,7 @@ TextureImporter:
       name: DG_NewColors_94
       rect:
         serializedVersion: 2
-        x: 144
+        x: 32
         y: 140
         width: 16
         height: 16
@@ -2758,7 +2776,7 @@ TextureImporter:
       name: DG_NewColors_95
       rect:
         serializedVersion: 2
-        x: 176
+        x: 48
         y: 140
         width: 16
         height: 16
@@ -2779,7 +2797,7 @@ TextureImporter:
       name: DG_NewColors_96
       rect:
         serializedVersion: 2
-        x: 208
+        x: 80
         y: 140
         width: 16
         height: 16
@@ -2800,7 +2818,7 @@ TextureImporter:
       name: DG_NewColors_97
       rect:
         serializedVersion: 2
-        x: 240
+        x: 112
         y: 140
         width: 16
         height: 16
@@ -2821,7 +2839,7 @@ TextureImporter:
       name: DG_NewColors_98
       rect:
         serializedVersion: 2
-        x: 256
+        x: 144
         y: 140
         width: 16
         height: 16
@@ -2842,7 +2860,7 @@ TextureImporter:
       name: DG_NewColors_99
       rect:
         serializedVersion: 2
-        x: 288
+        x: 176
         y: 140
         width: 16
         height: 16
@@ -2863,7 +2881,7 @@ TextureImporter:
       name: DG_NewColors_100
       rect:
         serializedVersion: 2
-        x: 352
+        x: 208
         y: 140
         width: 16
         height: 16
@@ -2884,7 +2902,7 @@ TextureImporter:
       name: DG_NewColors_101
       rect:
         serializedVersion: 2
-        x: 368
+        x: 240
         y: 140
         width: 16
         height: 16
@@ -2905,7 +2923,7 @@ TextureImporter:
       name: DG_NewColors_102
       rect:
         serializedVersion: 2
-        x: 384
+        x: 256
         y: 140
         width: 16
         height: 16
@@ -2926,7 +2944,7 @@ TextureImporter:
       name: DG_NewColors_103
       rect:
         serializedVersion: 2
-        x: 416
+        x: 288
         y: 140
         width: 16
         height: 16
@@ -2947,7 +2965,7 @@ TextureImporter:
       name: DG_NewColors_104
       rect:
         serializedVersion: 2
-        x: 448
+        x: 352
         y: 140
         width: 16
         height: 16
@@ -2972,7 +2990,7 @@ TextureImporter:
       name: DG_NewColors_105
       rect:
         serializedVersion: 2
-        x: 464
+        x: 368
         y: 140
         width: 16
         height: 16
@@ -2996,7 +3014,7 @@ TextureImporter:
       name: DG_NewColors_106
       rect:
         serializedVersion: 2
-        x: 480
+        x: 384
         y: 140
         width: 16
         height: 16
@@ -3020,7 +3038,7 @@ TextureImporter:
       name: DG_NewColors_107
       rect:
         serializedVersion: 2
-        x: 496
+        x: 416
         y: 140
         width: 16
         height: 16
@@ -3045,15 +3063,19 @@ TextureImporter:
       name: DG_NewColors_108
       rect:
         serializedVersion: 2
-        x: 16
-        y: 124
+        x: 448
+        y: 140
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 40b6287003ea763d0800000000000000
@@ -3066,15 +3088,18 @@ TextureImporter:
       name: DG_NewColors_109
       rect:
         serializedVersion: 2
-        x: 32
-        y: 124
+        x: 464
+        y: 140
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: -8, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 2b44f77cbd3b0b370800000000000000
@@ -3087,15 +3112,18 @@ TextureImporter:
       name: DG_NewColors_110
       rect:
         serializedVersion: 2
-        x: 48
-        y: 124
+        x: 480
+        y: 140
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 1}
       tessellationDetail: 0
       bones: []
       spriteID: 1d9eafe8dc6350510800000000000000
@@ -3108,15 +3136,19 @@ TextureImporter:
       name: DG_NewColors_111
       rect:
         serializedVersion: 2
-        x: 240
-        y: 124
+        x: 496
+        y: 140
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 1}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 7550afbcac74a4ad0800000000000000
@@ -3129,7 +3161,7 @@ TextureImporter:
       name: DG_NewColors_112
       rect:
         serializedVersion: 2
-        x: 256
+        x: 16
         y: 124
         width: 16
         height: 16
@@ -3150,7 +3182,7 @@ TextureImporter:
       name: DG_NewColors_113
       rect:
         serializedVersion: 2
-        x: 288
+        x: 32
         y: 124
         width: 16
         height: 16
@@ -3171,7 +3203,7 @@ TextureImporter:
       name: DG_NewColors_114
       rect:
         serializedVersion: 2
-        x: 320
+        x: 48
         y: 124
         width: 16
         height: 16
@@ -3192,7 +3224,7 @@ TextureImporter:
       name: DG_NewColors_115
       rect:
         serializedVersion: 2
-        x: 352
+        x: 240
         y: 124
         width: 16
         height: 16
@@ -3213,7 +3245,7 @@ TextureImporter:
       name: DG_NewColors_116
       rect:
         serializedVersion: 2
-        x: 368
+        x: 256
         y: 124
         width: 16
         height: 16
@@ -3234,7 +3266,7 @@ TextureImporter:
       name: DG_NewColors_117
       rect:
         serializedVersion: 2
-        x: 384
+        x: 288
         y: 124
         width: 16
         height: 16
@@ -3255,7 +3287,7 @@ TextureImporter:
       name: DG_NewColors_118
       rect:
         serializedVersion: 2
-        x: 416
+        x: 320
         y: 124
         width: 16
         height: 16
@@ -3276,7 +3308,7 @@ TextureImporter:
       name: DG_NewColors_119
       rect:
         serializedVersion: 2
-        x: 448
+        x: 352
         y: 124
         width: 16
         height: 16
@@ -3297,7 +3329,7 @@ TextureImporter:
       name: DG_NewColors_120
       rect:
         serializedVersion: 2
-        x: 464
+        x: 368
         y: 124
         width: 16
         height: 16
@@ -3318,7 +3350,7 @@ TextureImporter:
       name: DG_NewColors_121
       rect:
         serializedVersion: 2
-        x: 480
+        x: 384
         y: 124
         width: 16
         height: 16
@@ -3339,7 +3371,7 @@ TextureImporter:
       name: DG_NewColors_122
       rect:
         serializedVersion: 2
-        x: 496
+        x: 416
         y: 124
         width: 16
         height: 16
@@ -3360,8 +3392,8 @@ TextureImporter:
       name: DG_NewColors_123
       rect:
         serializedVersion: 2
-        x: 16
-        y: 108
+        x: 448
+        y: 124
         width: 16
         height: 16
       alignment: 0
@@ -3381,8 +3413,8 @@ TextureImporter:
       name: DG_NewColors_124
       rect:
         serializedVersion: 2
-        x: 32
-        y: 108
+        x: 464
+        y: 124
         width: 16
         height: 16
       alignment: 0
@@ -3402,8 +3434,8 @@ TextureImporter:
       name: DG_NewColors_125
       rect:
         serializedVersion: 2
-        x: 48
-        y: 108
+        x: 480
+        y: 124
         width: 16
         height: 16
       alignment: 0
@@ -3423,8 +3455,8 @@ TextureImporter:
       name: DG_NewColors_126
       rect:
         serializedVersion: 2
-        x: 176
-        y: 108
+        x: 496
+        y: 124
         width: 16
         height: 16
       alignment: 0
@@ -3444,7 +3476,7 @@ TextureImporter:
       name: DG_NewColors_127
       rect:
         serializedVersion: 2
-        x: 208
+        x: 16
         y: 108
         width: 16
         height: 16
@@ -3465,7 +3497,7 @@ TextureImporter:
       name: DG_NewColors_128
       rect:
         serializedVersion: 2
-        x: 240
+        x: 32
         y: 108
         width: 16
         height: 16
@@ -3486,7 +3518,7 @@ TextureImporter:
       name: DG_NewColors_129
       rect:
         serializedVersion: 2
-        x: 256
+        x: 48
         y: 108
         width: 16
         height: 16
@@ -3507,7 +3539,7 @@ TextureImporter:
       name: DG_NewColors_130
       rect:
         serializedVersion: 2
-        x: 288
+        x: 176
         y: 108
         width: 16
         height: 16
@@ -3528,7 +3560,7 @@ TextureImporter:
       name: DG_NewColors_131
       rect:
         serializedVersion: 2
-        x: 320
+        x: 208
         y: 108
         width: 16
         height: 16
@@ -3549,8 +3581,8 @@ TextureImporter:
       name: DG_NewColors_132
       rect:
         serializedVersion: 2
-        x: 80
-        y: 92
+        x: 240
+        y: 108
         width: 16
         height: 16
       alignment: 0
@@ -3570,8 +3602,8 @@ TextureImporter:
       name: DG_NewColors_133
       rect:
         serializedVersion: 2
-        x: 112
-        y: 92
+        x: 256
+        y: 108
         width: 16
         height: 16
       alignment: 0
@@ -3591,8 +3623,8 @@ TextureImporter:
       name: DG_NewColors_134
       rect:
         serializedVersion: 2
-        x: 144
-        y: 92
+        x: 288
+        y: 108
         width: 16
         height: 16
       alignment: 0
@@ -3612,8 +3644,8 @@ TextureImporter:
       name: DG_NewColors_135
       rect:
         serializedVersion: 2
-        x: 16
-        y: 76
+        x: 320
+        y: 108
         width: 16
         height: 16
       alignment: 0
@@ -3633,8 +3665,8 @@ TextureImporter:
       name: DG_NewColors_136
       rect:
         serializedVersion: 2
-        x: 32
-        y: 76
+        x: 80
+        y: 92
         width: 16
         height: 16
       alignment: 0
@@ -3654,8 +3686,8 @@ TextureImporter:
       name: DG_NewColors_137
       rect:
         serializedVersion: 2
-        x: 48
-        y: 76
+        x: 112
+        y: 92
         width: 16
         height: 16
       alignment: 0
@@ -3676,7 +3708,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 76
+        y: 92
         width: 16
         height: 16
       alignment: 0
@@ -3696,7 +3728,7 @@ TextureImporter:
       name: DG_NewColors_139
       rect:
         serializedVersion: 2
-        x: 176
+        x: 16
         y: 76
         width: 16
         height: 16
@@ -3717,7 +3749,7 @@ TextureImporter:
       name: DG_NewColors_140
       rect:
         serializedVersion: 2
-        x: 192
+        x: 32
         y: 76
         width: 16
         height: 16
@@ -3738,7 +3770,7 @@ TextureImporter:
       name: DG_NewColors_141
       rect:
         serializedVersion: 2
-        x: 208
+        x: 48
         y: 76
         width: 16
         height: 16
@@ -3759,7 +3791,7 @@ TextureImporter:
       name: DG_NewColors_142
       rect:
         serializedVersion: 2
-        x: 224
+        x: 144
         y: 76
         width: 16
         height: 16
@@ -3780,7 +3812,7 @@ TextureImporter:
       name: DG_NewColors_143
       rect:
         serializedVersion: 2
-        x: 240
+        x: 176
         y: 76
         width: 16
         height: 16
@@ -3801,7 +3833,7 @@ TextureImporter:
       name: DG_NewColors_144
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 76
         width: 16
         height: 16
@@ -3822,7 +3854,7 @@ TextureImporter:
       name: DG_NewColors_145
       rect:
         serializedVersion: 2
-        x: 272
+        x: 208
         y: 76
         width: 16
         height: 16
@@ -3843,7 +3875,7 @@ TextureImporter:
       name: DG_NewColors_146
       rect:
         serializedVersion: 2
-        x: 288
+        x: 224
         y: 76
         width: 16
         height: 16
@@ -3864,7 +3896,7 @@ TextureImporter:
       name: DG_NewColors_147
       rect:
         serializedVersion: 2
-        x: 304
+        x: 240
         y: 76
         width: 16
         height: 16
@@ -3885,7 +3917,7 @@ TextureImporter:
       name: DG_NewColors_148
       rect:
         serializedVersion: 2
-        x: 320
+        x: 256
         y: 76
         width: 16
         height: 16
@@ -3906,7 +3938,7 @@ TextureImporter:
       name: DG_NewColors_149
       rect:
         serializedVersion: 2
-        x: 336
+        x: 272
         y: 76
         width: 16
         height: 16
@@ -3927,7 +3959,7 @@ TextureImporter:
       name: DG_NewColors_150
       rect:
         serializedVersion: 2
-        x: 352
+        x: 288
         y: 76
         width: 16
         height: 16
@@ -3948,7 +3980,7 @@ TextureImporter:
       name: DG_NewColors_151
       rect:
         serializedVersion: 2
-        x: 368
+        x: 304
         y: 76
         width: 16
         height: 16
@@ -3969,7 +4001,7 @@ TextureImporter:
       name: DG_NewColors_152
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 76
         width: 16
         height: 16
@@ -3990,7 +4022,7 @@ TextureImporter:
       name: DG_NewColors_153
       rect:
         serializedVersion: 2
-        x: 416
+        x: 336
         y: 76
         width: 16
         height: 16
@@ -4011,7 +4043,7 @@ TextureImporter:
       name: DG_NewColors_154
       rect:
         serializedVersion: 2
-        x: 432
+        x: 352
         y: 76
         width: 16
         height: 16
@@ -4032,7 +4064,7 @@ TextureImporter:
       name: DG_NewColors_155
       rect:
         serializedVersion: 2
-        x: 448
+        x: 368
         y: 76
         width: 16
         height: 16
@@ -4053,7 +4085,7 @@ TextureImporter:
       name: DG_NewColors_156
       rect:
         serializedVersion: 2
-        x: 464
+        x: 384
         y: 76
         width: 16
         height: 16
@@ -4074,7 +4106,7 @@ TextureImporter:
       name: DG_NewColors_157
       rect:
         serializedVersion: 2
-        x: 480
+        x: 416
         y: 76
         width: 16
         height: 16
@@ -4095,7 +4127,7 @@ TextureImporter:
       name: DG_NewColors_158
       rect:
         serializedVersion: 2
-        x: 496
+        x: 432
         y: 76
         width: 16
         height: 16
@@ -4116,7 +4148,7 @@ TextureImporter:
       name: DG_NewColors_159
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 76
         width: 16
         height: 16
@@ -4137,7 +4169,7 @@ TextureImporter:
       name: DG_NewColors_160
       rect:
         serializedVersion: 2
-        x: 528
+        x: 464
         y: 76
         width: 16
         height: 16
@@ -4158,7 +4190,7 @@ TextureImporter:
       name: DG_NewColors_161
       rect:
         serializedVersion: 2
-        x: 544
+        x: 480
         y: 76
         width: 16
         height: 16
@@ -4179,7 +4211,7 @@ TextureImporter:
       name: DG_NewColors_162
       rect:
         serializedVersion: 2
-        x: 560
+        x: 496
         y: 76
         width: 16
         height: 16
@@ -4200,8 +4232,8 @@ TextureImporter:
       name: DG_NewColors_163
       rect:
         serializedVersion: 2
-        x: 16
-        y: 60
+        x: 512
+        y: 76
         width: 16
         height: 16
       alignment: 0
@@ -4221,8 +4253,8 @@ TextureImporter:
       name: DG_NewColors_164
       rect:
         serializedVersion: 2
-        x: 32
-        y: 60
+        x: 528
+        y: 76
         width: 16
         height: 16
       alignment: 0
@@ -4242,8 +4274,8 @@ TextureImporter:
       name: DG_NewColors_165
       rect:
         serializedVersion: 2
-        x: 48
-        y: 60
+        x: 544
+        y: 76
         width: 16
         height: 16
       alignment: 0
@@ -4263,8 +4295,8 @@ TextureImporter:
       name: DG_NewColors_166
       rect:
         serializedVersion: 2
-        x: 80
-        y: 60
+        x: 560
+        y: 76
         width: 16
         height: 16
       alignment: 0
@@ -4284,7 +4316,7 @@ TextureImporter:
       name: DG_NewColors_167
       rect:
         serializedVersion: 2
-        x: 112
+        x: 16
         y: 60
         width: 16
         height: 16
@@ -4305,7 +4337,7 @@ TextureImporter:
       name: DG_NewColors_168
       rect:
         serializedVersion: 2
-        x: 144
+        x: 32
         y: 60
         width: 16
         height: 16
@@ -4326,7 +4358,7 @@ TextureImporter:
       name: DG_NewColors_169
       rect:
         serializedVersion: 2
-        x: 320
+        x: 48
         y: 60
         width: 16
         height: 16
@@ -4347,7 +4379,7 @@ TextureImporter:
       name: DG_NewColors_170
       rect:
         serializedVersion: 2
-        x: 336
+        x: 80
         y: 60
         width: 16
         height: 16
@@ -4368,7 +4400,7 @@ TextureImporter:
       name: DG_NewColors_171
       rect:
         serializedVersion: 2
-        x: 352
+        x: 112
         y: 60
         width: 16
         height: 16
@@ -4389,7 +4421,7 @@ TextureImporter:
       name: DG_NewColors_172
       rect:
         serializedVersion: 2
-        x: 368
+        x: 144
         y: 60
         width: 16
         height: 16
@@ -4410,7 +4442,7 @@ TextureImporter:
       name: DG_NewColors_173
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 60
         width: 16
         height: 16
@@ -4431,7 +4463,7 @@ TextureImporter:
       name: DG_NewColors_174
       rect:
         serializedVersion: 2
-        x: 416
+        x: 336
         y: 60
         width: 16
         height: 16
@@ -4452,7 +4484,7 @@ TextureImporter:
       name: DG_NewColors_175
       rect:
         serializedVersion: 2
-        x: 432
+        x: 352
         y: 60
         width: 16
         height: 16
@@ -4473,7 +4505,7 @@ TextureImporter:
       name: DG_NewColors_176
       rect:
         serializedVersion: 2
-        x: 448
+        x: 368
         y: 60
         width: 16
         height: 16
@@ -4494,7 +4526,7 @@ TextureImporter:
       name: DG_NewColors_177
       rect:
         serializedVersion: 2
-        x: 464
+        x: 384
         y: 60
         width: 16
         height: 16
@@ -4515,7 +4547,7 @@ TextureImporter:
       name: DG_NewColors_178
       rect:
         serializedVersion: 2
-        x: 480
+        x: 416
         y: 60
         width: 16
         height: 16
@@ -4536,7 +4568,7 @@ TextureImporter:
       name: DG_NewColors_179
       rect:
         serializedVersion: 2
-        x: 496
+        x: 432
         y: 60
         width: 16
         height: 16
@@ -4557,7 +4589,7 @@ TextureImporter:
       name: DG_NewColors_180
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 60
         width: 16
         height: 16
@@ -4578,7 +4610,7 @@ TextureImporter:
       name: DG_NewColors_181
       rect:
         serializedVersion: 2
-        x: 528
+        x: 464
         y: 60
         width: 16
         height: 16
@@ -4599,7 +4631,7 @@ TextureImporter:
       name: DG_NewColors_182
       rect:
         serializedVersion: 2
-        x: 544
+        x: 480
         y: 60
         width: 16
         height: 16
@@ -4620,7 +4652,7 @@ TextureImporter:
       name: DG_NewColors_183
       rect:
         serializedVersion: 2
-        x: 560
+        x: 496
         y: 60
         width: 16
         height: 16
@@ -4641,8 +4673,8 @@ TextureImporter:
       name: DG_NewColors_184
       rect:
         serializedVersion: 2
-        x: 16
-        y: 44
+        x: 512
+        y: 60
         width: 16
         height: 16
       alignment: 0
@@ -4662,8 +4694,8 @@ TextureImporter:
       name: DG_NewColors_185
       rect:
         serializedVersion: 2
-        x: 32
-        y: 44
+        x: 528
+        y: 60
         width: 16
         height: 16
       alignment: 0
@@ -4683,8 +4715,8 @@ TextureImporter:
       name: DG_NewColors_186
       rect:
         serializedVersion: 2
-        x: 48
-        y: 44
+        x: 544
+        y: 60
         width: 16
         height: 16
       alignment: 0
@@ -4704,8 +4736,8 @@ TextureImporter:
       name: DG_NewColors_187
       rect:
         serializedVersion: 2
-        x: 16
-        y: 12
+        x: 560
+        y: 60
         width: 16
         height: 16
       alignment: 0
@@ -4725,8 +4757,8 @@ TextureImporter:
       name: DG_NewColors_188
       rect:
         serializedVersion: 2
-        x: 48
-        y: 12
+        x: 16
+        y: 44
         width: 16
         height: 16
       alignment: 0
@@ -4746,8 +4778,8 @@ TextureImporter:
       name: DG_NewColors_189
       rect:
         serializedVersion: 2
-        x: 80
-        y: 12
+        x: 32
+        y: 44
         width: 16
         height: 16
       alignment: 0
@@ -4767,8 +4799,8 @@ TextureImporter:
       name: DG_NewColors_190
       rect:
         serializedVersion: 2
-        x: 112
-        y: 12
+        x: 48
+        y: 44
         width: 16
         height: 16
       alignment: 0
@@ -4788,7 +4820,7 @@ TextureImporter:
       name: DG_NewColors_191
       rect:
         serializedVersion: 2
-        x: 144
+        x: 16
         y: 12
         width: 16
         height: 16
@@ -4809,7 +4841,7 @@ TextureImporter:
       name: DG_NewColors_192
       rect:
         serializedVersion: 2
-        x: 176
+        x: 48
         y: 12
         width: 16
         height: 16
@@ -4830,7 +4862,7 @@ TextureImporter:
       name: DG_NewColors_193
       rect:
         serializedVersion: 2
-        x: 208
+        x: 80
         y: 12
         width: 16
         height: 16
@@ -4851,7 +4883,7 @@ TextureImporter:
       name: DG_NewColors_194
       rect:
         serializedVersion: 2
-        x: 240
+        x: 112
         y: 12
         width: 16
         height: 16
@@ -4872,7 +4904,7 @@ TextureImporter:
       name: DG_NewColors_195
       rect:
         serializedVersion: 2
-        x: 272
+        x: 144
         y: 12
         width: 16
         height: 16
@@ -4893,7 +4925,7 @@ TextureImporter:
       name: DG_NewColors_196
       rect:
         serializedVersion: 2
-        x: 304
+        x: 176
         y: 12
         width: 16
         height: 16
@@ -4914,7 +4946,7 @@ TextureImporter:
       name: DG_NewColors_197
       rect:
         serializedVersion: 2
-        x: 352
+        x: 208
         y: 12
         width: 16
         height: 16
@@ -4935,7 +4967,7 @@ TextureImporter:
       name: DG_NewColors_198
       rect:
         serializedVersion: 2
-        x: 368
+        x: 240
         y: 12
         width: 16
         height: 16
@@ -4956,7 +4988,7 @@ TextureImporter:
       name: DG_NewColors_199
       rect:
         serializedVersion: 2
-        x: 384
+        x: 272
         y: 12
         width: 16
         height: 16
@@ -4977,7 +5009,7 @@ TextureImporter:
       name: DG_NewColors_200
       rect:
         serializedVersion: 2
-        x: 400
+        x: 304
         y: 12
         width: 16
         height: 16
@@ -4998,7 +5030,7 @@ TextureImporter:
       name: DG_NewColors_201
       rect:
         serializedVersion: 2
-        x: 416
+        x: 352
         y: 12
         width: 16
         height: 16
@@ -5019,7 +5051,7 @@ TextureImporter:
       name: DG_NewColors_202
       rect:
         serializedVersion: 2
-        x: 432
+        x: 368
         y: 12
         width: 16
         height: 16
@@ -5040,7 +5072,7 @@ TextureImporter:
       name: DG_NewColors_203
       rect:
         serializedVersion: 2
-        x: 448
+        x: 384
         y: 12
         width: 16
         height: 16
@@ -5061,7 +5093,7 @@ TextureImporter:
       name: DG_NewColors_204
       rect:
         serializedVersion: 2
-        x: 464
+        x: 400
         y: 12
         width: 16
         height: 16
@@ -5082,7 +5114,7 @@ TextureImporter:
       name: DG_NewColors_205
       rect:
         serializedVersion: 2
-        x: 480
+        x: 416
         y: 12
         width: 16
         height: 16
@@ -5103,7 +5135,7 @@ TextureImporter:
       name: DG_NewColors_206
       rect:
         serializedVersion: 2
-        x: 496
+        x: 432
         y: 12
         width: 16
         height: 16
@@ -5124,7 +5156,7 @@ TextureImporter:
       name: DG_NewColors_207
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 12
         width: 16
         height: 16
@@ -5145,7 +5177,7 @@ TextureImporter:
       name: DG_NewColors_208
       rect:
         serializedVersion: 2
-        x: 528
+        x: 464
         y: 12
         width: 16
         height: 16
@@ -5158,6 +5190,90 @@ TextureImporter:
       bones: []
       spriteID: d7902698af95180c0800000000000000
       internalID: -4575276813850113667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DG_NewColors_209
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a41dc79faa9f050800000000000000
+      internalID: 5834882780752857683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DG_NewColors_210
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f53b4019b8e83c0800000000000000
+      internalID: -4355390334655307919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DG_NewColors_211
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a6ddb780589c400800000000000000
+      internalID: 344953117954894432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DG_NewColors_212
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da052d2d9570f170800000000000000
+      internalID: 8210191438624131800
       vertices: []
       indices: 
       edges: []
