@@ -22,18 +22,19 @@ public class FalseWallController : GameEventListener
         
     }
 
-    public void DisableWall(){
-        // gameObject.SetActive(false);
+    public void DisableWall()
+    {
         var bounds = FalseWall.cellBounds;
         TileBase[] tileArray = FalseWall.GetTilesBlock(FalseWall.cellBounds);
 
-        foreach (var pos in FalseWall.cellBounds.allPositionsWithin){
-            StartCoroutine(WaitToRemoveTile());
-            FalseWall.SetTile(new Vector3Int(pos.x, pos.y, pos.z), null);
-        }
+        StartCoroutine(WaitToRemoveTile());
     }
 
-    private IEnumerator WaitToRemoveTile(){
-        yield return new WaitForSeconds(1f);
+    private IEnumerator WaitToRemoveTile()
+    {
+        foreach (var pos in FalseWall.cellBounds.allPositionsWithin){
+            FalseWall.SetTile(new Vector3Int(pos.x, pos.y, pos.z), null);
+            yield return new WaitForSeconds(.125f);
+        } 
     }
 }
