@@ -7,6 +7,8 @@ public class ItemController : MonoBehaviour
     public float ItemValue;
     public FloatVariable ItemPickUp;
     // Start is called before the first frame update
+
+    public GameEvent ItemGameEvent;
     void Start()
     {
         
@@ -22,7 +24,10 @@ public class ItemController : MonoBehaviour
         if (other.CompareTag("Player")){
             if (ItemPickUp != null)
                 ItemPickUp.RuntimeValue = ItemValue;
-            
+            if(ItemGameEvent != null){
+                ItemGameEvent.Raise();
+            }
+
             Destroy(gameObject);
         }
     }
