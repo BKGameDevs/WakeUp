@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 41222217}
   - component: {fileID: 41222218}
   - component: {fileID: 41222221}
+  - component: {fileID: 41222223}
+  - component: {fileID: 41222222}
   m_Layer: 0
   m_Name: First Light
   m_TagString: Untagged
@@ -183,7 +185,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2838693360000157988, guid: f2be4b0095c32472cb170e41bb8f3600, type: 3}
+  m_Sprite: {fileID: -4633013239837376153, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,7 +193,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &41222218
@@ -287,6 +289,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!111 &41222222
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41222216}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 115489472a49e4c0fbfc53bcf4ffe32e, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &41222223
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41222216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &42528496
 GameObject:
   m_ObjectHideFlags: 0
@@ -26236,6 +26272,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5528514250262233348, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8298335142436343970, guid: 6c3411b1e543e418c9bcd7e7aa57df21, type: 3}
+    - target: {fileID: 5528514250262233348, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -26250,6 +26290,14 @@ PrefabInstance:
     - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26347,8 +26395,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.84, y: 4.77}
+  m_Offset: {x: 0, y: -0.01948653}
+  m_Size: {x: 0.19, y: 0.32897303}
   m_Direction: 0
 --- !u!4 &561157693 stripped
 Transform:
