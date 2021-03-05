@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4547020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688215636476302157, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+  m_PrefabInstance: {fileID: 768304973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4547023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: aca9400abf2233a41beb19e0328f7461, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UpdateSoftCheckpoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4547024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7ae56e5649bf47048aad034a9f7f810a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UpdateHardCheckpoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &41222216
 GameObject:
   m_ObjectHideFlags: 0
@@ -26120,6 +26181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f7d3f16e3cf41a8953a0e92d489cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckpointEvent: {fileID: 0}
 --- !u!61 &337116075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26535,6 +26597,22 @@ PrefabInstance:
       propertyPath: SanityBar
       value: 
       objectReference: {fileID: 803389913}
+    - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+      propertyPath: _HardCheckpoint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+      propertyPath: _HardCheckpoint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+      propertyPath: _SoftCheckpoint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+      propertyPath: _SoftCheckpoint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7688215636476302157, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -35839,6 +35917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f7d3f16e3cf41a8953a0e92d489cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckpointEvent: {fileID: 11400000, guid: 7ae56e5649bf47048aad034a9f7f810a, type: 2}
 --- !u!61 &1131957808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36185,6 +36264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608539308}
   - component: {fileID: 1608539307}
+  - component: {fileID: 1608539309}
   m_Layer: 0
   m_Name: Soft Checkpoint 1
   m_TagString: Untagged
@@ -36232,6 +36312,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608539309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608539306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f7d3f16e3cf41a8953a0e92d489cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CheckpointEvent: {fileID: 11400000, guid: aca9400abf2233a41beb19e0328f7461, type: 2}
 --- !u!1001 &1685913982
 PrefabInstance:
   m_ObjectHideFlags: 0
