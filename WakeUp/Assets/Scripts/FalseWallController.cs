@@ -22,7 +22,7 @@ public class FalseWallController : GameEventListener
         
     }
 
-    public void DisableWall()
+    public void DisableWall(object value)
     {
         var bounds = FalseWall.cellBounds;
         TileBase[] tileArray = FalseWall.GetTilesBlock(FalseWall.cellBounds);

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     
     public PlayerController Player;
     public SanityBar SanityBar;
-
+    public Vector3 _SoftCheckpoint, _HardCheckpoint;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        
         // if (Player != null) 
         //     Player.SanityReduced += (player, currentSanity) => {
         //         if (SanityBar != null)
@@ -30,5 +31,17 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void UpdateHardCheckpoint(object newPos) {
+        _HardCheckpoint = (Vector3) newPos;
+        Debug.Log((Vector3) newPos);
+        // Player.UpdateCheckpoint();
+    }
+
+    public void UpdateSoftCheckpoint(object newPos) {
+        _SoftCheckpoint = (Vector3) newPos;
+        Debug.Log((Vector3) newPos);
+        // Player.UpdateCheckpoint();
     }
 }

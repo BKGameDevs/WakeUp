@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillZoneController : MonoBehaviour
 {
     public PlayerController Player;
+    public GameEvent KillzoneEvent;
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
@@ -14,6 +15,7 @@ public class KillZoneController : MonoBehaviour
 
     private IEnumerator WaitAndReset(){
         yield return new WaitForSeconds(0.25f);
-        Player?.ResetPlayer();
+        KillzoneEvent?.Raise();
+        // Player?.ResetPlayer();
     }
 }

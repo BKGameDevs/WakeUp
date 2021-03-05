@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CheckpointController : MonoBehaviour
 {
+    public GameEvent CheckpointEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +21,9 @@ public class CheckpointController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            var player = other.gameObject.GetComponent<PlayerController>();   
-            player.UpdateCheckpoint(transform.position);
-            
+            CheckpointEvent?.Raise(transform.position);
+            // var player = other.gameObject.GetComponent<PlayerController>();   
+            // player.UpdateCheckpoint(transform.position); 
         }
     }
 }
