@@ -22,6 +22,7 @@ public class CheckpointController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
             CheckpointEvent?.Raise(transform.position);
+            
             // var player = other.gameObject.GetComponent<PlayerController>();   
             // player.UpdateCheckpoint(transform.position); 
         }

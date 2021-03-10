@@ -25,17 +25,19 @@ public class PlayerController : MonoBehaviour
     private int MAX_SANITY = 100;
     public int SanityReduceRate = 1;
     public int SanityReduceInterval = 5;
-    private int CurrentInterval = 1;
     private float _CurrentSanity;
     private float _StartTime;
     private float _ElapsedTime;
 
     private bool _IsGrounded;
-    private Vector3 _OriginalPosition;
+
+    private Vector3 _SoftCheckpoint;
+    private Vector3 _HardCheckpoint;
+    // private Vector3 _OriginalPosition;
     void Start()
     {
         //Set position of transform
-        _OriginalPosition = _Position = transform.position;
+        // _OriginalPosition = _Position = transform.position;
         _RigidBody = GetComponent<Rigidbody2D>();
         _SpriteRenderer = GetComponent<SpriteRenderer>();
         _Collider = GetComponent<Collider2D>();
@@ -145,14 +147,38 @@ public class PlayerController : MonoBehaviour
         return hit.collider != null;
     }
 
+    public void OnKillzoneEnter(){
+        
+        ReduceSanity(25);
+        if(_CurrentSanity <= 0){
+            ResetSanity(100);
+            ResetPlayer(_HardCheckpoint);
+        } else {
+            ResetPlayer(_SoftCheckpoint);
+        }
+    }
+
     private void ReduceSanity(int amount){
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity < 0 ? 0 : _CurrentSanity;
     }
 
-    public void ResetPlayer() => transform.position = _OriginalPosition;
-
-    public void UpdateCheckpoint(Vector3 newPos){
-        _OriginalPosition = newPos;
+    private void ResetSanity(int amount){
+        _CurrentSanity = amount;
     }
+
+
+    public void UpdateHardCheckpoint(object newPos) {
+        _HardCheckpoint = (Vector3) newPos;
+    }
+
+    public void UpdateSoftCheckpoint(object newPos) {
+        _SoftCheckpoint = (Vector3) newPos;
+    }
+
+    public void ResetPlayer(Vector3 resetPos){
+        transform.position = resetPos;
+    }
+    
+
 }

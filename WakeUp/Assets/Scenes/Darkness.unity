@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,67 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &4547020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7688215636476302157, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
-  m_PrefabInstance: {fileID: 768304973}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4547023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4547020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: aca9400abf2233a41beb19e0328f7461, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: UpdateSoftCheckpoint
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &4547024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4547020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7ae56e5649bf47048aad034a9f7f810a, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: UpdateHardCheckpoint
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &41222216
 GameObject:
   m_ObjectHideFlags: 0
@@ -26397,6 +26336,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 561157688}
+    - target: {fileID: 4596790717698063039, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
+      propertyPath: KillzoneEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
 --- !u!1001 &561157686
@@ -26436,11 +26379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.28
+      value: -27.2
       objectReference: {fileID: 0}
     - target: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26538,6 +26481,90 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
   m_PrefabInstance: {fileID: 561157686}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &561157694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561157687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 561157688}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnKillzoneEnter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &561157695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561157687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7ae56e5649bf47048aad034a9f7f810a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 561157688}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: UpdateHardCheckpoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &561157696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561157687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: aca9400abf2233a41beb19e0328f7461, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 561157688}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: UpdateSoftCheckpoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &768304973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26599,19 +26626,27 @@ PrefabInstance:
       objectReference: {fileID: 803389913}
     - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
       propertyPath: _HardCheckpoint.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
       propertyPath: _HardCheckpoint.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+      propertyPath: _HardCheckpoint.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
       propertyPath: _SoftCheckpoint.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
       propertyPath: _SoftCheckpoint.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688215636476302156, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
+      propertyPath: _SoftCheckpoint.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7688215636476302157, guid: d30d3eef261f8c345a92ed1367889af3, type: 3}
       propertyPath: m_Name
@@ -35101,7 +35136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939035506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -27.28, z: -10}
+  m_LocalPosition: {x: -0.5, y: -27.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1194749051}
@@ -36795,6 +36830,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 561157688}
+    - target: {fileID: 4596790717698063039, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
+      propertyPath: KillzoneEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
 --- !u!1 &1732124053
@@ -37040,6 +37079,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 561157688}
+    - target: {fileID: 4596790717698063039, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
+      propertyPath: KillzoneEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
 --- !u!1 &4231868947502921158
@@ -37187,7 +37230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4231868947502921158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -27.28, z: -10}
+  m_LocalPosition: {x: -0.5, y: -27.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 841692087}
@@ -37252,6 +37295,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 561157688}
+    - target: {fileID: 4596790717698063039, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
+      propertyPath: KillzoneEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23e0cdd8a1a843a888809ebfdd7a7b6, type: 3}
 --- !u!1001 &4831239666151825096
