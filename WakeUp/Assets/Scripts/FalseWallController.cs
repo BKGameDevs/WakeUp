@@ -8,9 +8,12 @@ public class FalseWallController : GameEventListener
     // Start is called before the first frame update
 
     private Tilemap FalseWall;
+    private AudioSource SoundEffect;
+    public int rowCount = 5;
 
     void Start()
     {
+        SoundEffect = GetComponent<AudioSource>();
         FalseWall = GetComponent<Tilemap>();
         FalseWall.CompressBounds();
         Response.AddListener(DisableWall);
@@ -32,9 +35,16 @@ public class FalseWallController : GameEventListener
 
     private IEnumerator WaitToRemoveTile()
     {
-        foreach (var pos in FalseWall.cellBounds.allPositionsWithin){
+        var count = 0;
+        var cellBounds = FalseWall.cellBounds.allPositionsWithin;
+        foreach (var pos in cellBounds){
             FalseWall.SetTile(new Vector3Int(pos.x, pos.y, pos.z), null);
+            if (count % rowCount == 0) {
+                SoundEffect.Play();
+            }
+            count++;
             yield return new WaitForSeconds(.125f);
         } 
+
     }
 }

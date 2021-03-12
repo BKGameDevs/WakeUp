@@ -70,5 +70,13 @@ namespace WakeUp.Constants
             }
         }
 
+        public static bool IsPressingInteract
+        {
+            get
+            {
+                return Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.F);
+            }
+        }
+
     }
 }

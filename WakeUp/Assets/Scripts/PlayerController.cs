@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
 
         if (ItemPickUp != null)
             ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
+
+        _HardCheckpoint = transform.position;
     }
 
     private void ItemPickUp_PropertyChanged(object sender, EventArgs args) {
@@ -95,19 +97,8 @@ public class PlayerController : MonoBehaviour
 
         if (PlayerSanity != null)
             PlayerSanity.RuntimeValue = _CurrentSanity;
-        // if (IsPressingEnter)
-        //     ReduceSanity(1);
     }
 
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     Debug.Log(collision);
-    //     if (collision.contacts.Any(x => x.normal.x == 0 && x.normal.y == 1))
-    //     {
-    //         Debug.Log("Hello");
-    //         _IsGrounded = true;
-    //     }
-    // }
 
     private void FixedUpdate()
     {
@@ -150,10 +141,11 @@ public class PlayerController : MonoBehaviour
     public void OnKillzoneEnter(){
         
         ReduceSanity(25);
-        if(_CurrentSanity <= 0){
-            ResetSanity(100);
-            ResetPlayer(_HardCheckpoint);
+        if(IsPlayerDead()){
+            // Debug.Log("Player is dead");
+            ResetPlayerOnDeath();
         } else {
+            // Debug.Log("Player is damaged");
             ResetPlayer(_SoftCheckpoint);
         }
     }
@@ -161,12 +153,23 @@ public class PlayerController : MonoBehaviour
     private void ReduceSanity(int amount){
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity < 0 ? 0 : _CurrentSanity;
+        if (IsPlayerDead()) {
+            // Debug.Log("Player is dead");
+            ResetPlayerOnDeath();
+        }
+    }
+    private void ResetPlayerOnDeath() {
+        ResetPlayer(_HardCheckpoint);
+        ResetSanity(100);
+    }
+
+    private bool IsPlayerDead(){
+        return _CurrentSanity <= 0;
     }
 
     private void ResetSanity(int amount){
         _CurrentSanity = amount;
     }
-
 
     public void UpdateHardCheckpoint(object newPos) {
         _HardCheckpoint = (Vector3) newPos;
