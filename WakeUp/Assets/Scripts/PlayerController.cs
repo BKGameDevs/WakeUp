@@ -152,9 +152,8 @@ public class PlayerController : MonoBehaviour
 
     private void ReduceSanity(int amount){
         _CurrentSanity -= amount;
-        _CurrentSanity = _CurrentSanity < 0 ? 0 : _CurrentSanity;
+        _CurrentSanity = _CurrentSanity <= 0 ? 0 : _CurrentSanity;
         if (IsPlayerDead()) {
-            // Debug.Log("Player is dead");
             ResetPlayerOnDeath();
         }
     }
