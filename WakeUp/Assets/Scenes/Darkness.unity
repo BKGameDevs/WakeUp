@@ -26614,6 +26614,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: d3cce46f63bbcbd439636638b307cb85, type: 2}
     - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
+      propertyPath: OnPlayerDeath
+      value: 
+      objectReference: {fileID: 11400000, guid: ebe8f091408145a4a967e717f7820104, type: 2}
+    - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
+      propertyPath: OnPlayerDamage
+      value: 
+      objectReference: {fileID: 11400000, guid: b26b40f6a0e6ce94a8f5eec0001ae45b, type: 2}
+    - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: SanityReduceRate
       value: 5
       objectReference: {fileID: 0}

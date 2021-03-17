@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 _SoftCheckpoint;
     private Vector3 _HardCheckpoint;
+
+    public GameEvent OnPlayerDeath;
+    public GameEvent OnPlayerDamage;
     // private Vector3 _OriginalPosition;
     void Start()
     {
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour
             ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
 
         _HardCheckpoint = transform.position;
+
     }
 
     private void ItemPickUp_PropertyChanged(object sender, EventArgs args) {
@@ -138,23 +142,19 @@ public class PlayerController : MonoBehaviour
         return hit.collider != null;
     }
 
-    public void OnKillzoneEnter(){
-        
+    public void OnKillzoneEnter(){ 
+        ResetPlayer(_SoftCheckpoint);
         ReduceSanity(25);
-        if(IsPlayerDead()){
-            // Debug.Log("Player is dead");
-            ResetPlayerOnDeath();
-        } else {
-            // Debug.Log("Player is damaged");
-            ResetPlayer(_SoftCheckpoint);
-        }
     }
 
     private void ReduceSanity(int amount){
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity <= 0 ? 0 : _CurrentSanity;
         if (IsPlayerDead()) {
+            OnPlayerDeath?.Raise();
             ResetPlayerOnDeath();
+        } else {
+            OnPlayerDamage?.Raise();
         }
     }
     private void ResetPlayerOnDeath() {

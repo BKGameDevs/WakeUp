@@ -74,7 +74,7 @@ namespace WakeUp.Constants
         {
             get
             {
-                return Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.F);
+                return Input.GetKeyUp(KeyCode.I) || Input.GetKeyUp(KeyCode.X) || Input.GetKeyUp(KeyCode.F);
             }
         }
 
