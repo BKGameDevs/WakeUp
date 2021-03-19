@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    
+
     public PlayerController Player;
     public SanityBar SanityBar;
+
+    internal bool KeyObtained { get; private set;}
     // private Vector3 _SoftCheckpoint;
     // private Vector3 _HardCheckpoint;
 
@@ -48,4 +50,9 @@ public class GameManager : MonoBehaviour
     // public void ResetPlayer(){
     //     Player.ResetPlayer(_SoftCheckpoint);
     // }
+
+    public void SetKeyObtained()
+    {
+        KeyObtained = true;
+    }
 }

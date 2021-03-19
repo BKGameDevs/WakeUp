@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private float _ElapsedTime;
 
     private bool _IsGrounded;
+    private bool _IsInteracting;
 
     private Vector3 _SoftCheckpoint;
     private Vector3 _HardCheckpoint;
@@ -65,7 +66,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_IsInteracting)
+            return;
+
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
@@ -178,9 +181,14 @@ public class PlayerController : MonoBehaviour
         _SoftCheckpoint = (Vector3) newPos;
     }
 
-    public void ResetPlayer(Vector3 resetPos){
+    public void ResetPlayer(Vector3 resetPos) {
         transform.position = resetPos;
     }
-    
+
+    public void SetInteract(object value) {
+        _IsInteracting = (bool)value;
+        if (!_IsInteracting)
+            _StartTime = _ElapsedTime;
+    }
 
 }
