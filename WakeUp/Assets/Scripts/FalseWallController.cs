@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class FalseWallController : GameEventListener
+public class FalseWallController : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -16,7 +16,6 @@ public class FalseWallController : GameEventListener
         SoundEffect = GetComponent<AudioSource>();
         FalseWall = GetComponent<Tilemap>();
         FalseWall.CompressBounds();
-        Response.AddListener(DisableWall);
     }
 
     // Update is called once per frame

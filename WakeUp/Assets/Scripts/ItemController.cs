@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     public float ItemValue;
-    public FloatVariable ItemPickUp;
     // Start is called before the first frame update
 
     public GameEvent ItemGameEvent;
@@ -22,10 +21,8 @@ public class ItemController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            if (ItemPickUp != null)
-                ItemPickUp.RuntimeValue = ItemValue;
             if(ItemGameEvent != null){
-                ItemGameEvent.Raise();
+                ItemGameEvent.Raise(ItemValue);
             }
 
             Destroy(gameObject);

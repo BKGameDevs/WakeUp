@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     // private Vector3 _HardCheckpoint;
 
     // Start is called before the first frame update
+
+    public GameEvent OnLevelStart;
     void Start()
     {
         if (Instance == null)
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-
+        OnLevelStart?.Raise();
         // if (Player != null) 
         //     Player.SanityReduced += (player, currentSanity) => {
         //         if (SanityBar != null)

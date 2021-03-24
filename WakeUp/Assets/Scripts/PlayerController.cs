@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
 
     public FloatVariable PlayerSanity;
-    public FloatVariable ItemPickUp;
+    //public FloatVariable ItemPickUp;
 
     private int MAX_SANITY = 100;
     public int SanityReduceRate = 1;
@@ -50,18 +50,18 @@ public class PlayerController : MonoBehaviour
         _CurrentSanity = MAX_SANITY;
         _StartTime = Time.fixedTime;
 
-        if (ItemPickUp != null)
-            ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
+        //if (ItemPickUp != null)
+        //    ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
 
         _HardCheckpoint = transform.position;
 
     }
 
-    private void ItemPickUp_PropertyChanged(object sender, EventArgs args) {
-        if (ItemPickUp.RuntimeValue > 0)
-            _CurrentSanity += ItemPickUp.RuntimeValue;
-        ItemPickUp.RuntimeValue = 0;
-    }
+    //private void ItemPickUp_PropertyChanged(object sender, EventArgs args) {
+    //    if (ItemPickUp.RuntimeValue > 0)
+    //        _CurrentSanity += ItemPickUp.RuntimeValue;
+    //    ItemPickUp.RuntimeValue = 0;
+    //}
 
     // Update is called once per frame
     void Update()
@@ -147,29 +147,31 @@ public class PlayerController : MonoBehaviour
 
     public void OnKillzoneEnter(){ 
         ResetPlayer(_SoftCheckpoint);
-        ReduceSanity(25);
+        ReduceSanity(25f);
     }
 
-    private void ReduceSanity(int amount){
+
+    private void ReduceSanity(float amount){
         _CurrentSanity -= amount;
-        _CurrentSanity = _CurrentSanity <= 0 ? 0 : _CurrentSanity;
+        _CurrentSanity = _CurrentSanity <= 0f ? 0f : _CurrentSanity;
         if (IsPlayerDead()) {
             OnPlayerDeath?.Raise();
             ResetPlayerOnDeath();
         } else {
+            //Will be used by other systems later
             OnPlayerDamage?.Raise();
         }
     }
     private void ResetPlayerOnDeath() {
         ResetPlayer(_HardCheckpoint);
-        ResetSanity(100);
+        ResetSanity(100f);
     }
 
     private bool IsPlayerDead(){
-        return _CurrentSanity <= 0;
+        return _CurrentSanity <= 0f;
     }
 
-    private void ResetSanity(int amount){
+    private void ResetSanity(float amount){
         _CurrentSanity = amount;
     }
 
@@ -189,6 +191,12 @@ public class PlayerController : MonoBehaviour
         _IsInteracting = (bool)value;
         if (!_IsInteracting)
             _StartTime = _ElapsedTime;
+    }
+
+    public void CouragePickedUp(object value)
+    {
+        _CurrentSanity += (float)value;
+        _CurrentSanity = _CurrentSanity > MAX_SANITY ? MAX_SANITY : _CurrentSanity;
     }
 
 }
