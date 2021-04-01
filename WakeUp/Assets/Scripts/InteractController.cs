@@ -30,16 +30,17 @@ public class InteractController : MonoBehaviour
 
             if (IsPressingInteract)
             {
-                if (GameManager.Instance.KeyObtained)
-                {
-                    //Unlock exit by triggering event that DoorController picks up
-                    //Once DoorController finishes trigger interact
+                //if (GameManager.Instance.KeyObtained)
+                //{
+                //    //Unlock exit by triggering event that DoorController picks up
+                //    //Once DoorController finishes trigger interact
 
-                    Prompt.text = "Press X to Enter next level";
-                }
+                //    Prompt.text = "Press X to Enter next level";
+                //}
 
 
-                else if (!isOpen)
+                //else 
+                if (!isOpen)
                     // Debug.Log("User Interact");
                     OnInteract?.Raise(true);
 
@@ -49,6 +50,11 @@ public class InteractController : MonoBehaviour
             {
                 // Debug.Log("User Interact");
                 OnInteract?.Raise(false);
+
+                if (GameManager.Instance.KeyObtained)
+                {
+                    Prompt.text = "Press X to Enter next section";
+                }
             }
 
         }

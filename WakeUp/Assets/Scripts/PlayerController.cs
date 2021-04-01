@@ -25,12 +25,14 @@ public class PlayerController : MonoBehaviour
     private int MAX_SANITY = 100;
     public int SanityReduceRate = 1;
     public int SanityReduceInterval = 5;
+    public float RespawnDelay = 1f;
     private float _CurrentSanity;
     private float _StartTime;
     private float _ElapsedTime;
 
     private bool _IsGrounded;
     private bool _IsInteracting;
+    public bool UpdateDisabled { get { return _IsInteracting || IsPlayerDead(); } }
 
     private Vector3 _SoftCheckpoint;
     private Vector3 _HardCheckpoint;
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_IsInteracting)
+        if (UpdateDisabled)
             return;
 
         // Setting bool values with conditionals to check if layer is moving left or right
@@ -155,14 +157,16 @@ public class PlayerController : MonoBehaviour
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity <= 0f ? 0f : _CurrentSanity;
         if (IsPlayerDead()) {
-            OnPlayerDeath?.Raise();
-            ResetPlayerOnDeath();
+            OnPlayerDeath?.Raise(1.5f); //TODO: Find some better solution to this
+            StartCoroutine(ResetPlayerOnDeath());
         } else {
             //Will be used by other systems later
             OnPlayerDamage?.Raise();
         }
     }
-    private void ResetPlayerOnDeath() {
+    private IEnumerator ResetPlayerOnDeath() {
+        yield return new WaitForSeconds(RespawnDelay);
+
         ResetPlayer(_HardCheckpoint);
         ResetSanity(100f);
     }
