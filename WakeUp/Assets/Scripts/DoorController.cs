@@ -2,27 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : InteractController, IHasOverlayText
 {
     private Animator _DoorAnimator;
-    // Start is called before the first frame update
-    void Start()
+    private bool _IsDoorOpen;
+
+    private string _OverlayText;
+    protected override void Initialize()
     {
+        base.Initialize();
         _DoorAnimator = GetComponent<Animator>();
     }
 
-    public void InvokeOpenDoor(object value)
+    public void SetOverlayText(string text)
     {
-        var isOpen = (bool)value;
-
-        if (!isOpen && GameManager.Instance.KeyObtained)
-            StartCoroutine(OpenDoor());
+        _OverlayText = text;
     }
 
-    public IEnumerator OpenDoor()
+    protected override void OnInteractChanged()
     {
-        yield return new WaitForSeconds(0.25f);
+        base.OnInteractChanged();
+        if (IsInteracting)
+        {
+            if (!_IsDoorOpen)
+            {
+                OverlayController.Instance.Open(_OverlayText);
+            }
+            else
+            {
+                //Go to next section
+            }
+        }
+        else if (!IsInteracting) //Closed overlay
+        {
+            OverlayController.Instance.Close();
+            if (GameManager.Instance.KeyObtained)
+            {
+                this.StartTimedAction(null, OpenDoor, 0.25f);
+                Prompt.text = "Press X to Enter next section";
+            }
+        }
+    }
 
+    protected override bool StopInteraction()
+    {
+        //TODO: Figure out how to Start and Stop interaction not using X and ESC in certain cases
+
+        return base.StopInteraction();
+    }
+
+    private void OpenDoor()
+    {
+        _IsDoorOpen = true;
         _DoorAnimator.SetTrigger("Open");
     }
 }

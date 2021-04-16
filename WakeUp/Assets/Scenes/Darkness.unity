@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -36636,7 +36636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: ~Press [ESC] to Close~
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 19d11c06d2762044da82fd4e0fc51787, type: 2}
   m_sharedMaterial: {fileID: 7178850536735696350, guid: 19d11c06d2762044da82fd4e0fc51787, type: 2}
@@ -37398,7 +37398,6 @@ GameObject:
   - component: {fileID: 1131957810}
   - component: {fileID: 1131957808}
   - component: {fileID: 1131957807}
-  - component: {fileID: 1131957809}
   - component: {fileID: 1131957812}
   - component: {fileID: 1131957813}
   - component: {fileID: 1131957814}
@@ -37448,21 +37447,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.625, y: 1.9375}
   m_EdgeRadius: 0
---- !u!114 &1131957809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131957806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5c756364132cc41bb8e7cc28a10b98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract: {fileID: 11400000, guid: ba86ed4130b5bf143aebd3206e7e3b79, type: 2}
-  Prompt: {fileID: 330818981}
-  OverlayOpen: {fileID: 11400000, guid: 600b14807adb4b94e8ab2520ea76a9f3, type: 2}
 --- !u!212 &1131957810
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37550,7 +37534,7 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1131957809}
+        - m_Target: {fileID: 1131957814}
           m_TargetAssemblyTypeName: InteractController, Assembly-CSharp
           m_MethodName: SetPromptText
           m_Mode: 5
@@ -37562,11 +37546,24 @@ MonoBehaviour:
             m_StringArgument: Press 'X' to Interact
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1131957814}
+          m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+          m_MethodName: SetOverlayText
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: You do not have the Key Flame. You need the Key Flame
+              to open the door.
+            m_BoolArgument: 0
+          m_CallState: 2
   - Event: {fileID: 11400000, guid: e55db45f826f74e8ba3136826014edba, type: 2}
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1131957809}
+        - m_Target: {fileID: 1131957814}
           m_TargetAssemblyTypeName: InteractController, Assembly-CSharp
           m_MethodName: SetPromptText
           m_Mode: 5
@@ -37578,20 +37575,16 @@ MonoBehaviour:
             m_StringArgument: Press 'X' to Unlock
             m_BoolArgument: 0
           m_CallState: 2
-  - Event: {fileID: 11400000, guid: ba86ed4130b5bf143aebd3206e7e3b79, type: 2}
-    Response:
-      m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 1131957814}
           m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
-          m_MethodName: InvokeOpenDoor
-          m_Mode: 0
+          m_MethodName: SetOverlayText
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Press 'X' to Unlock
+            m_StringArgument: You inserted the Key Flame. You are permitted to continue.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!95 &1131957813
@@ -37625,6 +37618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8520041d9227e2e429e197a5b21b9178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnInteract: {fileID: 11400000, guid: ba86ed4130b5bf143aebd3206e7e3b79, type: 2}
+  Prompt: {fileID: 330818981}
 --- !u!1 &1194749050
 GameObject:
   m_ObjectHideFlags: 3
@@ -38373,9 +38368,6 @@ GameObject:
   - component: {fileID: 1687822586}
   - component: {fileID: 1687822587}
   - component: {fileID: 1687822589}
-  - component: {fileID: 1687822588}
-  - component: {fileID: 1687822590}
-  - component: {fileID: 1687822591}
   m_Layer: 5
   m_Name: Overlay
   m_TagString: Untagged
@@ -38497,48 +38489,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1687822588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687822581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 399c4399c38b65a4595f4a3ac155e387, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1687822589}
-        m_TargetAssemblyTypeName: InteractOverlayController, Assembly-CSharp
-        m_MethodName: UpdateMainText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: You do not have the Key Flame. You need the Key Flame
-            to open the door.
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1687822589}
-        m_TargetAssemblyTypeName: InteractOverlayController, Assembly-CSharp
-        m_MethodName: UpdateClosingText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ~Press [ESC] to Close~
-          m_BoolArgument: 0
-        m_CallState: 2
-  GameEventResponses: []
 --- !u!114 &1687822589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38553,77 +38503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainText: {fileID: 412056890}
   ClosingText: {fileID: 1078794005}
-  OverlayOpen: {fileID: 11400000, guid: 600b14807adb4b94e8ab2520ea76a9f3, type: 2}
---- !u!114 &1687822590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687822581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: e55db45f826f74e8ba3136826014edba, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1687822589}
-        m_TargetAssemblyTypeName: InteractOverlayController, Assembly-CSharp
-        m_MethodName: UpdateMainText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: You inserted the Key Flame. You are permitted to continue.
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1687822589}
-        m_TargetAssemblyTypeName: InteractOverlayController, Assembly-CSharp
-        m_MethodName: UpdateClosingText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ~Press [ESC] to Close~
-          m_BoolArgument: 0
-        m_CallState: 2
-  GameEventResponses: []
---- !u!114 &1687822591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687822581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: ba86ed4130b5bf143aebd3206e7e3b79, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1687822589}
-        m_TargetAssemblyTypeName: InteractOverlayController, Assembly-CSharp
-        m_MethodName: SetOverlayState
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  GameEventResponses: []
 --- !u!1 &1711172302
 GameObject:
   m_ObjectHideFlags: 0

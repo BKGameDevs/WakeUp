@@ -11,55 +11,60 @@ public class InteractController : MonoBehaviour
     public GameEvent OnInteract;
     //public GameObject Prompt;
     public TextMeshProUGUI Prompt;
-    public BoolVariable OverlayOpen;
+
     private bool InArea;
+    private bool _IsInteracting;
+    public bool IsInteracting
+    {
+        get { return _IsInteracting; }
+        protected set
+        {
+            if (_IsInteracting != value)
+            {
+                _IsInteracting = value;
+                OnInteractChanged();
+            }
+        }
+
+    }
     // Start is called before the first frame update
     void Start()
     {
-        InArea = false;
+        Initialize();
+    }
 
+    protected virtual void Initialize()
+    {
+        InArea = false;
+    }
+
+    protected virtual bool StopInteraction()
+    {
+        return IsPressingEscape;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var isOpen = OverlayOpen.RuntimeValue;
-
         if (InArea)
         {
-
-            if (IsPressingInteract)
+            if (IsPressingInteract && !IsInteracting)
             {
-                //if (GameManager.Instance.KeyObtained)
-                //{
-                //    //Unlock exit by triggering event that DoorController picks up
-                //    //Once DoorController finishes trigger interact
-
-                //    Prompt.text = "Press X to Enter next level";
-                //}
-
-
-                //else 
-                if (!isOpen)
-                    // Debug.Log("User Interact");
-                    OnInteract?.Raise(true);
-
-
+                IsInteracting = true;
             }
-            if (IsPressingEscape && isOpen)
+            if (StopInteraction() && IsInteracting)
             {
-                // Debug.Log("User Interact");
-                OnInteract?.Raise(false);
-
-                if (GameManager.Instance.KeyObtained)
-                {
-                    Prompt.text = "Press X to Enter next section";
-                }
+                IsInteracting = false;
             }
 
         }
 
-        Prompt.enabled = !isOpen && InArea;
+        Prompt.enabled = !IsInteracting && InArea;
+    }
+
+    protected virtual void OnInteractChanged()
+    {
+        OnInteract?.Raise(IsInteracting);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
