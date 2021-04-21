@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
             _IsGrounded = false;
             // _RigidBody.velocity = transform.up * _JumpForce; /* jump is more realstic with this one, but doesn't work perfectly with boxcast */
             //_RigidBody.velocity = new Vector2(0, _JumpForce);
+            _RigidBody.velocity = Vector2.zero;
             _RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
         }
 
