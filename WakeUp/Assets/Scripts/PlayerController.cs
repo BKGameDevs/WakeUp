@@ -83,14 +83,18 @@ public class PlayerController : MonoBehaviour
             _SpriteRenderer.flipX = _Horizontal < 0;
 
 
-        if (_Vertical > 0 && _IsGrounded)
-            _Jump = true;
+        if (_Vertical > 0 && _IsGrounded) 
+        {
+            _Jumping = _Jump = true;
+        }
+        
         //else if (_IsGrounded && _Jumping)
         //{
         //    _Jumping = false;
         //    _Animator.SetBool("Jumping", false);
         //}
-        _Animator.SetBool("Jumping", !_IsGrounded);
+
+        _Animator.SetBool("Jumping", !_IsGrounded && _Jumping);
 
         if (_Horizontal != 0){
             _StartTime = _ElapsedTime;
@@ -111,7 +115,14 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         _ElapsedTime = Time.fixedTime;
+
+        var wasGrounded = _IsGrounded;
+
         _IsGrounded = IsGrounded();
+
+        if (!wasGrounded && _IsGrounded)
+            _Jumping = false;
+
         Move();
     }
 
@@ -134,7 +145,7 @@ public class PlayerController : MonoBehaviour
     {
         var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
         var size = _Collider.bounds.size;
-        var newSize = new Vector3(size.x / 2, extraLength, size.z);
+        var newSize = new Vector3(size.x, extraLength, size.z);
         var origin = _Collider.bounds.center - new Vector3(0, size.y / 2, 0);
         RaycastHit2D hit = Physics2D.BoxCast(origin, newSize, 0f, Vector2.down, extraLength, layerMask);
 
