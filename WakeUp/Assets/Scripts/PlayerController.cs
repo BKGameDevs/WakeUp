@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float Speed = 5;
     public float _JumpForce = 5;
     private bool _Jump;
+    private bool _Jumping;
     private Rigidbody2D _RigidBody;
     private SpriteRenderer _SpriteRenderer;
     private Collider2D _Collider;
@@ -71,26 +72,28 @@ public class PlayerController : MonoBehaviour
         if (UpdateDisabled)
             return;
 
+        _IsGrounded = IsGrounded();
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
-        if(_Horizontal != 0) {
-            // Debug.Log(_Horizontal);
-        }
         
         _Vertical = IsPressingDown ? -1 : ((IsPressingUp || IsPressingSpace) ? 1 : 0);
 
         _Animator.SetBool("Running", _Horizontal != 0);
         if (_Horizontal != 0)
             _SpriteRenderer.flipX = _Horizontal < 0;
-            
-        if (_Animator.GetBool("Jumping") && _IsGrounded)
-            _Animator.SetBool("Jumping", false);
 
-        if (_Vertical > 0 && _IsGrounded)
+
+        if (_Vertical > 0 && !_Jumping && _IsGrounded)
         {
             _Jump = true;
+            _Jumping = true;
             _Animator.SetBool("Jumping", true);
+        }
+        else if (_IsGrounded && _Jumping)
+        {
+            _Jumping = false;
+            _Animator.SetBool("Jumping", false);
         }
 
         if (_Horizontal != 0){
@@ -111,15 +114,14 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _IsGrounded = IsGrounded();
         _ElapsedTime = Time.fixedTime;
         if (_Jump)
         {
             _Jump = false;
             _IsGrounded = false;
             // _RigidBody.velocity = transform.up * _JumpForce; /* jump is more realstic with this one, but doesn't work perfectly with boxcast */
-            _RigidBody.velocity = new Vector2(0, 0);
-            _RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
+            _RigidBody.velocity = new Vector2(0, _JumpForce);
+            //_RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
         }
 
         var yVelocity = _IsGrounded ? 0 : _RigidBody.velocity.y;
@@ -130,20 +132,26 @@ public class PlayerController : MonoBehaviour
     {
         var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
         var size = _Collider.bounds.size;
-        var newSize = new Vector3(size.x / 2, size.y, size.z);
-        RaycastHit2D hit = Physics2D.BoxCast(_Collider.bounds.center, newSize, 0f, Vector2.down, extraLength, layerMask);
-        
+        var newSize = new Vector3(size.x / 2, extraLength, size.z);
+        var origin = _Collider.bounds.center - new Vector3(0, size.y / 2, 0);
+        RaycastHit2D hit = Physics2D.BoxCast(origin, newSize, 0f, Vector2.down, extraLength, layerMask);
+
         /* uncomment to show the BoxCast (green means it is not grounded, red means it is) */
-        // Color rayColor;
-        // if (hit.collider != null) {
-        //     rayColor = Color.green;
-        // }
-        // else {
-        //     rayColor = Color.red;
-        // }
-        // Debug.DrawRay(_Collider.bounds.center + new Vector3(_Collider.bounds.extents.x, 0), Vector2.down * (_Collider.bounds.extents.y + extraLength), rayColor);
-        // Debug.DrawRay(_Collider.bounds.center - new Vector3(_Collider.bounds.extents.x, 0), Vector2.down * (_Collider.bounds.extents.y + extraLength), rayColor);
-        // Debug.DrawRay(_Collider.bounds.center - new Vector3(_Collider.bounds.extents.x, _Collider.bounds.extents.y + extraLength), Vector2.right * (_Collider.bounds.extents.x), rayColor);
+        Color rayColor;
+        if (hit.collider != null)
+        {
+            rayColor = Color.green;
+        }
+        else
+        {
+            rayColor = Color.red;
+        }
+
+        var xOffset = newSize.x / 2;
+        Debug.DrawRay(origin + new Vector3(xOffset, 0), Vector2.down * extraLength, rayColor);
+        Debug.DrawRay(origin - new Vector3(xOffset, 0), Vector2.down * extraLength, rayColor);
+        Debug.DrawRay(origin - new Vector3(xOffset, extraLength), Vector2.right * xOffset, rayColor);
+        Debug.DrawRay(origin + new Vector3(xOffset, -extraLength), Vector2.left * xOffset, rayColor);
         return hit.collider != null;
     }
 
