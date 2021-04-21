@@ -34,7 +34,7 @@ namespace WakeUp.Constants
         {
             get
             {
-                return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.O) || Input.GetKeyDown(KeyCode.UpArrow);
+                return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.O) || Input.GetKey(KeyCode.UpArrow);
             }
         }
 
@@ -50,7 +50,7 @@ namespace WakeUp.Constants
         {
             get
             {
-                return Input.GetKeyDown(KeyCode.Space);
+                return Input.GetKey(KeyCode.Space);
             }
         }
 

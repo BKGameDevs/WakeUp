@@ -29631,7 +29631,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 9655801ba0046eb448df03c1eee387a5, type: 2}
     - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: _JumpForce
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: PlayerSanity

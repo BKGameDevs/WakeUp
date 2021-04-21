@@ -72,7 +72,6 @@ public class PlayerController : MonoBehaviour
         if (UpdateDisabled)
             return;
 
-        _IsGrounded = IsGrounded();
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
@@ -84,17 +83,14 @@ public class PlayerController : MonoBehaviour
             _SpriteRenderer.flipX = _Horizontal < 0;
 
 
-        if (_Vertical > 0 && !_Jumping && _IsGrounded)
-        {
+        if (_Vertical > 0 && _IsGrounded)
             _Jump = true;
-            _Jumping = true;
-            _Animator.SetBool("Jumping", true);
-        }
-        else if (_IsGrounded && _Jumping)
-        {
-            _Jumping = false;
-            _Animator.SetBool("Jumping", false);
-        }
+        //else if (_IsGrounded && _Jumping)
+        //{
+        //    _Jumping = false;
+        //    _Animator.SetBool("Jumping", false);
+        //}
+        _Animator.SetBool("Jumping", !_IsGrounded);
 
         if (_Horizontal != 0){
             _StartTime = _ElapsedTime;
@@ -115,13 +111,19 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         _ElapsedTime = Time.fixedTime;
+        _IsGrounded = IsGrounded();
+        Move();
+    }
+
+    private void Move()
+    {
         if (_Jump)
         {
             _Jump = false;
             _IsGrounded = false;
             // _RigidBody.velocity = transform.up * _JumpForce; /* jump is more realstic with this one, but doesn't work perfectly with boxcast */
-            _RigidBody.velocity = new Vector2(0, _JumpForce);
-            //_RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
+            //_RigidBody.velocity = new Vector2(0, _JumpForce);
+            _RigidBody.AddForce(transform.up * _JumpForce, ForceMode2D.Impulse);
         }
 
         var yVelocity = _IsGrounded ? 0 : _RigidBody.velocity.y;
