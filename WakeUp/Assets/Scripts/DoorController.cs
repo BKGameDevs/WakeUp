@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorController : InteractController, IHasOverlayText
 {
     private Animator _DoorAnimator;
-    private bool _IsDoorOpen;
+    private bool _IsDoorOpen, _EnteredNextSection;
 
     private string _OverlayText;
     protected override void Initialize()
@@ -19,36 +19,39 @@ public class DoorController : InteractController, IHasOverlayText
         _OverlayText = text;
     }
 
-    protected override void OnInteractChanged()
+    protected override void StartInteraction()
     {
-        base.OnInteractChanged();
-        if (IsInteracting)
+        base.StartInteraction();
+
+        if (!_IsDoorOpen)
+            OverlayController.Instance.Open(_OverlayText);
+        else
         {
-            if (!_IsDoorOpen)
-            {
-                OverlayController.Instance.Open(_OverlayText);
-            }
-            else
-            {
-                //Go to next section
-            }
-        }
-        else if (!IsInteracting) //Closed overlay
-        {
-            OverlayController.Instance.Close();
-            if (GameManager.Instance.KeyObtained)
-            {
-                this.StartTimedAction(null, OpenDoor, 0.25f);
-                Prompt.text = "Press X to Enter next section";
-            }
+            //Go to next section
         }
     }
 
-    protected override bool StopInteraction()
+    protected override void StopInteraction()
     {
-        //TODO: Figure out how to Start and Stop interaction not using X and ESC in certain cases
+        base.StopInteraction();
+        OverlayController.Instance.Close(); 
+        if (GameManager.Instance.KeyObtained && !_IsDoorOpen) 
+        {
+            this.StartTimedAction(null, OpenDoor, 0.25f);
+            Prompt.text = "Press X to Enter next section";
+        }
+    }
 
-        return base.StopInteraction();
+
+    protected override bool GetStopInteractionTrigger()
+    {
+        //Default stop interaction trigger is Escape key
+        var stopInteraction = base.GetStopInteractionTrigger();
+
+        if (_IsDoorOpen) //Interaction after door is open can only be stopped by a change in section or scene
+            stopInteraction = _EnteredNextSection;
+
+        return stopInteraction;
     }
 
     private void OpenDoor()

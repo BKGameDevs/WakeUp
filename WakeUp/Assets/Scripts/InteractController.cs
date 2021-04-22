@@ -38,26 +38,33 @@ public class InteractController : MonoBehaviour
         InArea = false;
     }
 
-    protected virtual bool StopInteraction()
+    protected virtual bool GetStopInteractionTrigger()
     {
-        return IsPressingEscape;
+        return IsPressingEscape && InArea;
+    }
+
+    protected virtual bool GetStartInteractionTrigger()
+    {
+        return IsPressingInteract && InArea;
+    }
+
+    protected virtual void StopInteraction()
+    {
+        IsInteracting = false;
+    }
+
+    protected virtual void StartInteraction()
+    {
+        IsInteracting = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (InArea)
-        {
-            if (IsPressingInteract && !IsInteracting)
-            {
-                IsInteracting = true;
-            }
-            if (StopInteraction() && IsInteracting)
-            {
-                IsInteracting = false;
-            }
-
-        }
+        if (GetStartInteractionTrigger())
+            StartInteraction();
+        else if (GetStopInteractionTrigger())
+            StopInteraction();
 
         Prompt.enabled = !IsInteracting && InArea;
     }
