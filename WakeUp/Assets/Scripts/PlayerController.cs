@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
     {
         var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
         var size = _Collider.bounds.size;
-        var newSize = new Vector3(size.x, extraLength, size.z);
+        var newSize = new Vector3(size.x / 2, extraLength, size.z);
         var origin = _Collider.bounds.center - new Vector3(0, size.y / 2, 0);
         RaycastHit2D hit = Physics2D.BoxCast(origin, newSize, 0f, Vector2.down, extraLength, layerMask);
 

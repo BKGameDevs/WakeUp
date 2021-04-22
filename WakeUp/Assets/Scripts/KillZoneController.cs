@@ -19,6 +19,7 @@ public class KillZoneController : MonoBehaviour
         FadeoutEvent?.Raise(1.5f);
         yield return new WaitForSeconds(1f);
         KillzoneEvent?.Raise();
+
         // Player?.ResetPlayer();
     }
 }
