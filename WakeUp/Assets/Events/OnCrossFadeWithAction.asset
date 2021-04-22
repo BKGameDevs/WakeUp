@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d2e9fc18ba1a483cacbfaed9ace72e8, type: 3}
-  m_Name: OnCrossFade
+  m_Name: OnCrossFadeWithAction
   m_EditorClassIdentifier: 
