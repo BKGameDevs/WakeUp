@@ -1,10 +1,12 @@
 using UnityEngine.Events;
 using UnityEngine;
+using System;
 
-public class CrossFadeController : Singleton<OverlayController>
+public class CrossFadeController : Singleton<CrossFadeController>
 {
     private Animator _Transition;
     private bool _IsFading;
+    private Action _CurrentAction;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class CrossFadeController : Singleton<OverlayController>
 
         var time = value is float ? (float)value : 3f;
         
-        RunCrossFadeWithAction(time, () => {
+        RunCrossFadeWithAction(time, time, () => {
             Debug.Log("Action Logger");
         });
     }
@@ -47,7 +49,7 @@ public class CrossFadeController : Singleton<OverlayController>
          time);
     }
 
-    public void RunCrossFadeWithAction(float time, UnityAction action)
+    public void RunCrossFadeWithAction(float fadeOutTime, float fadeInTime, UnityAction action)
     {
         //Start the fading animation and wait for X seconds
         Util.StartTimedAction(this, 
@@ -64,13 +66,28 @@ public class CrossFadeController : Singleton<OverlayController>
                 _IsFading = false;
                 _Transition.SetBool("Fade Out", _IsFading);
             },
-            time);
+            fadeInTime);
         },
-        time);
+        fadeOutTime);
 
         // perform action while screen is black
-        
+    }
+    public void RunCrossFade(Action action = null)
+    {
+        if (_IsFading)
+            return;
 
-       
+        _CurrentAction = action;
+        _IsFading = true;
+        _Transition.SetBool("Fade Out", _IsFading);
+
+        // perform action while screen is black
+    }
+
+    public void FadeIn()
+    {
+        _CurrentAction?.Invoke();
+        _IsFading = false;
+        _Transition.SetBool("Fade Out", _IsFading);
     }
 }

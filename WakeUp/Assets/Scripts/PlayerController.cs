@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _Horizontal = _Vertical = 0;
         if (UpdateDisabled)
             return;
 
@@ -169,9 +170,10 @@ public class PlayerController : MonoBehaviour
         return hit.collider != null;
     }
 
-    public void OnKillzoneEnter(){ 
-        ResetPlayer(_SoftCheckpoint);
+    public void OnKillzoneEnter() {
         ReduceSanity(25f);
+        if (!IsPlayerDead())
+            CrossFadeController.Instance.RunCrossFade(() => ResetPlayer(_SoftCheckpoint));
     }
 
 
@@ -179,19 +181,23 @@ public class PlayerController : MonoBehaviour
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity <= 0f ? 0f : _CurrentSanity;
         if (IsPlayerDead()) {
-            OnPlayerDeath?.Raise(1.5f); //TODO: Find some better solution to this
-            StartCoroutine(ResetPlayerOnDeath());
+            OnPlayerDeath?.Raise(); //TODO: Find some better solution to this
+            CrossFadeController.Instance.RunCrossFade(() =>
+            {
+                ResetPlayer(_HardCheckpoint);
+                ResetSanity(100f);
+            });
         } else {
             //Will be used by other systems later
             OnPlayerDamage?.Raise();
         }
     }
-    private IEnumerator ResetPlayerOnDeath() {
-        yield return new WaitForSeconds(RespawnDelay);
+    //private void ResetPlayerOnDeath() {
+    //    yield return new WaitForSeconds(RespawnDelay);
 
-        ResetPlayer(_HardCheckpoint);
-        ResetSanity(100f);
-    }
+    //    ResetPlayer(_HardCheckpoint);
+    //    ResetSanity(100f);
+    //}
 
     private bool IsPlayerDead(){
         return _CurrentSanity <= 0f;
@@ -210,8 +216,25 @@ public class PlayerController : MonoBehaviour
     }
 
     public void ResetPlayer(Vector3 resetPos) {
+        //CrossFadeController.Instance.RunCrossFadeWithAction(1f, 0.75f, () => transform.position = resetPos);
+
+        var size = _Collider.bounds.size;
+        var origin = resetPos - new Vector3(0, size.y / 2, 0);
+
+        var hit = Physics2D.Raycast(origin, Vector2.down, 20f, layerMask);
+
+        if (hit.collider != null)
+        {
+            var yOffset = origin.y - hit.point.y;
+
+            resetPos += new Vector3(0, -yOffset, 0);
+        }
         transform.position = resetPos;
     }
+
+    //private void ResetPlayerToGround(Vector3 resetPos)
+    //{
+    //}
 
     public void SetInteract(object value) {
         _IsInteracting = (bool)value;
