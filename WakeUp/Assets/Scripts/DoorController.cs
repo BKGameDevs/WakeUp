@@ -8,6 +8,7 @@ public class DoorController : InteractController, IHasOverlayText
     private bool _IsDoorOpen, _EnteredNextSection;
 
     private string _OverlayText;
+
     protected override void Initialize()
     {
         base.Initialize();
@@ -26,9 +27,7 @@ public class DoorController : InteractController, IHasOverlayText
         if (!_IsDoorOpen)
             OverlayController.Instance.Open(_OverlayText);
         else
-        {
-            //Go to next section
-        }
+            SectionManager.Next();
     }
 
     protected override void StopInteraction()

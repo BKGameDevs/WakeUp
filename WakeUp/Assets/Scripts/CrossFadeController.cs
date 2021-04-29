@@ -8,8 +8,7 @@ public class CrossFadeController : Singleton<CrossFadeController>
     private bool _IsFading;
     private Action _CurrentAction;
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void OnAwake()
     {
         _Transition = GetComponent<Animator>();
     }
@@ -87,7 +86,11 @@ public class CrossFadeController : Singleton<CrossFadeController>
     public void FadeIn()
     {
         _CurrentAction?.Invoke();
-        _IsFading = false;
-        _Transition.SetBool("Fade Out", _IsFading);
+
+        this.StartTimedAction(null, () =>
+        {
+            _IsFading = false;
+            _Transition.SetBool("Fade Out", _IsFading);
+        }, 0.5f);
     }
 }

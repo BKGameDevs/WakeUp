@@ -13,5 +13,9 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
             Instance = this as T;
             DontDestroyOnLoad(gameObject);
         }
+
+        OnAwake();
     }
+
+    protected virtual void OnAwake() { }
 }

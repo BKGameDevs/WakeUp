@@ -7,7 +7,6 @@ using static WakeUp.Constants.PlayerInput;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 _Position;
     private float _Horizontal;
     private float _Vertical;
     public float Speed = 5;
@@ -44,7 +43,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //Set position of transform
-        // _OriginalPosition = _Position = transform.position;
         _RigidBody = GetComponent<Rigidbody2D>();
         _SpriteRenderer = GetComponent<SpriteRenderer>();
         _Collider = GetComponent<Collider2D>();
@@ -185,7 +183,7 @@ public class PlayerController : MonoBehaviour
             CrossFadeController.Instance.RunCrossFade(() =>
             {
                 ResetPlayer(_HardCheckpoint);
-                ResetSanity(100f);
+                ResetSanity();
             });
         } else {
             //Will be used by other systems later
@@ -203,8 +201,8 @@ public class PlayerController : MonoBehaviour
         return _CurrentSanity <= 0f;
     }
 
-    private void ResetSanity(float amount){
-        _CurrentSanity = amount;
+    public void ResetSanity(){
+        _CurrentSanity = MAX_SANITY;
     }
 
     public void UpdateHardCheckpoint(object newPos) {
