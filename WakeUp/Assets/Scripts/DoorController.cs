@@ -27,7 +27,17 @@ public class DoorController : InteractController, IHasOverlayText
         if (!_IsDoorOpen)
             OverlayController.Instance.Open(_OverlayText);
         else
+        {
+            SectionManager.PlayerSpawned += SectionManager_PlayerSpawned;
             SectionManager.Next();
+        }
+    }
+
+    private void SectionManager_PlayerSpawned(object sender, System.EventArgs e)
+    {
+        _EnteredNextSection = true;
+
+        SectionManager.PlayerSpawned -= SectionManager_PlayerSpawned;
     }
 
     protected override void StopInteraction()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,8 @@ public class SectionManager : MonoBehaviour
 
     private static int _Current;
     private static List<SectionManager> _Managers;
+
+    public static event EventHandler PlayerSpawned;
 
     static SectionManager()
     {
@@ -68,6 +71,7 @@ public class SectionManager : MonoBehaviour
         {
             PlayerController.ResetSanity();
             PlayerController.ResetPlayer(PlayerSpawn.position);
+            PlayerSpawned?.Invoke(this, EventArgs.Empty);
         });
     }
 
