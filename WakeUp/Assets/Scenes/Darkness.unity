@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 42528499}
   - component: {fileID: 42528498}
   m_Layer: 6
-  m_Name: Dark_DungeonTiles
+  m_Name: S1_Ground_Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31579,7 +31579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &852140527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32025,7 +32025,7 @@ GameObject:
   - component: {fileID: 911530053}
   - component: {fileID: 911530052}
   m_Layer: 0
-  m_Name: Background Objects
+  m_Name: S1_Background_Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56271,31 +56271,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 195, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 198, y: -5, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
       m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 207, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -56829,8 +56809,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 574b8536d94f2407f884f6aa8807b374, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: a46a5cb60b5c042d5a4c314e39db408b, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: c0aa98b91bfdb4683bad5c08e0f46292, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 1711
     m_Data: {fileID: 6868936882464687754, guid: fa72608d3aa78426c92bab3b274cc65f, type: 3}
@@ -56838,10 +56818,10 @@ Tilemap:
     m_Data: {fileID: 6152380288250978584, guid: fa72608d3aa78426c92bab3b274cc65f, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: -6099757970024135000, guid: fa72608d3aa78426c92bab3b274cc65f, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: -3910008741747620877, guid: fa72608d3aa78426c92bab3b274cc65f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 1725
+  - m_RefCount: 1723
     m_Data:
       e00: 1
       e01: 0
@@ -56860,7 +56840,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1725
+  - m_RefCount: 1723
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -57070,22 +57050,6 @@ CompositeCollider2D:
         Y: -20000000
       - X: 2090000000
         Y: -70000000
-    - - X: 2079374976
-        Y: -40000000
-      - X: 2070000000
-        Y: -40000000
-      - X: 2070000000
-        Y: -50000000
-      - X: 2079374976
-        Y: -50000000
-    - - X: 1959374976
-        Y: -40000000
-      - X: 1950000000
-        Y: -40000000
-      - X: 1950000000
-        Y: -50000000
-      - X: 1959374976
-        Y: -50000000
     - - X: 2040000000
         Y: -270000000
       - X: 2050000000
@@ -57304,14 +57268,6 @@ CompositeCollider2D:
       - {x: 203, y: 4.9999704}
       - {x: 203.00003, y: -2}
       - {x: 209, y: -2.0000293}
-    - - {x: 195.93747, y: -5}
-      - {x: 195.93747, y: -4}
-      - {x: 195, y: -4.000029}
-      - {x: 195.00003, y: -5}
-    - - {x: 207.93747, y: -5}
-      - {x: 207.93747, y: -4}
-      - {x: 207, y: -4.000029}
-      - {x: 207.00003, y: -5}
     - - {x: 203.99997, y: -28}
       - {x: 204.00003, y: -27}
       - {x: 205, y: -26.999971}

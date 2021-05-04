@@ -30,7 +30,6 @@ public class OverlayController : Singleton<OverlayController>
     {
         if (_IsOpen)
             return;
-
         MainText.text = mainText;
         _IsOpen = true;
         _Transition.SetBool("Open", _IsOpen);
