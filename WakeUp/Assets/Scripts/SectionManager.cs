@@ -66,13 +66,20 @@ public class SectionManager : MonoBehaviour
     {
         if (PlayerController == null)
             return;
-
-        CrossFadeController.Instance.RunCrossFade(() =>
+        if (_Current > 0)
         {
-            PlayerController.ResetSanity();
-            PlayerController.ResetPlayer(PlayerSpawn.position);
-            PlayerSpawned?.Invoke(this, EventArgs.Empty);
-        });
+            CrossFadeController.Instance.RunCrossFade(() => 
+            { 
+                SetupPlayer(); 
+            });
+        }
+    }
+
+    private void SetupPlayer()
+    {
+        PlayerController.ResetSanity();
+        PlayerController.ResetPlayer(PlayerSpawn.position);
+        PlayerSpawned?.Invoke(this, EventArgs.Empty);
     }
 
     public void SpawnPickups()
