@@ -14,6 +14,12 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         OnLevelStart?.Raise();
+        SectionManager.PlayerSpawned += SectionManager_PlayerSpawned;
+    }
+
+    private void SectionManager_PlayerSpawned(object sender, System.EventArgs e)
+    {
+        KeyObtained = false;
     }
 
     // Update is called once per frame

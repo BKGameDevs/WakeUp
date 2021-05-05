@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorController : InteractController, IHasOverlayText
 {
     private Animator _DoorAnimator;
-    private bool _IsDoorOpen, _EnteredNextSection;
+    private bool _IsDoorOpen;
 
     private string _OverlayText;
 
@@ -35,7 +35,7 @@ public class DoorController : InteractController, IHasOverlayText
 
     private void SectionManager_PlayerSpawned(object sender, System.EventArgs e)
     {
-        _EnteredNextSection = true;
+        StopInteraction();
 
         SectionManager.PlayerSpawned -= SectionManager_PlayerSpawned;
     }
@@ -57,8 +57,9 @@ public class DoorController : InteractController, IHasOverlayText
         //Default stop interaction trigger is Escape key
         var stopInteraction = base.GetStopInteractionTrigger();
 
-        if (_IsDoorOpen) //Interaction after door is open can only be stopped by a change in section or scene
-            stopInteraction = _EnteredNextSection;
+        if (_IsDoorOpen)
+            //Interaction after door is open can only be stopped by a change in section or scene
+            stopInteraction = false;
 
         return stopInteraction;
     }

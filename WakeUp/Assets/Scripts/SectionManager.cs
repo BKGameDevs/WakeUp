@@ -70,9 +70,16 @@ public class SectionManager : MonoBehaviour
         {
             CrossFadeController.Instance.RunCrossFade(() => 
             { 
-                SetupPlayer(); 
+                SetupPlayer();
+                DisablePreviousSection();
             });
         }
+    }
+
+    private void DisablePreviousSection()
+    {
+        var manager = _Managers.ElementAtOrDefault(_Current - 1);
+        manager?.gameObject.SetActive(false);
     }
 
     private void SetupPlayer()
