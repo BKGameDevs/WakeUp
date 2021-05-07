@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class SwitchController : InteractController, IHasOverlayText
 {
-    private string _OverlayText;
+    public GameEvent OnSwitchTrigger;
     public Sprite ActiveLever;
-    private SpriteRenderer SpriteRenderer;
+
+    private SpriteRenderer _SpriteRenderer;
+    private string _OverlayText;
+    private bool _SwitchedOn;
+
     protected override void Initialize()
     {
         base.Initialize();
-        Prompt.text = "Press X to Interact";
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        SetPromptText("Press X to Interact");
+        _SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     protected override void StartInteraction()
@@ -26,9 +30,16 @@ public class SwitchController : InteractController, IHasOverlayText
     {
         base.StopInteraction();
         OverlayController.Instance.Close(); 
-        SpriteRenderer.sprite = ActiveLever;
-
+        _SpriteRenderer.sprite = ActiveLever;
+        DisablePrompt = _SwitchedOn = true;
+        OnSwitchTrigger?.Raise();
     }
+
+    protected override bool GetStartInteractionTrigger()
+    {
+        return !_SwitchedOn ? base.GetStartInteractionTrigger() : false;
+    }
+
     public void SetOverlayText(string text)
     {
         _OverlayText = text;

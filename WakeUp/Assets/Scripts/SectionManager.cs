@@ -66,7 +66,7 @@ public class SectionManager : MonoBehaviour
     {
         if (PlayerController == null)
             return;
-        if (_Current > 0)
+        if (_Current > -1)
         {
             CrossFadeController.Instance.RunCrossFade(() => 
             { 

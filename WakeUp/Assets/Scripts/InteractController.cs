@@ -12,6 +12,7 @@ public class InteractController : MonoBehaviour
     //public GameObject Prompt;
     public TextMeshProUGUI Prompt;
 
+    public bool DisablePrompt;
     private bool InArea;
     private bool _IsInteracting;
     public bool IsInteracting
@@ -66,7 +67,7 @@ public class InteractController : MonoBehaviour
         else if (GetStopInteractionTrigger())
             StopInteraction();
 
-        Prompt.enabled = !IsInteracting && InArea;
+        Prompt.enabled = !DisablePrompt && !IsInteracting && InArea;
     }
 
     protected virtual void OnInteractChanged()
