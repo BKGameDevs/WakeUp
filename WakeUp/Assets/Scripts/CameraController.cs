@@ -20,4 +20,6 @@ public class CameraController : MonoBehaviour
         var playerPosition = _PlayerTransform.position;
         transform.position = new Vector3(playerPosition.x, playerPosition.y + 1, cameraPosition.z);
     }
+    
+    
 }

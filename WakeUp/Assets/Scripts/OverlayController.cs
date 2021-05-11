@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System;
 using UnityEngine;
 
 public class OverlayController : Singleton<OverlayController>
 {
+    public event EventHandler Closed;
     public TextMeshProUGUI MainText;
     public TextMeshProUGUI ClosingText;
 
@@ -42,5 +44,9 @@ public class OverlayController : Singleton<OverlayController>
 
         _IsOpen = false;
         _Transition.SetBool("Open", _IsOpen);
+    }
+
+    public void OnClosed(){
+        Closed?.Invoke(this, EventArgs.Empty);
     }
 }

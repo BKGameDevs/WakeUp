@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SwitchController : InteractController, IHasOverlayText
 {
@@ -32,7 +33,12 @@ public class SwitchController : InteractController, IHasOverlayText
         OverlayController.Instance.Close(); 
         _SpriteRenderer.sprite = ActiveLever;
         DisablePrompt = _SwitchedOn = true;
+        OverlayController.Instance.Closed += OverlayClosed;
+    }
+
+    private void OverlayClosed(object sender, EventArgs args){
         OnSwitchTrigger?.Raise();
+        OverlayController.Instance.Closed -= OverlayClosed;
     }
 
     protected override bool GetStartInteractionTrigger()
