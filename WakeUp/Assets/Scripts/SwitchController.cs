@@ -45,6 +45,10 @@ public class SwitchController : InteractController, IHasOverlayText
     {
         return !_SwitchedOn ? base.GetStartInteractionTrigger() : false;
     }
+    protected override bool GetStopInteractionTrigger()
+    {
+        return !_SwitchedOn ? base.GetStopInteractionTrigger() : false;
+    }
 
     public void SetOverlayText(string text)
     {
