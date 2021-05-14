@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         //if (ItemPickUp != null)
         //    ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
 
-        _HardCheckpoint = transform.position;
+        _HardCheckpoint = transform.position + new Vector3(0, 1, 0);
 
     }
 
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
-        
+
         _Vertical = IsPressingDown ? -1 : ((IsPressingUp || IsPressingSpace) ? 1 : 0);
 
         _Animator.SetBool("Running", _Horizontal != 0);
@@ -82,11 +82,11 @@ public class PlayerController : MonoBehaviour
             _SpriteRenderer.flipX = _Horizontal < 0;
 
 
-        if (_Vertical > 0 && _IsGrounded) 
+        if (_Vertical > 0 && _IsGrounded)
         {
             _Jumping = _Jump = true;
         }
-        
+
         //else if (_IsGrounded && _Jumping)
         //{
         //    _Jumping = false;
@@ -95,9 +95,9 @@ public class PlayerController : MonoBehaviour
 
         _Animator.SetBool("Jumping", !_IsGrounded && _Jumping);
 
-        if (_Horizontal != 0){
+        if (_Horizontal != 0 || _Vertical != 0)
             _StartTime = _ElapsedTime;
-        }
+         
 
         //Amount of time passed since Player creation
         var time = _ElapsedTime - _StartTime;

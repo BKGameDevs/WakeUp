@@ -7,9 +7,10 @@ public class FalseWallController : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public bool PlaySoundOnColumn;
+
     private Tilemap FalseWall;
     private AudioSource SoundEffect;
-    public int rowCount = 5;
 
     void Start()
     {
@@ -34,14 +35,19 @@ public class FalseWallController : MonoBehaviour
 
     private IEnumerator WaitToRemoveTile()
     {
-        var count = 0;
+        //var count = 0;
+        int? last = null;
         var cellBounds = FalseWall.cellBounds.allPositionsWithin;
         foreach (var pos in cellBounds){
-            FalseWall.SetTile(new Vector3Int(pos.x, pos.y, pos.z), null);
-            if (count % rowCount == 0) {
+            var current = PlaySoundOnColumn ? pos.x : pos.y;
+            if (last != current)
+            {
+                last = current;
                 SoundEffect.Play();
             }
-            count++;
+
+            FalseWall.SetTile(new Vector3Int(pos.x, pos.y, pos.z), null);
+            //count++;
             yield return new WaitForSeconds(.125f);
         } 
 

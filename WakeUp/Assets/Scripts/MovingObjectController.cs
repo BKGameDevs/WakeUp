@@ -48,23 +48,32 @@ public class MovingObjectController : MonoBehaviour
         }
     }
 
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.tag == "Player")
+        var gameObject = collision.gameObject;
+        if (gameObject.CompareTag("Player"))
         {
             //set the flag
-            other.gameObject.transform.parent = this.transform;
+            gameObject.transform.parent = this.transform;
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (other.tag == "Player")
+        var gameObject = collision.gameObject;
+        if (gameObject.CompareTag("Player"))
         {
-            other.gameObject.transform.parent = null;
+            gameObject.transform.parent = null;
         }
     }
+
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //}
+
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //}
 
     public void SetIsActive(bool isActive)
     {
