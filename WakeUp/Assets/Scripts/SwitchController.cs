@@ -12,11 +12,14 @@ public class SwitchController : InteractController, IHasOverlayText
     private string _OverlayText;
     private bool _SwitchedOn;
 
+    private AudioSource _SwitchSound;
+
     protected override void Initialize()
     {
         base.Initialize();
         SetPromptText("Press X to Interact");
         _SpriteRenderer = GetComponent<SpriteRenderer>();
+        _SwitchSound = GetComponent<AudioSource>();
     }
 
     protected override void StartInteraction()
@@ -31,6 +34,7 @@ public class SwitchController : InteractController, IHasOverlayText
     {
         base.StopInteraction();
         OverlayController.Instance.Close(); 
+        _SwitchSound.Play();
         _SpriteRenderer.sprite = ActiveLever;
         DisablePrompt = _SwitchedOn = true;
         OverlayController.Instance.Closed += OverlayClosed;
