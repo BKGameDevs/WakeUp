@@ -47386,7 +47386,7 @@ GameObject:
   - component: {fileID: 1952236136}
   - component: {fileID: 1952236138}
   m_Layer: 0
-  m_Name: No_tile_DarkGray_12
+  m_Name: Player Spawn Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47464,7 +47464,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 6214962938485921934, guid: 19bb6a020de464c9bb9e61a368e2bb0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -47489,7 +47489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerName: Close
-  Time: 3
+  Time: 2
 --- !u!1 &1961429735
 GameObject:
   m_ObjectHideFlags: 0
