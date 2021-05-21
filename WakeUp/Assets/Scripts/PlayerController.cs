@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     private float _Horizontal;
     private float _Vertical;
+    private float _TiltDirection;
+    private bool _IsTiltingCamera;
     public float Speed = 5;
     public float _JumpForce = 5;
     private bool _Jump;
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     public GameEvent OnPlayerDeath;
     public GameEvent OnPlayerDamage;
+    public GameEvent OnTiltCamera;
     // private Vector3 _OriginalPosition;
     void Start()
     {
@@ -75,7 +78,9 @@ public class PlayerController : MonoBehaviour
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
 
-        _Vertical = IsPressingDown ? -1 : ((IsPressingUp || IsPressingSpace) ? 1 : 0);
+        _Vertical = IsPressingSpace ? 1 : -1;
+        
+        _TiltDirection = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
 
         _Animator.SetBool("Running", _Horizontal != 0);
         if (_Horizontal != 0)
@@ -98,6 +103,15 @@ public class PlayerController : MonoBehaviour
         if (_Horizontal != 0 || _Vertical != 0)
             _StartTime = _ElapsedTime;
          
+        if (_TiltDirection != 0 && !_IsTiltingCamera)
+        {
+            _IsTiltingCamera = true;
+            OnTiltCamera.Raise(_TiltDirection);
+        } 
+        else if (_TiltDirection == 0)
+        {
+            _IsTiltingCamera = false;
+        }
 
         //Amount of time passed since Player creation
         var time = _ElapsedTime - _StartTime;
