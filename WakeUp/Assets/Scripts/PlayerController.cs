@@ -7,10 +7,34 @@ using static WakeUp.Constants.PlayerInput;
 
 public class PlayerController : MonoBehaviour
 {
+
+    private Coroutine _CameraTiltCoroutine;
+    private float _TiltDirection;
+    private float TiltDirection
+    {
+        get { return _TiltDirection; }
+        set
+        {
+            if (_TiltDirection != value)
+            {
+                _TiltDirection = value;
+                if (_CameraTiltCoroutine != null)
+                {
+                    StopCoroutine(_CameraTiltCoroutine);
+                    OnTiltCamera.Raise(0f);
+                }
+                _CameraTiltCoroutine = this.StartTimedAction(null,
+                    () =>
+                    {
+                        OnTiltCamera.Raise(_TiltDirection);
+                    }, 1f);
+            }
+        }
+    }
+    private bool _IsTiltingCamera;
+
     private float _Horizontal;
     private float _Vertical;
-    private float _TiltDirection;
-    private bool _IsTiltingCamera;
     public float Speed = 5;
     public float _JumpForce = 5;
     private bool _Jump;
@@ -24,13 +48,12 @@ public class PlayerController : MonoBehaviour
     public FloatVariable PlayerSanity;
     //public FloatVariable ItemPickUp;
 
+    private Coroutine _ReduceSanityCoroutine;
     private int MAX_SANITY = 100;
     public int SanityReduceRate = 1;
     public int SanityReduceInterval = 5;
     public float RespawnDelay = 1f;
     private float _CurrentSanity;
-    private float _StartTime;
-    private float _ElapsedTime;
 
     private bool _IsGrounded;
     private bool _IsInteracting;
@@ -52,13 +75,13 @@ public class PlayerController : MonoBehaviour
         _Animator = GetComponent<Animator>();
 
         _CurrentSanity = MAX_SANITY;
-        _StartTime = Time.fixedTime;
 
         //if (ItemPickUp != null)
         //    ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
 
         _HardCheckpoint = transform.position + new Vector3(0, 1, 0);
 
+        StartReduceSanity();
     }
 
     //private void ItemPickUp_PropertyChanged(object sender, EventArgs args) {
@@ -78,9 +101,11 @@ public class PlayerController : MonoBehaviour
         // Setting bool values with conditionals to check if layer is moving up or down
         _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
 
-        _Vertical = IsPressingSpace ? 1 : -1;
-        
-        _TiltDirection = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
+        _Vertical = IsPressingSpace ? 1 : 0;
+
+        var tiltDirection = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
+        TiltDirection = (_Horizontal == 0 && _IsGrounded) ? tiltDirection : 0;
+
 
         _Animator.SetBool("Running", _Horizontal != 0);
         if (_Horizontal != 0)
@@ -101,35 +126,37 @@ public class PlayerController : MonoBehaviour
         _Animator.SetBool("Jumping", !_IsGrounded && _Jumping);
 
         if (_Horizontal != 0 || _Vertical != 0)
-            _StartTime = _ElapsedTime;
-         
-        if (_TiltDirection != 0 && !_IsTiltingCamera)
-        {
-            _IsTiltingCamera = true;
-            OnTiltCamera.Raise(_TiltDirection);
-        } 
-        else if (_TiltDirection == 0)
-        {
-            _IsTiltingCamera = false;
-            OnTiltCamera.Raise(_TiltDirection);
-        }
+            //TODO: Add way to prevent from stopping midway
+            StopReduceSanity();
 
-        //Amount of time passed since Player creation
-        var time = _ElapsedTime - _StartTime;
-        if (time > SanityReduceInterval) {
-            _StartTime = _ElapsedTime;
-            ReduceSanity(SanityReduceRate);
-        }
+        if (_ReduceSanityCoroutine == null)
+            StartReduceSanity();
 
         if (PlayerSanity != null)
             PlayerSanity.RuntimeValue = _CurrentSanity;
     }
 
+    private void StartReduceSanity()
+    {
+        _ReduceSanityCoroutine = this.StartTimedAction(null,
+            () =>
+            {
+                ReduceSanity(SanityReduceRate);
+                StartReduceSanity();
+            }, SanityReduceInterval);
+    }
+
+    private void StopReduceSanity()
+    {
+        if (_ReduceSanityCoroutine == null)
+            return;
+
+        StopCoroutine(_ReduceSanityCoroutine);
+        _ReduceSanityCoroutine = null;
+    }
 
     private void FixedUpdate()
     {
-        _ElapsedTime = Time.fixedTime;
-
         var wasGrounded = _IsGrounded;
 
         _IsGrounded = IsGrounded();
@@ -252,7 +279,7 @@ public class PlayerController : MonoBehaviour
     public void SetInteract(object value) {
         _IsInteracting = (bool)value;
         if (!_IsInteracting)
-            _StartTime = _ElapsedTime;
+            StopReduceSanity();
     }
 
     public void CouragePickedUp(object value)

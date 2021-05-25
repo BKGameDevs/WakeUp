@@ -35369,82 +35369,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   GameEventResponses: []
---- !u!1 &424383833
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 424383836}
-  - component: {fileID: 424383835}
-  - component: {fileID: 424383834}
-  m_Layer: 0
-  m_Name: CameraTilt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &424383834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424383833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: ad12745c0769b2743adac1b18e82cec2, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1895462416}
-        m_TargetAssemblyTypeName: CameraPanController, Assembly-CSharp
-        m_MethodName: TiltCamera
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  GameEventResponses: []
---- !u!114 &424383835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424383833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9ffef7e043447e4086f5d380d8ca240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainVirtualCamera: {fileID: 939035508}
-  Targets: []
-  TiltOffset: 0.2
---- !u!4 &424383836
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424383833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 207.1095, y: -28.65156, z: -27.72159}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &427515413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37732,6 +37656,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 841692087}
+  - component: {fileID: 841692089}
+  - component: {fileID: 841692088}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -37755,6 +37681,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841692088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841692086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ad12745c0769b2743adac1b18e82cec2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 841692089}
+        m_TargetAssemblyTypeName: CameraPanController, Assembly-CSharp
+        m_MethodName: TiltCamera
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  GameEventResponses: []
+--- !u!114 &841692089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841692086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ffef7e043447e4086f5d380d8ca240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainVirtualCamera: {fileID: 939035508}
+  Targets: []
+  TiltOffset: 0.2
 --- !u!1 &852140526
 GameObject:
   m_ObjectHideFlags: 0

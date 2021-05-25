@@ -29,11 +29,11 @@ public class CameraPanController : MonoBehaviour
         var dir = (float) direction;
 
         if (dir > 0)
-            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += 0.35f;
-            // MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += TiltOffset;
+            //MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += 0.35f;
+            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += TiltOffset;
         else if (dir < 0)
-            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= 0.35f;
-            // MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= TiltOffset;
+            //MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= 0.35f;
+            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= TiltOffset;
         else
             MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY = _OriginalScreenY;
 
