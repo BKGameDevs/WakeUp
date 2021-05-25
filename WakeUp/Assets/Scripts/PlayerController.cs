@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
         else if (_TiltDirection == 0)
         {
             _IsTiltingCamera = false;
+            OnTiltCamera.Raise(_TiltDirection);
         }
 
         //Amount of time passed since Player creation

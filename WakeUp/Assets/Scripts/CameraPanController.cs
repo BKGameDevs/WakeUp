@@ -13,7 +13,7 @@ public class CameraPanController : MonoBehaviour
     private Transform _OriginalTarget;
     private int _Current;
 
-    public float TiltOffset;
+    public float TiltOffset = 0.3f;
     private float _OriginalScreenY;
     // Start is called before the first frame update
     void Start()
@@ -29,9 +29,11 @@ public class CameraPanController : MonoBehaviour
         var dir = (float) direction;
 
         if (dir > 0)
-            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += TiltOffset;
+            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += 0.35f;
+            // MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY += TiltOffset;
         else if (dir < 0)
-            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= TiltOffset;
+            MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= 0.35f;
+            // MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY -= TiltOffset;
         else
             MainVirtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY = _OriginalScreenY;
 
