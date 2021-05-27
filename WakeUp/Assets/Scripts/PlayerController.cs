@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
                     () =>
                     {
                         OnTiltCamera.Raise(_TiltDirection);
-                    }, 1f);
+                    }, 0.5f);
             }
         }
     }
