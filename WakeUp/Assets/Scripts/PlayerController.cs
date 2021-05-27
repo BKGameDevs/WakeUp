@@ -95,7 +95,10 @@ public class PlayerController : MonoBehaviour
     {
         _Horizontal = _Vertical = 0;
         if (UpdateDisabled)
+        {
+            StopReduceSanity();
             return;
+        }
 
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
