@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     public float _JumpForce = 5;
     private bool _Jump;
     private bool _Jumping;
+    private bool _Falling;
     private Rigidbody2D _RigidBody;
     private SpriteRenderer _SpriteRenderer;
     private Collider2D _Collider;
@@ -95,10 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         _Horizontal = _Vertical = 0;
         if (UpdateDisabled)
-        {
-            StopReduceSanity();
             return;
-        }
 
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down
@@ -127,6 +125,7 @@ public class PlayerController : MonoBehaviour
         //}
 
         _Animator.SetBool("Jumping", !_IsGrounded && _Jumping);
+        _Animator.SetBool("Falling", !_IsGrounded && _Falling);
 
         if (_Horizontal != 0 || _Vertical != 0)
             //TODO: Add way to prevent from stopping midway
@@ -165,7 +164,7 @@ public class PlayerController : MonoBehaviour
         _IsGrounded = IsGrounded();
 
         if (!wasGrounded && _IsGrounded)
-            _Jumping = false;
+            _Jumping = _Falling = false;
 
         Move();
     }
@@ -184,6 +183,12 @@ public class PlayerController : MonoBehaviour
 
         var yVelocity = _IsGrounded ? 0 : _RigidBody.velocity.y;
         _RigidBody.velocity = new Vector2(_Horizontal * Speed, yVelocity);
+
+        if (!_IsGrounded)
+        {
+            _Jumping = yVelocity > 0;
+            _Falling = yVelocity < 0;
+        }
     }
 
     private bool IsGrounded()
@@ -281,7 +286,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetInteract(object value) {
         _IsInteracting = (bool)value;
-        if (!_IsInteracting)
+        if (_IsInteracting)
             StopReduceSanity();
     }
 
