@@ -20,7 +20,7 @@
 
 .Menu {
     justify-content: flex-start;
-    background-color: rgba(67, 109, 118, 255);
+    background-color: rgb(67, 109, 118);
     width: 500px;
     height: 500px;
     align-items: center;

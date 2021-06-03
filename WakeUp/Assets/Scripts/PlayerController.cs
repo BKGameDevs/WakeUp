@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
     public GameEvent OnPlayerDeath;
     public GameEvent OnPlayerDamage;
     public GameEvent OnTiltCamera;
+    public GameEvent OnPlayerJump;
     // private Vector3 _OriginalPosition;
     void Start()
     {
@@ -114,9 +115,7 @@ public class PlayerController : MonoBehaviour
 
 
         if (_Vertical > 0 && _IsGrounded)
-        {
             _Jumping = _Jump = true;
-        }
 
         //else if (_IsGrounded && _Jumping)
         //{
@@ -173,6 +172,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_Jump)
         {
+            OnPlayerJump?.Raise();
             _Jump = false;
             _IsGrounded = false;
             // _RigidBody.velocity = transform.up * _JumpForce; /* jump is more realstic with this one, but doesn't work perfectly with boxcast */

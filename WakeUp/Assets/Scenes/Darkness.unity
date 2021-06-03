@@ -34963,6 +34963,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785426562}
     m_Modifications:
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: MaxDistance
+      value: 30.695023
+      objectReference: {fileID: 0}
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: MinDistance
+      value: 17.937866
+      objectReference: {fileID: 0}
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3273373035983786731, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -35006,6 +35030,14 @@ PrefabInstance:
     - target: {fileID: 3273373035983786731, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542917228361536499, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542917228361536499, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.88
       objectReference: {fileID: 0}
     - target: {fileID: 6977458216163251142, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_Name
@@ -36230,6 +36262,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
+      propertyPath: OnPlayerJump
+      value: 
+      objectReference: {fileID: 11400000, guid: 8113986e319a245449cbe2aba4f2bd69, type: 2}
+    - target: {fileID: 5528514250262233352, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
       propertyPath: OnTiltCamera
       value: 
       objectReference: {fileID: 11400000, guid: ad12745c0769b2743adac1b18e82cec2, type: 2}
@@ -36401,6 +36437,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Event: {fileID: 11400000, guid: 8113986e319a245449cbe2aba4f2bd69, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
+          m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: b95bb73dbde35204f9d5f5ce906869c6, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!81 &561157691
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561157687}
+  m_Enabled: 1
 --- !u!4 &561157693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528514250262233351, guid: 6a5e06b05ead037469f390c2c0e7595f, type: 3}
@@ -37694,7 +37754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 153d41b661c69434ca267fb2a0cec3be, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 3c2c8a6e87150d94ca19f25549e3e109, type: 3}
+  sourceAsset: {fileID: 0}
   m_SortingOrder: 0
 --- !u!114 &826169487
 MonoBehaviour:
@@ -45801,6 +45861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785426562}
     m_Modifications:
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: MaxDistance
+      value: 2.1290588
+      objectReference: {fileID: 0}
     - target: {fileID: 3273373035983786731, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -45966,6 +46030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785426562}
     m_Modifications:
+    - target: {fileID: 880790671592400665, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: MaxDistance
+      value: 4.18544
+      objectReference: {fileID: 0}
     - target: {fileID: 3273373035983786731, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -46009,6 +46077,14 @@ PrefabInstance:
     - target: {fileID: 3273373035983786731, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542917228361536499, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542917228361536499, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 6977458216163251142, guid: a4e0200bb47965b498de2edbd5c1f2f6, type: 3}
       propertyPath: m_Name
@@ -109241,7 +109317,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4231868947502921163}
   - component: {fileID: 4231868947502921160}
-  - component: {fileID: 4231868947502921161}
   - component: {fileID: 4231868947502921162}
   - component: {fileID: 4231868947502921159}
   m_Layer: 0
@@ -109328,14 +109403,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4231868947502921161
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4231868947502921158}
-  m_Enabled: 1
 --- !u!114 &4231868947502921162
 MonoBehaviour:
   m_ObjectHideFlags: 0

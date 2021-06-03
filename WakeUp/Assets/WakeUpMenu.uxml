@@ -3,9 +3,9 @@
     <ui:VisualElement name="Overlay" style="height: 938px; position: relative; align-items: center; justify-content: space-around; width: 98.5%; left: auto; flex-direction: column; -unity-font: url(&apos;/Assets/Fonts/Quicksand_Book.otf&apos;); background-color: rgba(0, 0, 0, 0.67); margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; flex-basis: 100%; opacity: 1; overflow: visible; visibility: visible; display: flex; flex-grow: 0; flex-wrap: nowrap; flex-shrink: 1;">
         <ui:VisualElement name="Menu" class="Menu" style="flex-shrink: 1; width: 50%; height: 90%;">
             <ui:Label text="Main Menu" display-tooltip-when-elided="true" class="Label" />
-            <ui:Button text="Resume" display-tooltip-when-elided="true" class="Button" />
-            <ui:Button text="Settings" display-tooltip-when-elided="true" class="Button" />
-            <ui:Button text="Quit" display-tooltip-when-elided="true" class="Button" />
+            <ui:Button text="Resume" display-tooltip-when-elided="true" name="Resume" class="Button" />
+            <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="Button" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="Button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

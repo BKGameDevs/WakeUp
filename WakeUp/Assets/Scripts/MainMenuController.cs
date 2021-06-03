@@ -12,8 +12,15 @@ public class MainMenuController : Singleton<MainMenuController>
 
     private void OnEnable()
     {
-        _Root = GetComponent<UIDocument>().rootVisualElement;
+        _Root = GetComponent<UIDocument>()?.rootVisualElement;
+        //var button = _Root.Q<Button>("Resume");
+        //button.clicked += Button_clicked;
         _Root.visible = false;
+    }
+
+    private void Button_clicked()
+    {
+        Close();
     }
 
     public void Open(string mainText)
@@ -31,6 +38,7 @@ public class MainMenuController : Singleton<MainMenuController>
             return;
 
         _IsOpen = false;
+        _Root.visible = false;
         //_Transition.SetBool("Open", _IsOpen);
     }
 }
