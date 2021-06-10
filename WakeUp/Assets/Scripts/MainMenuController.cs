@@ -13,22 +13,38 @@ public class MainMenuController : Singleton<MainMenuController>
     private void OnEnable()
     {
         _Root = GetComponent<UIDocument>()?.rootVisualElement;
-        //var button = _Root.Q<Button>("Resume");
-        //button.clicked += Button_clicked;
-        _Root.visible = false;
+
+        var button = _Root.Q<Button>("Resume");
+        button.clicked += Resume_clicked;
+
+        SetVisibility(_Root, false);
     }
 
-    private void Button_clicked()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            Open();
+    }
+
+    private void SetVisibility(VisualElement root, bool visibility)
+    {
+        root.visible = visibility;
+        foreach (var child in root.Children())
+            SetVisibility(child, visibility);
+    }
+
+    private void Resume_clicked()
     {
         Close();
     }
 
-    public void Open(string mainText)
+    public void Open()
     {
         if (_IsOpen)
             return;
 
         _IsOpen = true;
+        SetVisibility(_Root, _IsOpen);
         //_Transition.SetBool("Open", _IsOpen);
     }
 
@@ -38,7 +54,7 @@ public class MainMenuController : Singleton<MainMenuController>
             return;
 
         _IsOpen = false;
-        _Root.visible = false;
+        SetVisibility(_Root, _IsOpen);
         //_Transition.SetBool("Open", _IsOpen);
     }
 }
