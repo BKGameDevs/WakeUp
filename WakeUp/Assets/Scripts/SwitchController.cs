@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class SwitchController : InteractController, IHasOverlayText
+public class SwitchController : InteractController
 {
     public GameEvent OnSwitchTrigger;
+    public Sprite DefaultLever;
     public Sprite ActiveLever;
+    public bool SingleUse;
+    public JustInTimeManager JustInTimeManager;
+
+    public string SwitchType;
 
     private SpriteRenderer _SpriteRenderer;
-    private string _OverlayText;
     private bool _SwitchedOn;
 
     private AudioSource _SwitchSound;
@@ -22,25 +26,41 @@ public class SwitchController : InteractController, IHasOverlayText
         _SwitchSound = GetComponent<AudioSource>();
     }
 
+    private void Switch()
+    {
+        _SwitchedOn = !_SwitchedOn;
+
+        _SwitchSound.Play();
+        _SpriteRenderer.sprite = _SwitchedOn ? ActiveLever : DefaultLever;
+
+        DisablePrompt = SingleUse && _SwitchedOn;
+    }
+
     protected override void StartInteraction()
     {
         base.StartInteraction();
-        
-        SetOverlayText("The platforms are moving!");
-        OverlayController.Instance.Open(_OverlayText);
 
+        Switch();
+        if (JustInTimeManager.TryOpenJustInTime(SwitchType))
+            OverlayController.Instance.Closed += OverlayClosed;
+        else
+        {
+            OnSwitchTrigger?.Raise();
+
+            StopInteraction();
+        }
+        //SetOverlayText("The platforms are moving!");
+        //OverlayController.Instance.Open(OverlayText);
     }    
+
     protected override void StopInteraction()
     {
         base.StopInteraction();
-        OverlayController.Instance.Close(); 
-        _SwitchSound.Play();
-        _SpriteRenderer.sprite = ActiveLever;
-        DisablePrompt = _SwitchedOn = true;
-        OverlayController.Instance.Closed += OverlayClosed;
+        OverlayController.Instance.Close();
     }
 
-    private void OverlayClosed(object sender, EventArgs args){
+    private void OverlayClosed(object sender, EventArgs args)
+    {
         OnSwitchTrigger?.Raise();
         OverlayController.Instance.Closed -= OverlayClosed;
     }
@@ -52,10 +72,5 @@ public class SwitchController : InteractController, IHasOverlayText
     protected override bool GetStopInteractionTrigger()
     {
         return !_SwitchedOn ? base.GetStopInteractionTrigger() : false;
-    }
-
-    public void SetOverlayText(string text)
-    {
-        _OverlayText = text;
     }
 }
