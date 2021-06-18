@@ -14,6 +14,8 @@ public class MovingObjectController : MonoBehaviour
     public Transform startPoint; // starting point
     public Transform endPoint; // ending point
 
+    public bool GoToOriginalWhenInactive;
+
     public float moveSpeed; // for fast the object moves
 
     private Vector3 currentTarget; // the current point it's going to, start or end?
@@ -29,19 +31,26 @@ public class MovingObjectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objectToMove != null && _IsActive)
+        if (objectToMove == null)
+            return;
+
+        var objectPosition = objectToMove.transform.position;
+        var move = _IsActive || (!_IsActive && GoToOriginalWhenInactive && objectPosition != startPoint.position);
+
+        if (move)
         { //while there is something to move
 
             //move towards endpoint
-            objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, currentTarget, moveSpeed * Time.deltaTime);
+            objectPosition = 
+                objectToMove.transform.position = Vector3.MoveTowards(objectPosition, currentTarget, moveSpeed * Time.deltaTime);
 
             //switch the current target
-            if (objectToMove.transform.position == endPoint.position)
+            if (objectPosition == endPoint.position)
             {
                 currentTarget = startPoint.position;
             }
 
-            if (objectToMove.transform.position == startPoint.position)
+            if (objectPosition == startPoint.position)
             {
                 currentTarget = endPoint.position;
             }

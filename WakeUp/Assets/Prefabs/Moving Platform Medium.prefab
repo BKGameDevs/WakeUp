@@ -118,8 +118,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8202754973380814273}
-  - component: {fileID: 8202754973380814287}
-  - component: {fileID: 8202754973380814272}
   m_Layer: 0
   m_Name: Moving Platform Medium
   m_TagString: Untagged
@@ -144,51 +142,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8202754973380814287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202754973380814274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9219dde678201b44a94174cb2fa9870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToMove: {fileID: 8202754974487632183}
-  startPoint: {fileID: 8202754974537394756}
-  endPoint: {fileID: 8202754973738633703}
-  moveSpeed: 5
---- !u!114 &8202754973380814272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202754973380814274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9d45456754e4aab47a5d0ce048c8b4d0, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8202754973380814287}
-        m_TargetAssemblyTypeName: MovingObjectController, Assembly-CSharp
-        m_MethodName: SetIsActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  GameEventResponses: []
 --- !u!1 &8202754973738633624
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +399,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8202754974487632182}
+  - component: {fileID: 6211905544577371675}
+  - component: {fileID: 3557212656672845046}
   - component: {fileID: 8202754974487632180}
   - component: {fileID: 8202754974487632181}
   - component: {fileID: 8202754974487632179}
@@ -473,6 +428,68 @@ Transform:
   m_Father: {fileID: 8202754973380814273}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6211905544577371675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202754974487632183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9219dde678201b44a94174cb2fa9870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToMove: {fileID: 8202754974487632183}
+  startPoint: {fileID: 8202754974537394756}
+  endPoint: {fileID: 8202754973738633703}
+  GoToOriginalWhenInactive: 1
+  moveSpeed: 5
+--- !u!114 &3557212656672845046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202754974487632183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 0}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6211905544577371675}
+        m_TargetAssemblyTypeName: MovingObjectController, Assembly-CSharp
+        m_MethodName: SetIsActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  GameEventResponses:
+  - Event: {fileID: 0}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6211905544577371675}
+          m_TargetAssemblyTypeName: MovingObjectController, Assembly-CSharp
+          m_MethodName: SetIsActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!50 &8202754974487632180
 Rigidbody2D:
   serializedVersion: 4

@@ -14,7 +14,7 @@ public class SwitchController : InteractController
     public string SwitchType;
 
     private SpriteRenderer _SpriteRenderer;
-    private bool _SwitchedOn;
+    protected bool _SwitchedOn;
 
     private AudioSource _SwitchSound;
 
@@ -26,7 +26,7 @@ public class SwitchController : InteractController
         _SwitchSound = GetComponent<AudioSource>();
     }
 
-    private void Switch()
+    protected void Switch()
     {
         _SwitchedOn = !_SwitchedOn;
 
@@ -67,10 +67,17 @@ public class SwitchController : InteractController
 
     protected override bool GetStartInteractionTrigger()
     {
+        if (!SingleUse)
+            return base.GetStartInteractionTrigger();
+
         return !_SwitchedOn ? base.GetStartInteractionTrigger() : false;
     }
+
     protected override bool GetStopInteractionTrigger()
     {
-        return !_SwitchedOn ? base.GetStopInteractionTrigger() : false;
+        if (!SingleUse)
+            return base.GetStopInteractionTrigger();
+
+        return IsInteracting ? base.GetStopInteractionTrigger() : false;
     }
 }

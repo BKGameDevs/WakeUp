@@ -15,14 +15,14 @@ public class GameEventListener : MonoBehaviour
         Event?.RegisterListener(this);
 
         foreach (var gameEventResponse in GameEventResponses)
-            gameEventResponse.Event.RegisterListener(this);
+            gameEventResponse.Event?.RegisterListener(this);
     }
 
     private void OnDisable(){
         Event?.UnregisterListener(this);
 
         foreach (var gameEventResponse in GameEventResponses)
-            gameEventResponse.Event.UnregisterListener(this);
+            gameEventResponse.Event?.UnregisterListener(this);
     }
 
     public void OnEventRaised(object obj){

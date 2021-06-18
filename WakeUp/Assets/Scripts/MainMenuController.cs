@@ -15,7 +15,9 @@ public class MainMenuController : Singleton<MainMenuController>
         _Root = GetComponent<UIDocument>()?.rootVisualElement;
 
         var button = _Root.Q<Button>("Resume");
-        button.clicked += Resume_clicked;
+
+        if (button != null)
+            button.clicked += Resume_clicked;
 
         SetVisibility(_Root, false);
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameEvent : ScriptableObject
 {
+    public event EventHandler<object> Raised;
 	private List<GameEventListener> listeners = new List<GameEventListener>();
 
      public void Raise(object obj = null){
+        Raised?.Invoke(this, obj);
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
             listeners[i].OnEventRaised(obj);
