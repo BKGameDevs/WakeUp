@@ -21,31 +21,53 @@ public class AudioPlayer : ScriptableObject
             ));
     }
 
-    public void PlayBackground(AudioClip audioClip)
+    public static AudioSource PlayBackgroundStandalone(AudioClip audioClip, string name)
     {
-        if (_BackgroundMusic == null)
-        {
-            var gameObject = new GameObject("Background Music");
-            _BackgroundMusic = gameObject.AddComponent<AudioSource>();
-            gameObject.AddComponent<CoroutineBehavior>();
-            _BackgroundMusic.loop = true;
-        }
+        var gameObject = new GameObject(name);
+        var audioSource = gameObject.AddComponent<AudioSource>();
+        gameObject.AddComponent<CoroutineBehavior>();
+        audioSource.loop = true;
 
-        _BackgroundMusic.clip = audioClip;
-        _BackgroundMusic.volume = 0f;
-        _BackgroundMusic.Play();
-        var behavior = _BackgroundMusic.gameObject.GetComponent<CoroutineBehavior>();
-        behavior.StartCoroutine(Util.StartFade(_BackgroundMusic, 1f, 0.5f));
+        audioSource.clip = audioClip;
+        audioSource.volume = 0f;
+        audioSource.Play();
+        var behavior = audioSource.gameObject.GetComponent<CoroutineBehavior>();
+        behavior.StartCoroutine(Util.StartFade(audioSource, 1f, 0.5f));
+
+        return audioSource;
     }
 
+    public void PlayBackground(AudioClip audioClip)
+    {
+        _BackgroundMusic = PlayBackgroundStandalone(audioClip, "Background Music");
+        //if (_BackgroundMusic == null)
+        //{
+        //    var gameObject = new GameObject("Background Music");
+        //    _BackgroundMusic = gameObject.AddComponent<AudioSource>();
+        //    gameObject.AddComponent<CoroutineBehavior>();
+        //    _BackgroundMusic.loop = true;
+        //}
+
+        //_BackgroundMusic.clip = audioClip;
+        //_BackgroundMusic.volume = 0f;
+        //_BackgroundMusic.Play();
+        //var behavior = _BackgroundMusic.gameObject.GetComponent<CoroutineBehavior>();
+        //behavior.StartCoroutine(Util.StartFade(_BackgroundMusic, 1f, 0.5f));
+    }
+
+
+    public static void StopBackground(AudioSource audioSource)
+    {
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+            Destroy(audioSource.gameObject);
+        }
+    }
     public void StopBackground()
     {
-        if (_BackgroundMusic != null)
-        {
-            _BackgroundMusic.Stop();
-            Destroy(_BackgroundMusic.gameObject);
-            _BackgroundMusic = null;
-        }
+        StopBackground(_BackgroundMusic);
+        _BackgroundMusic = null;
     }
 
     public class CoroutineBehavior : MonoBehaviour

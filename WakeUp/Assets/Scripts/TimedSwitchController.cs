@@ -5,7 +5,8 @@ using UnityEngine;
 public class TimedSwitchController : SwitchController
 {
     public GameEvent OnTimerEnd;
-    public float Duration = 5f;
+    public float Duration = 10f;
+    public AudioClip TimeSound;
 
     // Start is called before the first frame update
     protected override void Initialize()
@@ -20,11 +21,14 @@ public class TimedSwitchController : SwitchController
 
     private void OnSwitchTrigger_Raised(object sender, object e)
     {
-        this.StartTimedAction(null, () =>
-        {
-            Switch();
-            OnTimerEnd?.Raise();
-        },
-        Duration);
+        var audioSource = AudioPlayer.PlayBackgroundStandalone(TimeSound, "Ticking");
+        this.StartTimedAction(null, 
+            () =>
+            {
+                Switch();
+                OnTimerEnd?.Raise();
+                AudioPlayer.StopBackground(audioSource);
+            },
+            Duration);
     }
 }

@@ -42633,6 +42633,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 750831519}
     m_Modifications:
     - target: {fileID: 1338309491, guid: 652d4bedd444187409e8a25a005e7066, type: 3}
+      propertyPath: Duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338309491, guid: 652d4bedd444187409e8a25a005e7066, type: 3}
+      propertyPath: TimeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f0eead6f903451b4e81fbd1cef935aac, type: 3}
+    - target: {fileID: 1338309491, guid: 652d4bedd444187409e8a25a005e7066, type: 3}
       propertyPath: OnTimerEnd
       value: 
       objectReference: {fileID: 11400000, guid: 9a4c7ce8cb24496498021826b3ae064c, type: 2}
@@ -141660,6 +141668,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 750831519}
     m_Modifications:
+    - target: {fileID: 1338309491, guid: 652d4bedd444187409e8a25a005e7066, type: 3}
+      propertyPath: Duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338309491, guid: 652d4bedd444187409e8a25a005e7066, type: 3}
+      propertyPath: TimeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f0eead6f903451b4e81fbd1cef935aac, type: 3}
     - target: {fileID: 1338309491, guid: 652d4bedd444187409e8a25a005e7066, type: 3}
       propertyPath: OnTimerEnd
       value: 
