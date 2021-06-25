@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     public float RespawnDelay = 1f;
     private float _CurrentSanity;
 
+    public bool IsGrounded => _IsGrounded = CheckGrounded();
     private bool _IsGrounded;
     private bool _IsInteracting;
     public bool UpdateDisabled { get { return _IsInteracting || IsPlayerDead(); } }
@@ -160,7 +161,7 @@ public class PlayerController : MonoBehaviour
     {
         var wasGrounded = _IsGrounded;
 
-        _IsGrounded = IsGrounded();
+        _IsGrounded = CheckGrounded();
 
         if (!wasGrounded && _IsGrounded)
             _Jumping = _Falling = false;
@@ -191,7 +192,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool IsGrounded()
+    private bool CheckGrounded()
     {
         var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
         var size = _Collider.bounds.size;
