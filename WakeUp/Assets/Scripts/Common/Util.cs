@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,21 @@ public static class Util
         before?.Invoke();
         yield return new WaitForSeconds(time);
         after?.Invoke();
+    }
+
+    public static Coroutine StartLoopingAction(this MonoBehaviour monoBehaviour, UnityAction loopAction, Func<bool> repeatCondition, float repeatDelay, UnityAction endLoopAction = null)
+    {
+        return monoBehaviour.StartCoroutine(LoopingAction(loopAction, repeatCondition, repeatDelay, endLoopAction));
+    }
+    public static IEnumerator LoopingAction(UnityAction loopAction, Func<bool> repeatCondition, float repeatDelay, UnityAction endLoopAction = null)
+    {
+        while (repeatCondition?.Invoke() ?? false)
+        {
+            loopAction?.Invoke();
+            yield return new WaitForSeconds(repeatDelay);
+        }
+
+        endLoopAction?.Invoke();
     }
 
     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)

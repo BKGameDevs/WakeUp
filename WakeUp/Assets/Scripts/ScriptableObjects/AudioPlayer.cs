@@ -7,7 +7,7 @@ public class AudioPlayer : ScriptableObject
 {
     private AudioSource _BackgroundMusic;
 
-    public void PlayOneShot(AudioClip audioClip)
+    public static void StaticPlayOneShot(AudioClip audioClip)
     {
         var gameObject = new GameObject("Sound");
         var behavior = gameObject.AddComponent<CoroutineBehavior>();
@@ -19,6 +19,11 @@ public class AudioPlayer : ScriptableObject
             () => Destroy(gameObject),
             audioClip.length
             ));
+    }
+
+    public void PlayOneShot(AudioClip audioClip)
+    {
+        StaticPlayOneShot(audioClip);
     }
 
     public static AudioSource PlayBackgroundStandalone(AudioClip audioClip, string name)
