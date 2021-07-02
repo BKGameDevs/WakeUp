@@ -8,6 +8,8 @@ public class FalseWallController : MonoBehaviour
     // Start is called before the first frame update
 
     public bool PlaySoundOnColumn;
+    public float DestroyTileDelay = 0.125f;
+    public bool DestroyLine;
 
     private Tilemap FalseWall;
     private AudioSource SoundEffect;
@@ -48,7 +50,7 @@ public class FalseWallController : MonoBehaviour
 
             FalseWall.SetTile(new Vector3Int(pos.x, pos.y, pos.z), null);
             //count++;
-            yield return new WaitForSeconds(.125f);
+            yield return new WaitForSeconds(DestroyTileDelay);
         } 
 
     }

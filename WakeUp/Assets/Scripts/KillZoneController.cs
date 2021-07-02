@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KillZoneController : MonoBehaviour
 {
-    public PlayerController Player;
+    //public PlayerController Player;
     public GameEvent KillzoneEvent;
     //public GameEvent FadeoutEvent;
 

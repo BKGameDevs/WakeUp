@@ -258,6 +258,9 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateHardCheckpoint(object newPos) {
         _HardCheckpoint = (Vector3) newPos;
+
+        if (_SoftCheckpoint == Vector3.zero)
+            _SoftCheckpoint = _HardCheckpoint;
     }
 
     public void UpdateSoftCheckpoint(object newPos) {
