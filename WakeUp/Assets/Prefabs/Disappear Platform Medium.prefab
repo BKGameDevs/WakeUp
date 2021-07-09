@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5101564336708200206, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
+  m_Sprite: {fileID: -9157816766063381544, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5101564336708200206, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
+  m_Sprite: {fileID: -9157816766063381544, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -323,7 +323,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5101564336708200206, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
+  m_Sprite: {fileID: -9157816766063381544, guid: 79efe89a4f33048f39074c1344ce01c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -375,7 +375,7 @@ GameObject:
   m_Layer: 6
   m_Name: Disappear Platform Medium
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

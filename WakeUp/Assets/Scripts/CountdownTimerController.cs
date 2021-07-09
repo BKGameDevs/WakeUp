@@ -14,6 +14,7 @@ public class CountdownTimerController : MonoBehaviour
     void Start()
     {
         _TimeLeft = CountdownTime;
+        ClearTimer();
     }
 
     // Update is called once per frame
@@ -36,6 +37,9 @@ public class CountdownTimerController : MonoBehaviour
                 _TimeLeft--;
             },
             () => _TimeLeft >= 0,
-            1);
+            1,
+            ClearTimer);
     }
+
+    private void ClearTimer() => CountdownTimerText.text = string.Empty;
 }
