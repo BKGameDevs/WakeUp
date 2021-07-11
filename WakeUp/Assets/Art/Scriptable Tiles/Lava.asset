@@ -15,8 +15,8 @@ MonoBehaviour:
   m_AnimatedSprites:
   - {fileID: -1869430402003061747, guid: 47ea04643abce498483c7fb585a78a2e, type: 3}
   - {fileID: 5508800755808529901, guid: 47ea04643abce498483c7fb585a78a2e, type: 3}
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 1
