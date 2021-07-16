@@ -8,6 +8,18 @@ TextureImporter:
   - first:
       213: 5508800755808529901
     second: LAVA POOL ANIM 1_1
+  - first:
+      213: 6825587249107315542
+    second: LAVA POOL ANIM 1_2
+  - first:
+      213: 448738995017771194
+    second: LAVA POOL ANIM 1_3
+  - first:
+      213: -2657384286989581395
+    second: LAVA POOL ANIM 1_4
+  - first:
+      213: 4266137147794779787
+    second: LAVA POOL ANIM 1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
