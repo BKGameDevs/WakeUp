@@ -7,11 +7,12 @@ public class KillZoneController : MonoBehaviour
 {
     //public PlayerController Player;
     public GameEvent KillzoneEvent;
+    public float Damage = 25f;
     //public GameEvent FadeoutEvent;
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            KillzoneEvent?.Raise();
+            KillzoneEvent?.Raise(Damage);
         }
     }
 

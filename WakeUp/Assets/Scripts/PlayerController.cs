@@ -219,8 +219,10 @@ public class PlayerController : MonoBehaviour
         return hit.collider != null;
     }
 
-    public void OnKillzoneEnter() {
-        ReduceSanity(25f);
+    public void OnKillzoneEnter(object value) {
+        float damage = value is float ? (float)value : 25f;
+
+        ReduceSanity(damage);
         if (!IsPlayerDead())
             CrossFadeController.Instance.RunCrossFade(() => ResetPlayer(_SoftCheckpoint));
     }

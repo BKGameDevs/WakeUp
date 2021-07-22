@@ -88,4 +88,16 @@ public class MovingObjectController : MonoBehaviour
     {
         _IsActive = isActive;
     }
+
+    public void ResetPosition(float delay)
+    {
+        this.StartTimedAction(null,
+            () =>
+            {
+                SetIsActive(false);
+                objectToMove.transform.position = startPoint.position;
+            },
+            delay);
+
+    }
 }

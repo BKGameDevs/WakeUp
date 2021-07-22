@@ -9,7 +9,7 @@ public class CollideEventController : MonoBehaviour
 
     private bool _Fired;
 
-    public void Reset() => _Fired = false;
+    public void ResetFire() => _Fired = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
