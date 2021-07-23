@@ -59,7 +59,8 @@ public class PlayerController : MonoBehaviour
     public bool IsGrounded => _IsGrounded = CheckGrounded();
     private bool _IsGrounded;
     private bool _IsInteracting;
-    public bool UpdateDisabled { get { return _IsInteracting || IsPlayerDead(); } }
+    private bool _IsReseting;
+    public bool UpdateDisabled { get => _IsInteracting || _IsReseting;  }
 
     private Vector3 _SoftCheckpoint;
     private Vector3 _HardCheckpoint;
@@ -194,7 +195,7 @@ public class PlayerController : MonoBehaviour
 
     private bool CheckGrounded()
     {
-        var extraLength = .1f; //can be adjusted if the box's y extent doesn't seem perfect
+        var extraLength = .001f; //can be adjusted if the box's y extent doesn't seem perfect
         var size = _Collider.bounds.size;
         var newSize = new Vector3(size.x / 2, extraLength, size.z);
         var origin = _Collider.bounds.center - new Vector3(0, size.y / 2, 0);
@@ -224,7 +225,10 @@ public class PlayerController : MonoBehaviour
 
         ReduceSanity(damage);
         if (!IsPlayerDead())
+        {
+            _IsReseting = true;
             CrossFadeController.Instance.RunCrossFade(() => ResetPlayer(_SoftCheckpoint));
+        }
     }
 
 
@@ -233,6 +237,7 @@ public class PlayerController : MonoBehaviour
         _CurrentSanity = _CurrentSanity <= 0f ? 0f : _CurrentSanity;
         if (IsPlayerDead()) {
             OnPlayerDeath?.Raise(); //TODO: Find some better solution to this
+            _IsReseting = true;
             CrossFadeController.Instance.RunCrossFade(() =>
             {
                 ResetPlayer(_HardCheckpoint);
@@ -269,7 +274,8 @@ public class PlayerController : MonoBehaviour
         _SoftCheckpoint = (Vector3) newPos;
     }
 
-    public void ResetPlayer(Vector3 resetPos) {
+    private Coroutine _ResetDamageCoroutine;
+    public void ResetPlayer(Vector3 resetPos, bool triggersBlinking = true) {
         //CrossFadeController.Instance.RunCrossFadeWithAction(1f, 0.75f, () => transform.position = resetPos);
 
         var size = _Collider.bounds.size;
@@ -284,6 +290,25 @@ public class PlayerController : MonoBehaviour
             resetPos += new Vector3(0, -yOffset, 0);
         }
         transform.position = resetPos;
+        _IsReseting = false;
+
+        if (_ResetDamageCoroutine != null)
+            StopCoroutine(_ResetDamageCoroutine);
+
+        if (triggersBlinking)
+        {
+            var loopCount = 12;
+            _ResetDamageCoroutine = this.StartLoopingAction(
+                () =>
+                {
+                    _SpriteRenderer.enabled = !_SpriteRenderer.enabled;
+                    loopCount--;
+                },
+                () => loopCount > 0,
+                0.25f,
+                () => _SpriteRenderer.enabled = true
+                );
+        }
     }
 
     //private void ResetPlayerToGround(Vector3 resetPos)

@@ -68,11 +68,16 @@ public class SectionManager : MonoBehaviour
             return;
         if (_Current > -1)
         {
-            CrossFadeController.Instance.RunCrossFade(() => 
-            { 
+            if (_Current == 0)
                 SetupPlayer();
-                DisablePreviousSection();
-            });
+            else
+            {
+                CrossFadeController.Instance.RunCrossFade(() =>
+                {
+                    SetupPlayer();
+                    DisablePreviousSection();
+                });
+            }
         }
     }
 
@@ -85,7 +90,7 @@ public class SectionManager : MonoBehaviour
     private void SetupPlayer()
     {
         PlayerController.ResetSanity();
-        PlayerController.ResetPlayer(PlayerSpawn.position);
+        PlayerController.ResetPlayer(PlayerSpawn.position, false);
         PlayerSpawned?.Invoke(this, EventArgs.Empty);
     }
 
