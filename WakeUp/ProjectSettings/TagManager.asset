@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KillZone
   - PlayerLight
+  - DamageZone
   layers:
   - Default
   - TransparentFX

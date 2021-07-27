@@ -278,6 +278,8 @@ public class PlayerController : MonoBehaviour
     public void ResetPlayer(Vector3 resetPos, bool triggersBlinking = true) {
         //CrossFadeController.Instance.RunCrossFadeWithAction(1f, 0.75f, () => transform.position = resetPos);
 
+        Debug.Log("collider: " + _Collider);
+        Debug.Log("resetPos: " + resetPos);
         var size = _Collider.bounds.size;
         var origin = resetPos - new Vector3(0, size.y / 2, 0);
 
