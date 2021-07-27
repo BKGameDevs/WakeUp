@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         //    ItemPickUp.PropertyChanged += ItemPickUp_PropertyChanged;
 
         _HardCheckpoint = transform.position + new Vector3(0, 1, 0);
-
+        UpdateSoftCheckpoint(_HardCheckpoint);
         StartReduceSanity();
     }
 
