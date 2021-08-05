@@ -225,6 +225,9 @@ public class PlayerController : MonoBehaviour
     }
 
     public void OnKillzoneEnter(object value) {
+        if (_IsReseting)
+            return;
+
         float damage = value is float ? (float)value : 25f;
 
         ReduceSanity(damage);
