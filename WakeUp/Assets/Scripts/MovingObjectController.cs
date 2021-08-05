@@ -15,6 +15,7 @@ public class MovingObjectController : MonoBehaviour
     public Transform endPoint; // ending point
 
     public bool GoToOriginalWhenInactive;
+    public bool ParentPlayer = true;
 
     public float moveSpeed; // for fast the object moves
 
@@ -59,6 +60,9 @@ public class MovingObjectController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!ParentPlayer)
+            return;
+
         var gameObject = collision.gameObject;
         if (gameObject.CompareTag("Player"))
         {

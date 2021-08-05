@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DisappearingPlatformController : MonoBehaviour
 {
@@ -8,11 +9,14 @@ public class DisappearingPlatformController : MonoBehaviour
     public float AppearTime = 2f;
     public GameObject Platform;
 
+    public UnityEvent Disappearing;
+    public UnityEvent Disappeared;
 
+    private MovingObjectController _MovingObjectController;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _MovingObjectController = GetComponentInChildren<MovingObjectController>();
     }
 
     // Update is called once per frame
@@ -27,12 +31,18 @@ public class DisappearingPlatformController : MonoBehaviour
         {
             var playerController = collision.gameObject.GetComponent<PlayerController>();
 
-            if (playerController.IsGrounded)
+            if (playerController.IsGrounded && playerController.CurrentGround == gameObject)
             {
                 this.StartTimedAction(
-                    null,
                     () =>
                     {
+                        _MovingObjectController.SetIsActive(true);
+                        Disappearing?.Invoke();
+                    },
+                    () =>
+                    {
+                        Disappeared?.Invoke();
+                        _MovingObjectController.SetIsActive(false);
                         Platform.SetActive(false);
                         this.StartTimedAction(null, () => Platform.SetActive(true), AppearTime);
                     },

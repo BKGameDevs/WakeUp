@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded => _IsGrounded = CheckGrounded();
     private bool _IsGrounded;
+    public GameObject CurrentGround { get; private set; }
+
     private bool _IsInteracting;
     private bool _IsReseting;
     public bool UpdateDisabled { get => _IsInteracting || _IsReseting;  }
@@ -221,7 +223,12 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(origin - new Vector3(xOffset, 0), Vector2.down * extraLength, rayColor);
         Debug.DrawRay(origin - new Vector3(xOffset, extraLength), Vector2.right * xOffset, rayColor);
         Debug.DrawRay(origin + new Vector3(xOffset, -extraLength), Vector2.left * xOffset, rayColor);
-        return hit.collider != null;
+
+        CurrentGround = null;
+        if (hit.collider != null)
+            CurrentGround = hit.collider.gameObject;
+
+        return CurrentGround != null;
     }
 
     public void OnKillzoneEnter(object value) {
