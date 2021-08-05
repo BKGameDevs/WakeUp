@@ -70,14 +70,18 @@ public class PlayerController : MonoBehaviour
     public GameEvent OnTiltCamera;
     public GameEvent OnPlayerJump;
     // private Vector3 _OriginalPosition;
-    void Start()
+
+    private void Awake()
     {
         //Set position of transform
         _RigidBody = GetComponent<Rigidbody2D>();
         _SpriteRenderer = GetComponent<SpriteRenderer>();
         _Collider = GetComponent<Collider2D>();
         _Animator = GetComponent<Animator>();
+    }
 
+    void Start()
+    {
         _CurrentSanity = MAX_SANITY;
 
         //if (ItemPickUp != null)
@@ -278,8 +282,8 @@ public class PlayerController : MonoBehaviour
     public void ResetPlayer(Vector3 resetPos, bool triggersBlinking = true) {
         //CrossFadeController.Instance.RunCrossFadeWithAction(1f, 0.75f, () => transform.position = resetPos);
 
-        Debug.Log("collider: " + _Collider);
-        Debug.Log("resetPos: " + resetPos);
+        
+
         var size = _Collider.bounds.size;
         var origin = resetPos - new Vector3(0, size.y / 2, 0);
 
@@ -328,5 +332,4 @@ public class PlayerController : MonoBehaviour
         _CurrentSanity += (float)value;
         _CurrentSanity = _CurrentSanity > MAX_SANITY ? MAX_SANITY : _CurrentSanity;
     }
-
 }
