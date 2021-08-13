@@ -117,7 +117,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartDelay: 1
-  Delay: 1
+  RepeatDelay: 1
+  SpikeUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2d5984069c59ff74c943b64159dfddf9, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioPlayerSettings, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SpikeDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2a03e31c763858343be478b63f6448c2, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioPlayerSettings, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7315492936360207230
 MonoBehaviour:
   m_ObjectHideFlags: 0
