@@ -15,6 +15,6 @@ MonoBehaviour:
   AudioClip: {fileID: 8300000, guid: a5be71ce97100c64e8acbe70b2c4bd07, type: 3}
   Volume: 1
   SpatialBlend: 1
-  MaxDistance: 2
-  MinDistance: 1
+  MaxDistance: 20
+  MinDistance: 10
   AudioRolloffMode: 1

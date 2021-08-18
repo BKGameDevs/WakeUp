@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7315492936360207218}
   - component: {fileID: 7315492936360207229}
   - component: {fileID: 7315492936360207230}
+  - component: {fileID: 6120137761228976229}
   m_Layer: 0
   m_Name: Retractable Spike
   m_TagString: KillZone
@@ -121,8 +122,8 @@ MonoBehaviour:
   SpikeUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+      - m_Target: {fileID: 6120137761228976229}
+        m_TargetAssemblyTypeName: AudioPlayerController, Assembly-CSharp
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
@@ -136,8 +137,8 @@ MonoBehaviour:
   SpikeDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+      - m_Target: {fileID: 6120137761228976229}
+        m_TargetAssemblyTypeName: AudioPlayerController, Assembly-CSharp
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
@@ -162,3 +163,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillzoneEvent: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
   Damage: 25
+--- !u!114 &6120137761228976229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315492936360207217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aeae10756206c549a3dae9a1f0d684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSettings: {fileID: 0}

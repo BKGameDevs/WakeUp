@@ -6,10 +6,10 @@ using UnityEngine;
 public class AudioPlayer : ScriptableObject
 {
     private AudioSource _BackgroundMusic;
-    public static void StaticPlayOneShot(AudioPlayerSettings audioSettings)
+    public static void StaticPlayOneShot(AudioPlayerSettings audioSettings, Vector3? position = null)
     {
         StaticPlayOneShot(audioSettings.AudioClip, audioSettings.Volume, audioSettings.SpatialBlend,
-            audioSettings.MaxDistance, audioSettings.MinDistance, audioSettings.AudioRolloffMode);
+            audioSettings.MaxDistance, audioSettings.MinDistance, audioSettings.AudioRolloffMode, position);
     }
 
     public void PlayOneShot(AudioPlayerSettings audioSettings)
@@ -20,7 +20,7 @@ public class AudioPlayer : ScriptableObject
     public static void StaticPlayOneShot(AudioClip audioClip, 
         float volume = 1f, float spatialBlend = 0f, 
         float maxDistance = 500f, float minDistance = 1f,
-        AudioRolloffMode audioRolloffMode = AudioRolloffMode.Logarithmic)
+        AudioRolloffMode audioRolloffMode = AudioRolloffMode.Logarithmic, Vector3? position = null)
     {
         var gameObject = new GameObject("Sound");
         var behavior = gameObject.AddComponent<CoroutineBehavior>();
@@ -31,6 +31,8 @@ public class AudioPlayer : ScriptableObject
         audioSource.maxDistance = maxDistance;
         audioSource.minDistance = minDistance;
         audioSource.rolloffMode = audioRolloffMode;
+
+        gameObject.transform.position = position.HasValue ? position.Value : Vector3.zero;
 
         behavior.StartCoroutine(Util.TimedAction(
             () => audioSource.PlayOneShot(audioClip),
