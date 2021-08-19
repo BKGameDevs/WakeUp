@@ -8,8 +8,18 @@ public static class Util
 {
     public static bool Paused { get; private set; }
 
-    public static void Pause() => Paused = true;
-    public static void Resume() => Paused = false;
+    public static void Pause()
+    {
+        Time.timeScale = 0f;
+        Paused = true;
+    }
+    public static void Resume()
+    {
+        Time.timeScale = 1f;
+        Paused = false;
+    }
+
+    public static void Quit() => Application.Quit();
 
     public static Coroutine StartTimedAction(this MonoBehaviour monoBehaviour, UnityAction before, UnityAction after, float time)
     {

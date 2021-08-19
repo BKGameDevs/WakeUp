@@ -21,7 +21,32 @@
 .Menu {
     justify-content: flex-start;
     background-color: rgb(67, 109, 118);
-    width: 500px;
-    height: 500px;
     align-items: center;
+    flex-shrink: 1;
+    width: 50%;
+    height: 90%;
+}
+
+.Overlay {
+    height: 938px;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 98.5%;
+    left: auto;
+    flex-direction: column;
+    -unity-font: url('/Assets/Fonts/Quicksand_Book.otf');
+    background-color: rgba(0, 0, 0, 0.67);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+    display: flex;
+    flex-grow: 0;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
 }

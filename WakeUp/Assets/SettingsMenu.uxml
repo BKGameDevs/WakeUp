@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="WakeUpMenu.uss" />
+    <ui:VisualElement name="Overlay" class="Overlay">
+        <ui:VisualElement name="Menu" class="Menu">
+            <ui:Label text="Settings" display-tooltip-when-elided="true" class="Label" />
+            <ui:Slider name="Volume" picking-mode="Ignore" label="Volume" value="100" high-value="100" style="width: 75%; font-size: 36px; -unity-font-style: bold;" />
+            <ui:Button text="Back" display-tooltip-when-elided="true" name="Back" class="Button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
