@@ -14,4 +14,5 @@ public class AudioPlayerSettings : ScriptableObject
     public float MaxDistance;
     public float MinDistance;
     public AudioRolloffMode AudioRolloffMode;
+    public float Cutoff;
 }

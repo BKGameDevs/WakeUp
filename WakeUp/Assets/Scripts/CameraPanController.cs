@@ -9,6 +9,8 @@ public class CameraPanController : MonoBehaviour
     public CinemachineVirtualCamera MainVirtualCamera;
     public CameraPanTarget[] Targets;
 
+    public GameEvent CameraPan;
+
     private float _OriginalSize;
     private Transform _OriginalTarget;
     private int _Current;
@@ -41,6 +43,7 @@ public class CameraPanController : MonoBehaviour
 
     public void StartPan()
     {
+        CameraPan?.Raise(true);
         RecursivePan();
     }
 
@@ -56,6 +59,8 @@ public class CameraPanController : MonoBehaviour
             {
                 MainVirtualCamera.m_Lens.OrthographicSize = _OriginalSize;
                 MainVirtualCamera.Follow = _OriginalTarget;
+
+                CameraPan?.Raise(false);
             });
             return;
         }

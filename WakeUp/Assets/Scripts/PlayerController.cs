@@ -61,8 +61,9 @@ public class PlayerController : MonoBehaviour
     public GameObject CurrentGround { get; private set; }
 
     private bool _IsInteracting;
+    private bool _IsInCutscene;
     private bool _IsReseting;
-    public bool UpdateDisabled { get => _IsInteracting || _IsReseting;  }
+    public bool UpdateDisabled { get => _IsInteracting || _IsReseting || _IsInCutscene;  }
 
     private Vector3 _SoftCheckpoint;
     private Vector3 _HardCheckpoint;
@@ -237,7 +238,7 @@ public class PlayerController : MonoBehaviour
 
         float damage = value is float ? (float)value : 25f;
 
-        ReduceSanity(damage);
+        ReduceSanity(damage, true);
         if (!IsPlayerDead())
         {
             _IsReseting = true;
@@ -246,11 +247,12 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void ReduceSanity(float amount){
+    private void ReduceSanity(float amount, bool killzoneTriggered = false){
         _CurrentSanity -= amount;
         _CurrentSanity = _CurrentSanity <= 0f ? 0f : _CurrentSanity;
         if (IsPlayerDead()) {
-            OnPlayerDeath?.Raise(); //TODO: Find some better solution to this
+            //if (!killzoneTriggered) //TODO: If only for sound, cool, if not then think better
+                OnPlayerDeath?.Raise(); //TODO: Find some better solution to this
             _IsReseting = true;
             CrossFadeController.Instance.RunCrossFade(() =>
             {
@@ -334,6 +336,13 @@ public class PlayerController : MonoBehaviour
     public void SetInteract(object value) {
         _IsInteracting = (bool)value;
         if (_IsInteracting)
+            StopReduceSanity();
+    }
+
+    public void SetIsInCutscene(object value)
+    {
+        _IsInCutscene = (bool)value;
+        if (_IsInCutscene)
             StopReduceSanity();
     }
 

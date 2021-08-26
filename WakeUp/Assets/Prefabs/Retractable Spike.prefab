@@ -162,6 +162,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KillzoneEvent: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
+  OnKillzoneEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 43d2eabf3450dfd4c937655bf15bfc6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Damage: 25
 --- !u!114 &6120137761228976229
 MonoBehaviour:

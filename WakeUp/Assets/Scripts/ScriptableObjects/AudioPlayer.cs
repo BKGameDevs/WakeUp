@@ -9,7 +9,8 @@ public class AudioPlayer : ScriptableObject
     public static void StaticPlayOneShot(AudioPlayerSettings audioSettings, Vector3? position = null)
     {
         StaticPlayOneShot(audioSettings.AudioClip, audioSettings.Volume, audioSettings.SpatialBlend,
-            audioSettings.MaxDistance, audioSettings.MinDistance, audioSettings.AudioRolloffMode, position);
+            audioSettings.MaxDistance, audioSettings.MinDistance, audioSettings.AudioRolloffMode,
+            audioSettings.Cutoff, position);
     }
 
     public void PlayOneShot(AudioPlayerSettings audioSettings)
@@ -17,10 +18,10 @@ public class AudioPlayer : ScriptableObject
         StaticPlayOneShot(audioSettings);
     }
 
-    public static void StaticPlayOneShot(AudioClip audioClip, 
-        float volume = 1f, float spatialBlend = 0f, 
+    public static void StaticPlayOneShot(AudioClip audioClip,
+        float volume = 1f, float spatialBlend = 0f,
         float maxDistance = 500f, float minDistance = 1f,
-        AudioRolloffMode audioRolloffMode = AudioRolloffMode.Logarithmic, Vector3? position = null)
+        AudioRolloffMode audioRolloffMode = AudioRolloffMode.Logarithmic, float cutOff = 0f, Vector3? position = null)
     {
         var gameObject = new GameObject("Sound");
         var behavior = gameObject.AddComponent<CoroutineBehavior>();
@@ -37,7 +38,7 @@ public class AudioPlayer : ScriptableObject
         behavior.StartCoroutine(Util.TimedAction(
             () => audioSource.PlayOneShot(audioClip),
             () => Destroy(gameObject),
-            audioClip.length
+            cutOff <= 0 ? audioClip.length : cutOff
             ));
     }
 

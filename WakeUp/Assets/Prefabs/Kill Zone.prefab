@@ -70,4 +70,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a8a11d6bb05704ca34ad0957163e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  KillzoneEvent: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
+  Damage: 25

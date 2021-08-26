@@ -61,6 +61,9 @@ public class SwitchController : InteractController
 
     private void OverlayClosed(object sender, EventArgs args)
     {
+        //TODO: If there is a action triggered from this event that disables player,
+        //there will be a 1 second gap (end of close animation)
+        //where player can still move
         OnSwitchTrigger?.Raise();
         OverlayController.Instance.Closed -= OverlayClosed;
     }
