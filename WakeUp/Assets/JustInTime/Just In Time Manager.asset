@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JustInTimeInstructions:
   - Key: Platforms
-    Instruction: The platforms are moving!
+    Instruction: A new path has been forged!
