@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     public GameEvent OnPlayerDamage;
     public GameEvent OnTiltCamera;
     public GameEvent OnPlayerJump;
+    public GameEvent OnPlayerRespawn;
     // private Vector3 _OriginalPosition;
 
     private void Awake()
@@ -327,6 +328,8 @@ public class PlayerController : MonoBehaviour
                 () => _SpriteRenderer.enabled = true
                 );
         }
+
+        OnPlayerRespawn?.Raise();
     }
 
     //private void ResetPlayerToGround(Vector3 resetPos)
