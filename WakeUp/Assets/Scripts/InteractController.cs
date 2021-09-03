@@ -49,7 +49,7 @@ public class InteractController : MonoBehaviour
         return IsPressingInteract && InArea;
     }
 
-    protected virtual void StopInteraction()
+    public virtual void StopInteraction()
     {
         IsInteracting = false;
     }

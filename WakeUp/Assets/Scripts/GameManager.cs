@@ -6,23 +6,14 @@ public class GameManager : Singleton<GameManager>
 {
     public PlayerController Player;
 
- //   public Camera mainCam;
-	//public Camera secondCam;
-	//public bool onMainCam;
-	//public string camName;
-
     internal bool KeyObtained { get; private set;}
 
-    // Start is called before the first frame update
-
     public GameEvent OnLevelStart;
+
     void Start()
     {
-  //      onMainCam = true;
-		//camName = mainCam.name;
-
         OnLevelStart?.Raise();
-        SectionManager.PlayerSpawned += SectionManager_PlayerSpawned;
+        SectionManager.InternalPlayerSpawned += SectionManager_PlayerSpawned;
     }
 
     private void SectionManager_PlayerSpawned(object sender, System.EventArgs e)
@@ -40,17 +31,4 @@ public class GameManager : Singleton<GameManager>
     {
         KeyObtained = true;
     }
-
- //   public void ToggleCamera(){
-	//	if (onMainCam) {
-	//		mainCam.enabled = false;
-	//		secondCam.enabled = true;
-	//		onMainCam = !onMainCam;
-	//	}
-	//	else if (!onMainCam) {
-	//		mainCam.enabled = true;
-	//		secondCam.enabled = false;
-	//		onMainCam = !onMainCam;
-	//	}
-	//}
 }

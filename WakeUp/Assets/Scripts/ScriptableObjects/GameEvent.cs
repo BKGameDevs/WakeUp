@@ -9,7 +9,7 @@ public class GameEvent : ScriptableObject
     public event EventHandler<object> Raised;
 	private List<GameEventListener> listeners = new List<GameEventListener>();
 
-     public void Raise(object obj = null){
+    public void Raise(object obj = null){
         Raised?.Invoke(this, obj);
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
@@ -18,11 +18,16 @@ public class GameEvent : ScriptableObject
         }
      }
 
-     public void RegisterListener(GameEventListener listener){
-          listeners.Add(listener); 
-     }
+    public void Raise(bool value)
+    {
+        Raise(value as object);
+    }
 
-     public void UnregisterListener(GameEventListener listener){
-          listeners.Remove(listener); 
-     }
+    public void RegisterListener(GameEventListener listener){
+        listeners.Add(listener); 
+    }
+
+    public void UnregisterListener(GameEventListener listener){
+        listeners.Remove(listener); 
+    }
 }

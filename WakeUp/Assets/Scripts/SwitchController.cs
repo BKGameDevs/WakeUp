@@ -53,7 +53,7 @@ public class SwitchController : InteractController
         //OverlayController.Instance.Open(OverlayText);
     }    
 
-    protected override void StopInteraction()
+    public override void StopInteraction()
     {
         base.StopInteraction();
         OverlayController.Instance.Close();

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DoorController : InteractController, IHasOverlayText
 {
+    public UnityEvent DoorOpened;
+
     private Animator _DoorAnimator;
     private bool _IsDoorOpen;
 
@@ -28,19 +31,20 @@ public class DoorController : InteractController, IHasOverlayText
             OverlayController.Instance.Open(_OverlayText);
         else
         {
-            SectionManager.PlayerSpawned += SectionManager_PlayerSpawned;
-            SectionManager.Next();
+            DoorOpened?.Invoke(); 
+            //SectionManager.PlayerSpawned += SectionManager_PlayerSpawned;
+            //SectionManager.Next();
         }
     }
 
-    private void SectionManager_PlayerSpawned(object sender, System.EventArgs e)
-    {
-        StopInteraction();
+    //private void SectionManager_PlayerSpawned(object sender, System.EventArgs e)
+    //{
+    //    StopInteraction();
 
-        SectionManager.PlayerSpawned -= SectionManager_PlayerSpawned;
-    }
+    //    SectionManager.PlayerSpawned -= SectionManager_PlayerSpawned;
+    //}
 
-    protected override void StopInteraction()
+    public override void StopInteraction()
     {
         base.StopInteraction();
         OverlayController.Instance.Close(); 

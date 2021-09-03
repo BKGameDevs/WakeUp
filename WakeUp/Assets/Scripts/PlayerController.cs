@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
     public GameEvent OnPlayerDamage;
     public GameEvent OnTiltCamera;
     public GameEvent OnPlayerJump;
-    public GameEvent OnPlayerRespawn;
+    public GameEvent OnPlayerSpawn;
     // private Vector3 _OriginalPosition;
 
     private void Awake()
@@ -329,7 +329,7 @@ public class PlayerController : MonoBehaviour
                 );
         }
 
-        OnPlayerRespawn?.Raise();
+        OnPlayerSpawn?.Raise();
     }
 
     //private void ResetPlayerToGround(Vector3 resetPos)

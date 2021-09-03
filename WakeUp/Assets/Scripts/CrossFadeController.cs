@@ -7,10 +7,14 @@ public class CrossFadeController : Singleton<CrossFadeController>
     private Animator _Transition;
     private bool _IsFading;
     private Action _CurrentAction;
+    private Canvas _CrossFadeCanvas;
 
     protected override void OnAwake()
     {
         _Transition = GetComponent<Animator>();
+        _CrossFadeCanvas = GetComponent<Canvas>();
+        _CrossFadeCanvas.worldCamera = 
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     public void InvokeCrossFade(object value)
