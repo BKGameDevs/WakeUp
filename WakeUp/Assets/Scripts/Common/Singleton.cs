@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Singleton<T> : MonoBehaviour where T : Component
+public abstract class Singleton<T> : Singleton where T : Component
 {
     public static T Instance { get; private set; }
 
@@ -18,4 +18,9 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
     }
 
     protected virtual void OnAwake() { }
+}
+
+public abstract class Singleton : MonoBehaviour
+{
+
 }

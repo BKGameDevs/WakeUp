@@ -15,6 +15,8 @@ public class MovingObjectController : MonoBehaviour
     public Transform endPoint; // ending point
 
     public bool GoToOriginalWhenInactive;
+    public bool ActiveOnStart;
+    public bool InactiveOnEnd;
     public bool ParentPlayer = true;
 
     public float moveSpeed; // for fast the object moves
@@ -26,7 +28,8 @@ public class MovingObjectController : MonoBehaviour
     void Start()
     {
         currentTarget = endPoint.position; // start currTarget as endpoint
-        objectToMove.name = gameObject.name;
+        //objectToMove.name = gameObject.name;
+        SetIsActive(ActiveOnStart);
     }
 
     // Update is called once per frame
@@ -48,6 +51,12 @@ public class MovingObjectController : MonoBehaviour
             //switch the current target
             if (objectPosition == endPoint.position)
             {
+                if (InactiveOnEnd)
+                {
+                    SetIsActive(false);
+                    return;
+                }
+
                 currentTarget = startPoint.position;
             }
 
