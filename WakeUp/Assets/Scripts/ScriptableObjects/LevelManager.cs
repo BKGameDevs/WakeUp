@@ -13,4 +13,7 @@ public class LevelManager : ScriptableObject
     {
         CrossFadeController.Instance.RunCrossFade(() => SceneManager.LoadScene(scene));
     }
+
+    public void QuitGame() =>
+        Util.Quit();
 }
