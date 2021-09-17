@@ -6,12 +6,16 @@ public abstract class Singleton<T> : Singleton where T : Component
 {
     public static T Instance { get; private set; }
 
+    [SerializeField]
+    protected bool _DontDestroyOnLoad = true;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this as T;
-            DontDestroyOnLoad(gameObject);
+            if (_DontDestroyOnLoad)
+                DontDestroyOnLoad(gameObject);
         }
 
         OnAwake();

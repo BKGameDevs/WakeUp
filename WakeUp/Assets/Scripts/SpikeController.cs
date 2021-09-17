@@ -19,13 +19,16 @@ public class SpikeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _Animator = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
         SpikeUp?.Invoke();
 
-        _Animator = GetComponent<Animator>();
-
-        this.StartTimedAction(null, 
+        this.StartTimedAction(null,
             () => this.StartLoopingAction(
-                () => 
+                () =>
                 {
                     _Up = !_Up;
 

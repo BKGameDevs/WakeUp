@@ -4,39 +4,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class MainMenuController : Singleton<MainMenuController>
+public class MainMenuController : MenuController<MainMenuController>
 {
-    private VisualElement _Root;
-    private bool _IsOpen;
-
-    private void OnEnable()
+    public override void RootInitialized(VisualElement root)
     {
-        _Root = GetComponent<UIDocument>()?.rootVisualElement;
-
-        var resumeButton = _Root.Q<Button>("Resume");
+        var resumeButton = root.Q<Button>("Resume");
 
         if (resumeButton != null)
             resumeButton.clicked += Resume_clicked;
 
-        var settingsButton = _Root.Q<Button>("Settings");
+        var settingsButton = root.Q<Button>("Settings");
 
         if (settingsButton != null)
             settingsButton.clicked += Settings_Clicked;
 
-        var quitButton = _Root.Q<Button>("Quit");
+        var quitButton = root.Q<Button>("Quit");
 
         if (quitButton != null)
             quitButton.clicked += Quit_clicked;
-
-
-        SetVisibility(_Root, false);
     }
 
     private void Settings_Clicked()
     {
         Close(false);
         SettingsController.Instance.Open();
-
     }
 
     private void Quit_clicked()
@@ -54,13 +45,6 @@ public class MainMenuController : Singleton<MainMenuController>
             Open();
     }
 
-    private void SetVisibility(VisualElement root, bool visibility)
-    {
-        root.visible = visibility;
-        foreach (var child in root.Children())
-            SetVisibility(child, visibility);
-    }
-
     private void Resume_clicked()
     {
         Close();
@@ -68,24 +52,17 @@ public class MainMenuController : Singleton<MainMenuController>
 
     public void Open(bool pause = true)
     {
-        if (_IsOpen)
-            return;
-
         if (pause)
             Util.Pause();
-        _IsOpen = true;
-        SetVisibility(_Root, _IsOpen);
+
+        base.Open();
     }
 
     public void Close(bool resume = true)
     {
-        if (!_IsOpen)
-            return;
-
-        _IsOpen = false;
-        SetVisibility(_Root, _IsOpen);
-        
         if (resume)
             Util.Resume();
+
+        base.Close();
     }
 }

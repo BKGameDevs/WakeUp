@@ -33,8 +33,11 @@ public class SectionManager : MonoBehaviour
     {
         _Current++;
         var manager = _Managers.ElementAtOrDefault(_Current);
-        if (manager != null) 
+        if (manager != null)
+        {
+            manager.gameObject.SetActive(true);
             manager.SpawnPlayer();
+        }
     }
     
     //private PlayerController _PlayerController;
@@ -60,6 +63,10 @@ public class SectionManager : MonoBehaviour
         if (_Current < 0)
         {
             _Managers = _Managers.OrderBy(x => x.Order).ToList();
+
+            foreach (var manager in _Managers.Skip(1))
+                manager.gameObject.SetActive(false);
+
             Next();
         }
     }
