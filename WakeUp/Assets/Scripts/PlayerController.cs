@@ -259,6 +259,7 @@ public class PlayerController : MonoBehaviour
             {
                 ResetPlayer(_HardCheckpoint);
                 ResetSanity();
+                UpdateSoftCheckpoint(_HardCheckpoint);
             });
         } else {
             //Will be used by other systems later

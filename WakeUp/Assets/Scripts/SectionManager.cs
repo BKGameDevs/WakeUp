@@ -100,6 +100,7 @@ public class SectionManager : MonoBehaviour
     {
         PlayerController.ResetSanity();
         PlayerController.ResetPlayer(PlayerSpawn.position, false);
+        PlayerController.UpdateSoftCheckpoint(PlayerSpawn.position);
         PlayerSpawned?.Invoke();
         InternalPlayerSpawned?.Invoke(this, EventArgs.Empty);
     }
