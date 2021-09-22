@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Spike Down Settings
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 8300000, guid: fc3b8b3d8c9357e4d967e2fe82a4e276, type: 3}
-  Volume: 1
+  Volume: 0.25
   SpatialBlend: 1
   MaxDistance: 20
   MinDistance: 10
   AudioRolloffMode: 1
+  Cutoff: 0
