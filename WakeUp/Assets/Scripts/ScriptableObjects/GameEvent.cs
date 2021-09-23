@@ -28,6 +28,11 @@ public class GameEvent : ScriptableObject
         Raise(value as object);
     }
 
+    public void Raise(float value)
+    {
+        Raise(value as object);
+    }
+
     public void RegisterListener(GameEventListener listener){
         listeners.Add(listener); 
     }

@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.Events;
 
 public class CountdownTimerController : MonoBehaviour
 {
     public TextMeshProUGUI CountdownTimerText;
     public int CountdownTime = 65;
 
+    public UnityEvent OnTimeCompleted;
+
     private int _TimeLeft = 0;
     private Coroutine _TimeCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +47,7 @@ public class CountdownTimerController : MonoBehaviour
             //Delay between iterations
             1,
             //Action after looping stops
-            ClearTimer);
+            () => OnTimeCompleted?.Invoke());
     }
 
     public void ResetTime()
