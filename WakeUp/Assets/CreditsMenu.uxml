@@ -2,7 +2,7 @@
     <Style src="WakeUpMenu.uss" />
     <ui:VisualElement name="Overlay" class="Overlay">
         <ui:VisualElement name="Menu" class="Menu" style="width: 100%;">
-            <ui:ScrollView name="ScrollView">
+            <ui:ScrollView name="ScrollView" style="width: 100%; height: 90%;">
                 <ui:Label text="Credits &#10;&#10;Concept and Design: &#10;&#10;Alex Aquino&#10;Christopher Menedes&#10;Kwan S Holloway&#10;&#10;Development:&#10; Alex Aquino&#10; Christopher Menedes&#10; Kwan S Holloway&#10;&#10; Artwork: &#10;Janna - https://opengameart.org/content/sleek-bars&#10;Kentang - https://kentangpixel.itch.io/lava-dungeon-tile&#10;Kwan Holloway&#10;&#10;Music and Sound:&#10;&#10; Wake Up Title - Christopher Menedes &#10;Wake Up Darkness - Christopher Menedes&#10; Epic Chase by MaxKoMusic | https://maxkomusic.com/&#10;Crumbling sound effect by Mike Koenig via SoundBible&#10;Additional sound effects from https://www.zapsplat.com&#10;&#10;Special Thanks: &#10;&#10;All of our followers and supporters on Twitch and YouTube for sticking with us as we built the game! &#10;&#10;Thanks for playing Wake Up! We&apos;d appreciate feedback on our itch.io page! Look out for upcoming streams on Twitch for an up and coming Metroidvania we&apos;ll be working on!.&#10;" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; color: rgba(255, 255, 255, 255); height: 280px; width: 522px; top: 264px;" />
             </ui:ScrollView>
         </ui:VisualElement>
