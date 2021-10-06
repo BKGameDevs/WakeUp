@@ -102,12 +102,33 @@ public class PlayerController : MonoBehaviour
     //    ItemPickUp.RuntimeValue = 0;
     //}
 
+    private Coroutine _PauseMovement;
     // Update is called once per frame
     void Update()
     {
         _Horizontal = _Vertical = 0;
+
         if (UpdateDisabled)
+        {
+            if (_PauseMovement == null)
+            {
+                var linearVelocity = _RigidBody.velocity;
+                _PauseMovement = this.StartConditionalAction(
+                    () =>
+                    {
+                        _RigidBody.isKinematic = true;
+                        _RigidBody.velocity = Vector2.zero;
+                    },
+                    () =>
+                    {
+                        _RigidBody.isKinematic = false;
+                        _RigidBody.velocity = linearVelocity;
+                        _PauseMovement = null;
+                    },
+                    () => !UpdateDisabled);
+            }
             return;
+        }
 
         // Setting bool values with conditionals to check if layer is moving left or right
         // Setting bool values with conditionals to check if layer is moving up or down

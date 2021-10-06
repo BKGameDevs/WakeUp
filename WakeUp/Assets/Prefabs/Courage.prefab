@@ -4816,6 +4816,7 @@ GameObject:
   - component: {fileID: 4831239666893770714}
   - component: {fileID: 4831239666893770716}
   - component: {fileID: 4831239666893770717}
+  - component: {fileID: 4299690062314570407}
   - component: {fileID: 4831239666893770718}
   m_Layer: 0
   m_Name: Courage
@@ -4947,6 +4948,34 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4299690062314570407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831239666893770713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9553654a631e744943e43c23968db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCollided:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 51097f708aa16924db5b27661a662f72, type: 2}
+        m_TargetAssemblyTypeName: JustInTimeManager, Assembly-CSharp
+        m_MethodName: OpenJustInTime
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Courage
+          m_BoolArgument: 0
+        m_CallState: 2
+  FireOnce: 1
 --- !u!114 &4831239666893770718
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -71,6 +71,6 @@ public class DoorController : InteractController, IHasOverlayText
     private void OpenDoor()
     {
         _IsDoorOpen = true;
-        _DoorAnimator.SetTrigger("Open");
+        _DoorAnimator?.SetTrigger("Open");
     }
 }

@@ -33,6 +33,18 @@ public static class Util
         after?.Invoke();
     }
 
+    public static Coroutine StartConditionalAction(this MonoBehaviour monoBehaviour, UnityAction before, UnityAction after, Func<bool> waitUntilCondition)
+    {
+        return monoBehaviour.StartCoroutine(ConditionalAction(before, after, waitUntilCondition));
+    }
+
+    public static IEnumerator ConditionalAction(UnityAction before, UnityAction after, Func<bool> waitUntilCondition)
+    {
+        before?.Invoke();
+        yield return new WaitUntil(waitUntilCondition);
+        after?.Invoke();
+    }
+
     public static Coroutine StartLoopingAction(this MonoBehaviour monoBehaviour, UnityAction loopAction, Func<bool> repeatCondition, float repeatDelay, UnityAction endLoopAction = null)
     {
         return monoBehaviour.StartCoroutine(LoopingAction(loopAction, repeatCondition, repeatDelay, endLoopAction));

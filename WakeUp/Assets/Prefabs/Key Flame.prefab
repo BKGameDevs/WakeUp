@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4664850086084385072}
   - component: {fileID: 4664850086084385073}
   - component: {fileID: 4664850086084385085}
+  - component: {fileID: -7505469587309764301}
   - component: {fileID: 4664850086084385086}
   m_Layer: 0
   m_Name: Key Flame
@@ -130,6 +131,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.19}
   m_EdgeRadius: 0
+--- !u!114 &-7505469587309764301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4664850086084385074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9553654a631e744943e43c23968db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCollided:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 51097f708aa16924db5b27661a662f72, type: 2}
+        m_TargetAssemblyTypeName: JustInTimeManager, Assembly-CSharp
+        m_MethodName: OpenJustInTime
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Key Flame
+          m_BoolArgument: 0
+        m_CallState: 2
+  FireOnce: 1
 --- !u!114 &4664850086084385086
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,3 +15,16 @@ MonoBehaviour:
   JustInTimeInstructions:
   - Key: Platforms
     Instruction: A new path has been forged!
+  - Key: Instructions
+    Instruction: Use A/D or the left and right arrow keys to move, jump with space,
+      and W/S or up and down to tilt the camera up and down
+  - Key: Key Flame
+    Instruction: "You\u2019ve acquired a key flame, an ethereal flame that can be
+      used to open new paths. You\u2019ve acquired a key flame, an ethereal flame
+      that can be used to open new paths. "
+  - Key: Courage
+    Instruction: "You\u2019ve acquired a bundle of courage, which replenishes some
+      of your sanity and helps you brave this nightmare."
+  - Key: Escape
+    Instruction: "The lava is rising, make your escape! Don\u2019t let yourself die
+      in the darkness of this nightmare, get to the light before the time runs out!"

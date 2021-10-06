@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using System;
 using UnityEngine;
+using WakeUp.Constants;
+using UnityEngine.Events;
 
 public class OverlayController : Singleton<OverlayController>
 {
@@ -10,12 +12,21 @@ public class OverlayController : Singleton<OverlayController>
     public TextMeshProUGUI MainText;
     public TextMeshProUGUI ClosingText;
 
+    public UnityEvent Opening;
+    public UnityEvent Closing;
+
     private Animator _Transition;
     private bool _IsOpen;
     // Start is called before the first frame update
     void Start()
     {
         _Transition = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (PlayerInput.IsPressingEscape)
+            Close();
     }
 
     public void UpdateMainText(string mainText)
@@ -32,9 +43,13 @@ public class OverlayController : Singleton<OverlayController>
     {
         if (_IsOpen)
             return;
+
+        Opening?.Invoke();
+
         MainText.text = mainText;
         _IsOpen = true;
         _Transition.SetBool("Open", _IsOpen);
+
     }
 
     public void Close()
@@ -42,8 +57,11 @@ public class OverlayController : Singleton<OverlayController>
         if (!_IsOpen)
             return;
 
+        Closing?.Invoke();
+
         _IsOpen = false;
         _Transition.SetBool("Open", _IsOpen);
+
     }
 
     public void OnClosed(){

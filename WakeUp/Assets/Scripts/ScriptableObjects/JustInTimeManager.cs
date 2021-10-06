@@ -25,9 +25,20 @@ public class JustInTimeManager : ScriptableObject
         if (opened = _JustInTimeStore.TryGetValue(key, out result) && !result.Item2)
             OverlayController.Instance.Open(result.Item1);
 
+        _JustInTimeStore[key] = Tuple.Create(result.Item1, true);
+
         return opened;
     }
 
+    public void OpenJustInTime(string key)
+    {
+        var result = _JustInTimeStore[key];
+
+        if (!result.Item2)
+            OverlayController.Instance.Open(result.Item1);
+
+        _JustInTimeStore[key] = Tuple.Create(result.Item1, true);
+    }
 }
 
 [Serializable]

@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollideEventController : MonoBehaviour
 {
-    public GameEvent GameEvent;
+    public UnityEvent PlayerCollided;
     public bool FireOnce;
 
     private bool _Fired;
@@ -18,7 +19,7 @@ public class CollideEventController : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            GameEvent?.Raise();
+            PlayerCollided?.Invoke();
             _Fired = true;
         }
     }
