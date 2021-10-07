@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class DoorController : InteractController, IHasOverlayText
 {
+    [SerializeField]
+    public bool _RequiresKeyFlame = true;
+
     public UnityEvent DoorOpened;
 
     private Animator _DoorAnimator;
@@ -48,7 +51,7 @@ public class DoorController : InteractController, IHasOverlayText
     {
         base.StopInteraction();
         OverlayController.Instance.Close(); 
-        if (GameManager.Instance.KeyObtained && !_IsDoorOpen) 
+        if (((_RequiresKeyFlame && GameManager.Instance.KeyObtained) || !_RequiresKeyFlame) && !_IsDoorOpen) 
         {
             this.StartTimedAction(null, OpenDoor, 0.25f);
             Prompt.text = "Press X to Enter next section";

@@ -28,3 +28,15 @@ MonoBehaviour:
   - Key: Escape
     Instruction: "The lava is rising, make your escape! Don\u2019t let yourself die
       in the darkness of this nightmare, get to the light before the time runs out!"
+  - Key: Opening
+    Instruction: "You are trapped in a nightmare of your own creation that you must
+      break out of. The small flame in you still burns. Don\u2019t let the darkness
+      take over. You must find the strength to wake up. "
+  - Key: Movement
+    Instruction: Use A/D or the left and right arrow keys to move
+  - Key: Jump
+    Instruction: Use SPACE BAR to jump
+  - Key: Tilt
+    Instruction: Use W/S or the up and right arrow keys to look up or down
+  - Key: Sanity
+    Instruction: Always remember to keep moving or your sanity will deplete.
