@@ -20,8 +20,7 @@ MonoBehaviour:
       and W/S or up and down to tilt the camera up and down
   - Key: Key Flame
     Instruction: "You\u2019ve acquired a key flame, an ethereal flame that can be
-      used to open new paths. You\u2019ve acquired a key flame, an ethereal flame
-      that can be used to open new paths. "
+      used to open new paths."
   - Key: Courage
     Instruction: "You\u2019ve acquired a bundle of courage, which replenishes some
       of your sanity and helps you brave this nightmare."
