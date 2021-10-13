@@ -117,13 +117,11 @@ public class PlayerController : MonoBehaviour
                     () =>
                     {
                         _RigidBody.isKinematic = true;
-                        _Collider.enabled = false;
                         _RigidBody.velocity = Vector2.zero;
                     },
                     () =>
                     {
                         _RigidBody.isKinematic = false;
-                        _Collider.enabled = true;
                         _RigidBody.velocity = linearVelocity;
                         _PauseMovement = null;
                     },
@@ -318,9 +316,6 @@ public class PlayerController : MonoBehaviour
     private Coroutine _ResetDamageCoroutine;
     public void ResetPlayer(Vector3 resetPos, bool triggersBlinking = true) {
         //CrossFadeController.Instance.RunCrossFadeWithAction(1f, 0.75f, () => transform.position = resetPos);
-
-        
-
         var size = _Collider.bounds.size;
         var origin = resetPos - new Vector3(0, size.y / 2, 0);
 
