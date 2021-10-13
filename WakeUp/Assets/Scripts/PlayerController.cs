@@ -117,11 +117,13 @@ public class PlayerController : MonoBehaviour
                     () =>
                     {
                         _RigidBody.isKinematic = true;
+                        _Collider.enabled = false;
                         _RigidBody.velocity = Vector2.zero;
                     },
                     () =>
                     {
                         _RigidBody.isKinematic = false;
+                        _Collider.enabled = true;
                         _RigidBody.velocity = linearVelocity;
                         _PauseMovement = null;
                     },
