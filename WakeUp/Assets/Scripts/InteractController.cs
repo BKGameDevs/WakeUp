@@ -13,7 +13,7 @@ public class InteractController : MonoBehaviour
     public TextMeshProUGUI Prompt;
 
     public bool DisablePrompt;
-    private bool InArea;
+    protected bool InArea;
     private bool _IsInteracting;
     public bool IsInteracting
     {

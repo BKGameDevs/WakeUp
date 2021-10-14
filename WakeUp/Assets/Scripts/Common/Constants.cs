@@ -78,5 +78,12 @@ namespace WakeUp.Constants
             }
         }
 
+        public static bool IsPressingShift
+        {
+            get
+            {
+                return Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift);
+            }
+        }
     }
 }
