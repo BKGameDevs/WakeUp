@@ -38,4 +38,5 @@ MonoBehaviour:
   - Key: Tilt
     Instruction: Use W/S or the up and right arrow keys to look up or down
   - Key: Sanity
-    Instruction: Always remember to keep moving or your sanity will deplete.
+    Instruction: Your sanity depletes when you stay still. Keep moving forward to
+      learn about how to replenish your sanity.

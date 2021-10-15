@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioPlayer;
 
 [CreateAssetMenu]
 public class JustInTimeManager : ScriptableObject
@@ -25,7 +26,8 @@ public class JustInTimeManager : ScriptableObject
         if (opened = _JustInTimeStore.TryGetValue(key, out result) && !result.Item2)
             OverlayController.Instance.Open(result.Item1);
 
-        _JustInTimeStore[key] = Tuple.Create(result.Item1, true);
+        if (opened)
+            _JustInTimeStore[key] = Tuple.Create(result.Item1, true);
 
         return opened;
     }
@@ -38,6 +40,14 @@ public class JustInTimeManager : ScriptableObject
             OverlayController.Instance.Open(result.Item1);
 
         _JustInTimeStore[key] = Tuple.Create(result.Item1, true);
+    }
+
+    public void OpenJustInTime(JustInTimeSettings settings)
+    {
+        var gameObject = new GameObject("JustInTimeDelay");
+        var behavior = gameObject.AddComponent<CoroutineBehavior>();
+
+        behavior.StartTimedAction(null, () => OpenJustInTime(settings._Key), settings._Delay);
     }
 }
 

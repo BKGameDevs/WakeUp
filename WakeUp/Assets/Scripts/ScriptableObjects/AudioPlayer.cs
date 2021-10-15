@@ -96,6 +96,7 @@ public class AudioPlayer : ScriptableObject
         _BackgroundMusic = null;
     }
 
+    //TODO: Move this somewhere else
     public class CoroutineBehavior : MonoBehaviour
     {
 

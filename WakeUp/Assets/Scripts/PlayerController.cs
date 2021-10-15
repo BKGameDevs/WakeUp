@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
     private bool _IsGrounded;
     public GameObject CurrentGround { get; private set; }
 
+    private bool _InputEnabled = true;
+
     private bool _IsInteracting;
     private bool _IsInCutscene;
     private bool _IsReseting;
@@ -130,15 +132,17 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        // Setting bool values with conditionals to check if layer is moving left or right
-        // Setting bool values with conditionals to check if layer is moving up or down
-        _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
+        if (_InputEnabled)
+        {
+            // Setting bool values with conditionals to check if layer is moving left or right
+            // Setting bool values with conditionals to check if layer is moving up or down
+            _Horizontal = IsPressingLeft ? -1 : (IsPressingRight ? 1 : 0);
 
-        _Vertical = IsPressingSpace ? 1 : 0;
+            _Vertical = IsPressingSpace ? 1 : 0;
 
-        var tiltDirection = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
-        TiltDirection = (_Horizontal == 0 && _IsGrounded) ? tiltDirection : 0;
-
+            var tiltDirection = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
+            TiltDirection = (_Horizontal == 0 && _IsGrounded) ? tiltDirection : 0;
+        }
 
         _Animator.SetBool("Running", _Horizontal != 0);
         if (_Horizontal != 0)
@@ -373,4 +377,7 @@ public class PlayerController : MonoBehaviour
         _CurrentSanity += (float)value;
         _CurrentSanity = _CurrentSanity > MAX_SANITY ? MAX_SANITY : _CurrentSanity;
     }
+
+    public void InputEnabled(bool enabled) =>
+        _InputEnabled = enabled;
 }

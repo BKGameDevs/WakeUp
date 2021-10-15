@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7315492936360207219}
   - component: {fileID: 7315492936360207218}
   - component: {fileID: 7315492936360207229}
-  - component: {fileID: 7315492936360207230}
   - component: {fileID: 6120137761228976229}
+  - component: {fileID: 4342765528086988935}
+  - component: {fileID: 7235259033083430266}
   m_Layer: 0
   m_Name: Retractable Spike
   m_TagString: KillZone
@@ -149,35 +150,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7315492936360207230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7315492936360207217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a8a11d6bb05704ca34ad0957163e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KillzoneEvent: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
-  OnKillzoneEntered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 43d2eabf3450dfd4c937655bf15bfc6b, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Damage: 25
 --- !u!114 &6120137761228976229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +163,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSettings: {fileID: 0}
+--- !u!114 &4342765528086988935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315492936360207217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9553654a631e744943e43c23968db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCollided:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 8c837eac5e40d46fd90afe3a10eaaf60, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 25
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: e1e69fc7685ef2a46aca18922f2c3863, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 43d2eabf3450dfd4c937655bf15bfc6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  FireOnce: 1
+--- !u!114 &7235259033083430266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315492936360207217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b386e4be5b44ead963cf9e1b9dc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 0}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
+  GameEventResponses:
+  - Event: {fileID: 11400000, guid: 5bfe2140c124f1c4f8c884df774e53e8, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4342765528086988935}
+          m_TargetAssemblyTypeName: CollideEventController, Assembly-CSharp
+          m_MethodName: ResetFire
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
