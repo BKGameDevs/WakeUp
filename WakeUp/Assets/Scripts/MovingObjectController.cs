@@ -75,8 +75,8 @@ public class MovingObjectController : MonoBehaviour
         var gameObject = collision.gameObject;
         if (gameObject.CompareTag("Player"))
         {
-            //set the flag
-            gameObject.transform.parent = this.transform;
+            var playerController = gameObject.GetComponent<PlayerController>();
+            playerController?.SetParent(transform);
         }
     }
 
@@ -85,7 +85,8 @@ public class MovingObjectController : MonoBehaviour
         var gameObject = collision.gameObject;
         if (gameObject.CompareTag("Player"))
         {
-            gameObject.transform.parent = null;
+            var playerController = gameObject.GetComponent<PlayerController>();
+            playerController?.SetParent(null);
         }
     }
 

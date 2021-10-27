@@ -226,6 +226,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetParent(Transform parentTransform)
+    {
+        transform.parent = parentTransform;
+
+        _RigidBody.interpolation = 
+            parentTransform == null ? 
+            RigidbodyInterpolation2D.Interpolate : 
+            RigidbodyInterpolation2D.None;
+    }
+
     private bool CheckGrounded()
     {
         var extraLength = .001f; //can be adjusted if the box's y extent doesn't seem perfect
