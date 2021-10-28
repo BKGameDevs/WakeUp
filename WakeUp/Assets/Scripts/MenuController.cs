@@ -18,6 +18,7 @@ public abstract class MenuController<T> : Singleton<T> where T : Component
 
         RootInitialized(_Root);
 
+        _IsOpen = _VisibleOnEnabled;
         if (!_VisibleOnEnabled)
             SetVisibility(_Root, false);
     }

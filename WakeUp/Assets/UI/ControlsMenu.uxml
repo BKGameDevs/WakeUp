@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="WakeUpMenu.uss" />
+    <ui:VisualElement name="Overlay" class="Overlay">
+        <ui:VisualElement name="Menu" class="Menu">
+            <ui:Label text="Controls" display-tooltip-when-elided="true" name="Controls_Text" style="top: 20px; font-size: 101px;" />
+            <ui:VisualElement name="Control" style="display: flex; flex-direction: row; align-items: center;">
+                <ui:Label text="Move Player:" display-tooltip-when-elided="true" name="Move_Label" />
+                <ui:VisualElement name="A_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_10&apos;);" />
+                <ui:VisualElement name="D_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_12&apos;);" />
+                <ui:Label text="/" display-tooltip-when-elided="true" name="Separator_Label" />
+                <ui:VisualElement name="Left_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_55&apos;);" />
+                <ui:VisualElement name="Right_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_56&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Control" style="display: flex; flex-direction: row; align-items: center;">
+                <ui:Label text="Tilt Camera:" display-tooltip-when-elided="true" name="Tilt_Label" />
+                <ui:VisualElement name="W_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_1&apos;);" />
+                <ui:VisualElement name="S_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_11&apos;);" />
+                <ui:Label text="/" display-tooltip-when-elided="true" name="Separator_Label" />
+                <ui:VisualElement name="Up_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_57&apos;);" />
+                  <ui:VisualElement name="Down_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_58&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Control" style="display: flex; flex-direction: row; align-items: center;">
+                <ui:Label text="Jump:" display-tooltip-when-elided="true" name="Jump_Label" />
+                <ui:VisualElement name="Space_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_54&apos;);" />
+                <ui:Label text="Pause:" display-tooltip-when-elided="true" name="Pause_Label" />
+                <ui:VisualElement name="Space_Key" class="Key" style="background-image: url(&apos;/Assets/Art/Sprites/keyboard2.png#keyboard2_9&apos;);" />
+            </ui:VisualElement>
+            <ui:Button text="Back" display-tooltip-when-elided="true" name="Back_Button" class="Button" style="top: 25px; display: flex;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

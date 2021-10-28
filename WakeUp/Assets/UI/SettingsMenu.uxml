@@ -2,10 +2,9 @@
     <Style src="WakeUpMenu.uss" />
     <ui:VisualElement name="Overlay" class="Overlay">
         <ui:VisualElement name="Menu" class="Menu">
-            <ui:Label text="Settings" display-tooltip-when-elided="true" name="Settings_Text" class="Label" style="top: 20px; font-size: 101px;" />
+            <ui:Label text="Settings" display-tooltip-when-elided="true" name="Settings_Text" style="top: 20px; font-size: 101px;" />
             <ui:Slider name="Volume" picking-mode="Ignore" label="Volume" value="100" high-value="100" style="top: 57px; width: 75%; font-size: 36px; -unity-font-style: bold;" />
-            <ui:Label text="Controls" display-tooltip-when-elided="true" name="Controls_Label" class="Label" style="top: 90px; display: flex;" />
-           
+            <ui:Button text="Controls" display-tooltip-when-elided="true" name="Controls_Button" class="Button" style="top: 90px; display: flex;" />
             <ui:Button text="Back" display-tooltip-when-elided="true" name="Back_Button" class="Button" style="top: 90px; display: flex;" />
         </ui:VisualElement>
     </ui:VisualElement>

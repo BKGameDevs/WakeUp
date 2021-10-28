@@ -8,9 +8,8 @@ using UnityEngine.UIElements;
 
 public class SettingsController : MenuController<SettingsController>
 {
-    public AudioListener AudioListener;
-
     public UnityEvent BackClicked;
+    public UnityEvent ControlsClicked;
 
     public SettingsController()
     {
@@ -23,7 +22,12 @@ public class SettingsController : MenuController<SettingsController>
         var volumeSlider = _Root.Q<Slider>("Volume");
 
         if (volumeSlider != null)
-            volumeSlider.RegisterValueChangedCallback(Slider_Changed);
+            volumeSlider.RegisterValueChangedCallback(Slider_Changed); 
+        
+        var controlsButton = _Root.Q<Button>("Controls_Button");
+
+        if (controlsButton != null)
+            controlsButton.clicked += () => ControlsClicked?.Invoke();
 
         var backButton = _Root.Q<Button>("Back_Button");
 
@@ -33,6 +37,7 @@ public class SettingsController : MenuController<SettingsController>
 
     private void Slider_Changed(ChangeEvent<float> evt)
     {
+        //TODO: Check if this actually best practicef
         AudioListener.volume = evt.newValue / 100;
     }
 }
