@@ -505,7 +505,7 @@ MonoBehaviour:
   ActiveOnStart: 1
   InactiveOnEnd: 1
   ParentPlayer: 0
-  moveSpeed: 50
+  moveSpeed: 10
 --- !u!1 &895707290
 GameObject:
   m_ObjectHideFlags: 0
